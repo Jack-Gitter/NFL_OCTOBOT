@@ -6,3 +6,7 @@ export type Scoreboard = {
 export type Event = {
     id: number
 }
+
+export type Game = {
+    scoringPlays: unknown[]
+}

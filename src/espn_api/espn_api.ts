@@ -1,14 +1,22 @@
-import { Event, Scoreboard } from "./types"
+import { Event, Game, Scoreboard } from "./types"
 
-export const getDailyGames = async (date: Date = new Date()) => {
+export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`
     const result = await fetch(url)
     const scoreboard: Scoreboard = await result.json()
-    const gameIds = scoreboard.events.map((event: Event) => {
+    return scoreboard.events.map((event: Event) => {
         return event.id
     })
-    console.log(gameIds)
+}
+
+export const getGameScoringPlays = async (gameId: number) => {
+    console.log(gameId)
+    const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
+    const result = await fetch(url)
+    const game: Game = await result.json()
+    console.log(game.scoringPlays)
+    return game.scoringPlays
 }
 
 
