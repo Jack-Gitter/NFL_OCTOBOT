@@ -1,43 +1,43 @@
-export type Scoreboard = {
+export type ScoreboardResponse = {
     leagues: unknown[]
-    events: Event[]
+    events: EventResponse[]
 }
 
-export type Event = {
+export type EventResponse = {
     id: number
 }
 
 export type GameResponse = {
-    scoringPlays: ScoringPlay[]
+    scoringPlays: ScoringPlayResponse[]
 }
 
-export type ScoringPlay = {
+export type ScoringPlayResponse = {
     id: number,
     scoringType: {name: "touchdown" | "fieldgoal"}
 }
 
 export type ScoringPlayInformation = {
     id: number,
-    participants: Participant[]
-    pointAfterAttempt: PointAfterAttempt
+    participants: ParticipantResponse[]
+    pointAfterAttempt: PointAfterAttemptResponse
     shortText: string
     text: string
-    octopusScorer: Athlete
+    octopusScorer: AthleteResponse
 }
 
-export type Participant = {
+export type ParticipantResponse = {
     athlete: {
         $ref: string
     }
     type: string
 }
 
-export type PointAfterAttempt = {
+export type PointAfterAttemptResponse = {
     id: number,
     value: number
 }
 
-export type Athlete = {
+export type AthleteResponse = {
     firstName: string,
     lastName: string,
 }
@@ -56,18 +56,3 @@ export enum SCORER_TYPE {
     TD_SCORER = "scorer"
 }
 
-export type GameToScoringPlayIds = {
-    gameId: number,
-    scoringPlayIds: number[]
-}
-
-export type OctopusInformation = {
-    scorer: string,
-    shortText: string,
-    scoringPlayId: number
-}
-
-export type AthleteAndOctopusInformation = {
-    athlete: Athlete,
-    octopusInformation: OctopusInformation
-}

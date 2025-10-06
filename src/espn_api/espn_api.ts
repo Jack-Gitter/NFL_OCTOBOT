@@ -1,5 +1,5 @@
 import { Game } from "../models/game"
-import { Athlete, Event, GameResponse, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Athlete, Event, GameResponse, Scoreboard, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
