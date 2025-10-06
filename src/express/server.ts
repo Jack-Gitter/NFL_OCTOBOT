@@ -8,7 +8,6 @@ const STATE = "my-state";
 
 app.get('/x_callback', async (req, res) => { 
 try {
-try {
     const { code, state } = req.query;
     if (state !== STATE) return res.status(500).send("State isn't matching");
     await xAuthClient.requestAccessToken(code);
