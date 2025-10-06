@@ -2,7 +2,7 @@ import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOcto
 import { AthleteAndOctopusInformation } from "./espn_api/types"
 
 const main = async () => {
-    const gameIds = await getDailyGameIds(new Date('11/19/2017'))
+    const gameIds = await getDailyGameIds(new Date('09/29/2024'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))
