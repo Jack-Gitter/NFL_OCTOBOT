@@ -10,7 +10,7 @@ export class Game {
         })
     }
 
-    public extractOctopusScoringPlays() {
+    public filterScoringPlays() {
         this.scoringPlays?.filter((scoringPlay) => {
             const isTwoPointConversion = 
                 scoringPlay?.pointAfterAttempt?.value === 2 || 
