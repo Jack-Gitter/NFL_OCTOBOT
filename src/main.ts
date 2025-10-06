@@ -1,14 +1,22 @@
 import { configDotenv } from "dotenv"
 import "reflect-metadata"
-// import cron from 'node-cron'
-// import { checkForOctopus } from "./coordinator/coordinator"
+import datasource from "./datasource/datasource"
+import { run } from "./coordinator/coordinator"
+import { getTwitterClient } from "./x_api/x_api"
+import cron from 'node-cron'
+import { ScoringPlay } from "./entities/Play"
 
 const main = async () => {
+
     configDotenv()
-    //checkForOctopus()
-    /*cron.schedule('* 10-23 * * 4-1', () => {
-        checkForOctopus()
-    })*/
+
+    await datasource.initialize()
+    const scoringPlayRepository = datasource.getRepository(ScoringPlay)
+    const twitterClient = await getTwitterClient()
+
+    cron.schedule('* 10-23 * * 4-1', async () => {
+        await run(twitterClient, scoringPlayRepository)
+    })
 }
 
 

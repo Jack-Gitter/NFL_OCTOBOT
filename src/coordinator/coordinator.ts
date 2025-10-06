@@ -1,13 +1,12 @@
-import datasource from "../datasource/datasource"
+import { TwitterApi } from "twitter-api-v2"
 import { ScoringPlay } from "../entities/Play"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "../espn_api/types"
-import { getTwitterClient, postOctopusToTwitter } from "../x_api/x_api"
+import { postOctopusToTwitter } from "../x_api/x_api"
+import { DataSource, Repository } from "typeorm"
 
-export const run = async () => {
-    const twitterClient = await getTwitterClient()
-    const playRepository = datasource.getRepository(ScoringPlay)
-    const checkedPlays = await playRepository.find()
+export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
+    const checkedPlays = await scoringPlayRepository.find()
     const checkedPlayIds = checkedPlays.map(checkedPlay => {
         return checkedPlay.id
     })
@@ -47,7 +46,7 @@ export const run = async () => {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
                 const play = new ScoringPlay()
                 play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
-                await playRepository.save(play)
+                await scoringPlayRepository.save(play)
                 await postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }))
