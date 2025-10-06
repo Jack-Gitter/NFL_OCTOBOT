@@ -42,6 +42,12 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     }
 }
 
+export const getAtheleteInformation = async(playerUrl: string) => {
+    const result = await fetch(playerUrl)
+    const player = await result.json()
+
+}
+
 
 function formatDate(date: Date) {
   const year = date.getFullYear();

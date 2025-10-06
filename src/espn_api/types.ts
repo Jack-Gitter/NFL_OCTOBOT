@@ -32,3 +32,8 @@ export type Participant = {
 export type PointAfterAttempt = {
     id: number,
 }
+
+export type Athlete = {
+    firstName: string,
+    lastName: string,
+}
