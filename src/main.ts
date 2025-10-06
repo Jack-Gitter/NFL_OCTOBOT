@@ -27,8 +27,6 @@ const main = async () => {
         }))
         for (const athleteAndOctopusInformation of athleteAndOctopusInformationArray) {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
-                /*console.log(`${athleteAndOctopusInformation?.athlete.firstName}, ${athleteAndOctopusInformation?.athlete.lastName}`)
-                console.log(athleteAndOctopusInformation?.octopusInformation.shortText)*/
                 postOctopus(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }
