@@ -1,4 +1,5 @@
 import { configDotenv } from "dotenv"
+import "reflect-metadata"
 // import cron from 'node-cron'
 // import { checkForOctopus } from "./coordinator/coordinator"
 
