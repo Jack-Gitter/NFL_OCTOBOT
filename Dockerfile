@@ -8,5 +8,4 @@ RUN npm install
 
 COPY . .
 
-
 CMD ["npx", "ts-node", "src/main.ts"]

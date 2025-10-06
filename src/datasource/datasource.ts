@@ -15,4 +15,5 @@ export default new DataSource({
     database: process.env.PG_DB as string,
     entities: [ScoringPlay],
     migrations: [Migrations1759786272039],
+    migrationsRun: true,
 })
