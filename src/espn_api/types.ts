@@ -22,6 +22,7 @@ export type ScoringPlayInformation = {
     pointAfterAttempt: PointAfterAttempt
     shortText: string
     text: string
+    patScorer: string
 }
 
 export type Participant = {

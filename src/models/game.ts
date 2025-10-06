@@ -1,3 +1,4 @@
+import { getAtheleteInformation, getScoringPlayInformation } from "../espn_api/espn_api";
 import { Participant, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
 
 export class Game {
@@ -26,7 +27,13 @@ export class Game {
                 return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
             }
             return false
-
         })
+    }
+
+    public getOctopusPlayerInformation() {
+        // loop over all scoring plays, get player info
+
+        getAtheleteInformation()
+
     }
 }
