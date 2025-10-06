@@ -12,7 +12,9 @@ export class Game {
 
     public extractOctopusScoringPlays() {
         this.scoringPlays?.filter((scoringPlay) => {
-            const isTwoPointConversion = scoringPlay?.pointAfterAttempt?.value === 2 || (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
+            const isTwoPointConversion = 
+                scoringPlay?.pointAfterAttempt?.value === 2 || 
+                (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
             let patScorer = undefined
             let tdScorer = undefined 
             if (isTwoPointConversion) {
