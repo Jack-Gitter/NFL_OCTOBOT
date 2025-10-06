@@ -8,9 +8,6 @@ const main = async () => {
             const octoInfo = await getOctopusInformation(gameId, tdPlayId)
             if (octoInfo) {
                 const atheleteInfo = await getAtheleteInformation(octoInfo.scorer)
-                console.log(octoInfo.text)
-                console.log(atheleteInfo.firstName)
-                console.log(atheleteInfo.lastName)
             }
         }
     }

@@ -747,9 +747,6 @@
   },
   yardsAfterCatch: 0
 }
-Michael Pittman Jr. 4 Yd pass from Daniel Jones (Two-Point Pass Conversion Failed)
-Michael
-Pittman Jr.
 {
   '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/401772851/competitions/401772851/plays/4017728512692?lang=en&region=us',
   id: '4017728512692',

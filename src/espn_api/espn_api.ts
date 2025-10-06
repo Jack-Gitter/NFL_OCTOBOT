@@ -27,9 +27,10 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     const scoringPlayInformation: ScoringPlayInformation = await result.json()
     console.log(scoringPlayInformation)
     const twoPointConversion = scoringPlayInformation.pointAfterAttempt.value === 2
+    const legacyTwoPointConversion = scoringPlayInformation?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlayInformation?.text?.includes('ATTEMPT SUCCEEDS')
     let patScorer = undefined
     let tdScorer = undefined 
-    if (twoPointConversion) {
+    if (twoPointConversion || legacyTwoPointConversion) {
         patScorer = scoringPlayInformation.participants.find((participant: Participant) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
