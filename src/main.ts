@@ -24,7 +24,7 @@ const main = async () => {
             if (data?.athlete && data.octoInfo) {
                 console.log(data?.athlete.firstName)
                 console.log(data?.athlete.lastName)
-                console.log(data?.octoInfo.text)
+                console.log(data?.octoInfo.shortText)
             }
         }
 

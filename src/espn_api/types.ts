@@ -53,3 +53,15 @@ export enum SCORER_TYPE {
     PAT_SCORER = "patScorer",
     TD_SCORER = "scorer"
 }
+
+export type GameToTDPlayIds = {
+    gameId: number,
+    scoringPlayIds: number[]
+}
+
+export type OctopusInformation = {
+    scorer: string,
+    shortText: string,
+
+}
+

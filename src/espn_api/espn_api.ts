@@ -1,4 +1,4 @@
-import { Athlete, Event, Game, Participant, POINT_AFTER_ATTEMPT, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Athlete, Event, Game, GameToTDPlayIds, OctopusInformation, Participant, POINT_AFTER_ATTEMPT, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
@@ -19,7 +19,7 @@ export const getGameTouchdownPlayIds = async (gameId: number) => {
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
     })
-    return {gameId: gameId, scoringPlayIds: scoringPlayIds}
+    return { gameId: gameId, scoringPlayIds: scoringPlayIds } satisfies GameToTDPlayIds
 
 }
 
@@ -42,8 +42,8 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     if (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) {
         return {
             scorer: patScorer.athlete.$ref,
-            text: scoringPlayInformation.shortText
-        }
+            shortText: scoringPlayInformation.shortText
+        } satisfies OctopusInformation
     }
 }
 
