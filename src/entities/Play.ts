@@ -1,7 +1,7 @@
 import { Column, Entity } from "typeorm";
 
 @Entity()
-export class PlayId {
+export class Play {
 
     @Column()
     id: number
