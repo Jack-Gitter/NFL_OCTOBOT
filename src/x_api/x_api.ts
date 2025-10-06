@@ -1,16 +1,15 @@
-import { Client, auth } from "twitter-api-sdk";
+const baseurl = `https://api.x.com/2/tweets`
 
-export const post = async (client: Client, text: string) => {
-    const body = {text}
-    await client.tweets.createTweet(body)
+export const post = async () => {
+    const res  = await fetch(baseurl, {
+        method: 'POST',
+        headers: {'content-type': 'application/json', 'authorization': `Bearer ${process.env.X_BEARER_TOKEN}`},
+        body: JSON.stringify({
+            text: 'testing!'
+        })
+    })
+
+    const data = await res.json()
+    console.log(data)
 }
-
-export const xAuthClient = new auth.OAuth2User({
- client_id: process.env.X_API_KEY as string,
- client_secret: process.env.X_SECRET_KEY as string,
- callback: "",
- scopes: [],
-});
-
-export const xClient = new Client(xAuthClient)
 
