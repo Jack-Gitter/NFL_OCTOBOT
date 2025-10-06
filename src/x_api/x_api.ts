@@ -11,7 +11,7 @@ export const getTwitterClient = async () => {
     });
 }
 
-export const postOctopus = async (twitterClient: TwitterApi, text: string) => {
+export const postOctopusToTwitter = async (twitterClient: TwitterApi, text: string) => {
     try {
         const body = { text }
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)

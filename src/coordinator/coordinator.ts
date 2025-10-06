@@ -2,7 +2,7 @@ import datasource from "../datasource/datasource"
 import { Play } from "../entities/Play"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "../espn_api/types"
-import { getTwitterClient, postOctopus } from "../x_api/x_api"
+import { getTwitterClient, postOctopusToTwitter } from "../x_api/x_api"
 
 export const checkForOctopus = async () => {
     const twitterClient = await getTwitterClient()
@@ -41,8 +41,9 @@ export const checkForOctopus = async () => {
                 const play = new Play()
                 play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
                 await playRepository.save(play)
-                postOctopus(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
+                postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }))
     }))
 }
+
