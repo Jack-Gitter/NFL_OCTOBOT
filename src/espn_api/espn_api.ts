@@ -1,4 +1,4 @@
-import { Athlete, Event, Game, GameToScoringPlayIds, OctopusInformation, Participant, POINT_AFTER_ATTEMPT, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Athlete, Event, Game, GameToScoringPlayIds, OctopusInformation, Participant, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
