@@ -1,0 +1,6170 @@
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/plays/4009517411439?lang=en&region=us',
+  id: '4009517411439',
+  sequenceNumber: '144850',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Kenny Golladay 54 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  shortText: 'Kenny Golladay 54 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  alternativeText: 'Kenny Golladay 54 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  shortAlternativeText: 'Kenny Golladay 54 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  awayScore: 3,
+  homeScore: 10,
+  period: { number: 2 },
+  clock: { value: 447, displayValue: '7:27' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:24Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/probabilities/4009517411439?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:00:49Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/drives/4009517418?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 10,
+    yardLine: 46,
+    yardsToEndzone: 54,
+    downDistanceText: '3rd & 10 at DET 46',
+    shortDownDistanceText: '3rd & 10',
+    possessionText: 'DET 46',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  statYardage: 54,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/plays/4009517411771?lang=en&region=us',
+  id: '4009517411771',
+  sequenceNumber: '177100',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Marvin Jones Jr. Pass From Matthew Stafford for 3 Yrds M.Prater extra point is GOOD, Center-D.Muhlbach, Holder-S.Martin. PENALTY on GB-M.Daniels, Leverage, 15 yards, enforced between downs.',
+  shortText: 'Marvin Jones Jr. 3 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  alternativeText: 'Marvin Jones Jr. Pass From Matthew Stafford for 3 Yrds M.Prater extra point is GOOD, Center-D.Muhlbach, Holder-S.Martin. PENALTY on GB-M.Daniels, Leverage, 15 yards, enforced between downs.',
+  shortAlternativeText: 'Marvin Jones Jr. 3 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  awayScore: 3,
+  homeScore: 17,
+  period: { number: 2 },
+  clock: { value: 140, displayValue: '2:20' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:24Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/probabilities/4009517411771?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:14:34Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/drives/40095174111?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 3,
+    yardLine: 97,
+    yardsToEndzone: 3,
+    downDistanceText: '1st & Goal at GB 3',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'GB 3',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  statYardage: 3,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/plays/4009517412809?lang=en&region=us',
+  id: '4009517412809',
+  sequenceNumber: '280900',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Golden Tate Pass From Matthew Stafford for 71 Yrds M.Prater extra point is GOOD, Center-D.Muhlbach, Holder-S.Martin.',
+  shortText: 'Golden Tate 71 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  alternativeText: 'Golden Tate Pass From Matthew Stafford for 71 Yrds M.Prater extra point is GOOD, Center-D.Muhlbach, Holder-S.Martin.',
+  shortAlternativeText: 'Golden Tate 71 Yd pass from Matthew Stafford (Matt Prater Kick)',
+  awayScore: 3,
+  homeScore: 27,
+  period: { number: 3 },
+  clock: { value: 98, displayValue: '1:38' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:24Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/probabilities/4009517412809?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T20:11:30Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/drives/40095174120?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 29,
+    yardsToEndzone: 71,
+    downDistanceText: '1st & 10 at DET 29',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'DET 29',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  statYardage: 71,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/plays/4009517413133?lang=en&region=us',
+  id: '4009517413133',
+  sequenceNumber: '313300',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Randall Cobb Pass From Brett Hundley for 17 Yrds (Pass formation) TWO-POINT CONVERSION ATTEMPT. B.Hundley pass to R.Cobb is complete. ATTEMPT SUCCEEDS.',
+  shortText: 'Randall Cobb 17 Yd pass from Brett Hundley (Brett Hundley Pass to Randall Cobb for Two-Point Conversion)',
+  alternativeText: 'Randall Cobb Pass From Brett Hundley for 17 Yrds (Pass formation) TWO-POINT CONVERSION ATTEMPT. B.Hundley pass to R.Cobb is complete. ATTEMPT SUCCEEDS.',
+  shortAlternativeText: 'Randall Cobb 17 Yd pass from Brett Hundley (Brett Hundley Pass to Randall Cobb for Two-Point Conversion)',
+  awayScore: 11,
+  homeScore: 27,
+  period: { number: 4 },
+  clock: { value: 687, displayValue: '11:27' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:24Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/9?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patPasser'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/probabilities/4009517413133?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T20:24:31Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/drives/40095174121?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 5,
+    yardLine: 17,
+    yardsToEndzone: 17,
+    downDistanceText: '4th & 5 at DET 17',
+    shortDownDistanceText: '4th & 5',
+    possessionText: 'DET 17',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/9?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/9?lang=en&region=us'
+    }
+  },
+  statYardage: 17,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/plays/4009517413413?lang=en&region=us',
+  id: '4009517413413',
+  sequenceNumber: '341550',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Ameer Abdullah 7 Yd Run (Golden Tate Pass to Matthew Stafford for Two-Point Conversion)',
+  shortText: 'Ameer Abdullah 7 Yd Run (Golden Tate Pass to Matthew Stafford for Two-Point Conversion)',
+  alternativeText: 'Ameer Abdullah 7 Yd Run (Golden Tate Pass to Matthew Stafford for Two-Point Conversion)',
+  shortAlternativeText: 'Ameer Abdullah 7 Yd Run (Golden Tate Pass to Matthew Stafford for Two-Point Conversion)',
+  awayScore: 11,
+  homeScore: 35,
+  period: { number: 4 },
+  clock: { value: 436, displayValue: '7:16' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:24Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patPasser'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/probabilities/4009517413413?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T20:36:51Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951741/competitions/400951741/drives/40095174122?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 2,
+    yardLine: 93,
+    yardsToEndzone: 7,
+    downDistanceText: '2nd & 2 at GB 7',
+    shortDownDistanceText: '2nd & 2',
+    possessionText: 'GB 7',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/8?lang=en&region=us'
+    }
+  },
+  statYardage: 7,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/plays/400951745804?lang=en&region=us',
+  id: '400951745804',
+  sequenceNumber: '80400',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Jack Doyle Pass From Jacoby Brissett for 6 Yrds A.Vinatieri extra point is GOOD, Center-L.Rhodes, Holder-R.Sanchez.',
+  shortText: 'Jack Doyle 6 Yd pass from Jacoby Brissett (Adam Vinatieri Kick)',
+  alternativeText: 'Jack Doyle Pass From Jacoby Brissett for 6 Yrds A.Vinatieri extra point is GOOD, Center-L.Rhodes, Holder-R.Sanchez.',
+  shortAlternativeText: 'Jack Doyle 6 Yd pass from Jacoby Brissett (Adam Vinatieri Kick)',
+  awayScore: 3,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 895, displayValue: '14:55' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2017-12-31T21:03Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 6,
+      type: 'penalized'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/probabilities/400951745804?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:31:29Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/drives/4009517453?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 6,
+    yardLine: 94,
+    yardsToEndzone: 6,
+    downDistanceText: '1st & Goal at HOU 6',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'HOU 6',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+    }
+  },
+  statYardage: 6,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/plays/4009517451232?lang=en&region=us',
+  id: '4009517451232',
+  sequenceNumber: '123200',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Alfred Blue 2 Yard Rush K.Fairbairn extra point is GOOD, Center-J.Weeks, Holder-S.Lechler.',
+  shortText: "Alfred Blue 2 Yd Run (Ka'imi Fairbairn Kick)",
+  alternativeText: 'Alfred Blue 2 Yard Rush K.Fairbairn extra point is GOOD, Center-J.Weeks, Holder-S.Lechler.',
+  shortAlternativeText: "Alfred Blue 2 Yd Run (Ka'imi Fairbairn Kick)",
+  awayScore: 10,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 415, displayValue: '6:55' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2017-12-31T21:03Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/34?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/probabilities/4009517451232?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:46:44Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/drives/4009517454?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 1,
+    yardLine: 2,
+    yardsToEndzone: 2,
+    downDistanceText: '2nd & 1 at IND 2',
+    shortDownDistanceText: '2nd & 1',
+    possessionText: 'IND 2',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/34?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/34?lang=en&region=us'
+    }
+  },
+  statYardage: 2,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/plays/4009517452336?lang=en&region=us',
+  id: '4009517452336',
+  sequenceNumber: '233600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Marlon Mack 1 Yard Rush A.Vinatieri extra point is GOOD, Center-L.Rhodes, Holder-R.Sanchez.',
+  shortText: 'Marlon Mack 1 Yd Run (Adam Vinatieri Kick)',
+  alternativeText: 'Marlon Mack 1 Yard Rush A.Vinatieri extra point is GOOD, Center-L.Rhodes, Holder-R.Sanchez.',
+  shortAlternativeText: 'Marlon Mack 1 Yd Run (Adam Vinatieri Kick)',
+  awayScore: 13,
+  homeScore: 14,
+  period: { number: 3 },
+  clock: { value: 411, displayValue: '6:51' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2017-12-31T21:03Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/probabilities/4009517452336?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:47:47Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951745/competitions/400951745/drives/40095174510?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '2nd & Goal at HOU 1',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'HOU 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/11?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/plays/400951750316?lang=en&region=us',
+  id: '400951750316',
+  sequenceNumber: '31600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Latavius Murray 1 Yard Rush (Kick formation) K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortText: 'Latavius Murray 1 Yd Run (Kai Forbath Kick)',
+  alternativeText: 'Latavius Murray 1 Yard Rush (Kick formation) K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortAlternativeText: 'Latavius Murray 1 Yd Run (Kai Forbath Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 547, displayValue: '9:07' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/probabilities/400951750316?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:10:54Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/drives/4009517502?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '1st & Goal at CHI 1',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'CHI 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/plays/4009517501126?lang=en&region=us',
+  id: '4009517501126',
+  sequenceNumber: '112600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Latavius Murray 1 Yard Rush (Kick formation) K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortText: 'Latavius Murray 1 Yd Run (Kai Forbath Kick)',
+  alternativeText: 'Latavius Murray 1 Yard Rush (Kick formation) K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortAlternativeText: 'Latavius Murray 1 Yd Run (Kai Forbath Kick)',
+  awayScore: 0,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 570, displayValue: '9:30' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/probabilities/4009517501126?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:46:31Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/drives/4009517506?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '1st & Goal at CHI 1',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'CHI 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/plays/4009517501395?lang=en&region=us',
+  id: '4009517501395',
+  sequenceNumber: '139500',
+  type: { id: '34', text: 'Punt Return Touchdown', abbreviation: 'TD' },
+  text: "Bryce Callahan 59 Yrd Punt Return (Kick formation) M.Nugent extra point is GOOD, Center-A.DePaola, Holder-P.O'Donnell.",
+  shortText: 'Bryce Callahan 59 Yd Punt Return (Mike Nugent Kick)',
+  alternativeText: "Bryce Callahan 59 Yrd Punt Return (Kick formation) M.Nugent extra point is GOOD, Center-A.DePaola, Holder-P.O'Donnell.",
+  shortAlternativeText: 'Bryce Callahan 59 Yd Punt Return (Mike Nugent Kick)',
+  awayScore: 7,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 350, displayValue: '5:50' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2025-05-21T04:41Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/3?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'punter'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/probabilities/4009517501395?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:59:45Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/drives/4009517508?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 9,
+    yardLine: 16,
+    yardsToEndzone: 59,
+    downDistanceText: '4th & 9 at MIN 16',
+    shortDownDistanceText: '4th & 9',
+    possessionText: 'MIN 16',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/3?lang=en&region=us'
+    }
+  },
+  statYardage: 59,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/plays/4009517502905?lang=en&region=us',
+  id: '4009517502905',
+  sequenceNumber: '290500',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Stefon Diggs Pass From Case Keenum for 15 Yrds K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortText: 'Stefon Diggs 15 Yd pass from Case Keenum (Kai Forbath Kick)',
+  alternativeText: 'Stefon Diggs Pass From Case Keenum for 15 Yrds K.Forbath extra point is GOOD, Center-J.Overbaugh, Holder-R.Quigley.',
+  shortAlternativeText: 'Stefon Diggs 15 Yd pass from Case Keenum (Kai Forbath Kick)',
+  awayScore: 7,
+  homeScore: 23,
+  period: { number: 3 },
+  clock: { value: 14, displayValue: '0:14' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/probabilities/4009517502905?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T20:14:58Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951750/competitions/400951750/drives/40095175018?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 9,
+    yardLine: 85,
+    yardsToEndzone: 15,
+    downDistanceText: '2nd & 9 at CHI 15',
+    shortDownDistanceText: '2nd & 9',
+    possessionText: 'CHI 15',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/16?lang=en&region=us'
+    }
+  },
+  statYardage: 15,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/plays/400951756326?lang=en&region=us',
+  id: '400951756326',
+  sequenceNumber: '32600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Dion Lewis 3 Yard Rush S.Gostkowski extra point is GOOD, Center-J.Cardona, Holder-R.Allen.',
+  shortText: 'Dion Lewis 3 Yd Run (Stephen Gostkowski Kick)',
+  alternativeText: 'Dion Lewis 3 Yard Rush S.Gostkowski extra point is GOOD, Center-J.Cardona, Holder-R.Allen.',
+  shortAlternativeText: 'Dion Lewis 3 Yd Run (Stephen Gostkowski Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 570, displayValue: '9:30' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/probabilities/400951756326?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:10:15Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/drives/4009517561?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 3,
+    yardLine: 97,
+    yardsToEndzone: 3,
+    downDistanceText: '1st & Goal at NYJ 3',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'NYJ 3',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  statYardage: 3,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/plays/4009517561673?lang=en&region=us',
+  id: '4009517561673',
+  sequenceNumber: '168050',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Brandin Cooks 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  shortText: 'Brandin Cooks 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  alternativeText: 'Brandin Cooks 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  shortAlternativeText: 'Brandin Cooks 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  awayScore: 3,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 254, displayValue: '4:14' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/probabilities/4009517561673?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:11:07Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/drives/4009517569?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 5,
+    yardLine: 95,
+    yardsToEndzone: 5,
+    downDistanceText: '2nd & Goal at NYJ 5',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'NYJ 5',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  statYardage: 5,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/plays/4009517562109?lang=en&region=us',
+  id: '4009517562109',
+  sequenceNumber: '210900',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Dion Lewis Pass From Tom Brady for 5 Yrds S.Gostkowski extra point is GOOD, Center-J.Cardona, Holder-R.Allen.',
+  shortText: 'Dion Lewis 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  alternativeText: 'Dion Lewis Pass From Tom Brady for 5 Yrds S.Gostkowski extra point is GOOD, Center-J.Cardona, Holder-R.Allen.',
+  shortAlternativeText: 'Dion Lewis 5 Yd pass from Tom Brady (Stephen Gostkowski Kick)',
+  awayScore: 3,
+  homeScore: 21,
+  period: { number: 2 },
+  clock: { value: 20, displayValue: '0:20' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/probabilities/4009517562109?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:26:21Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951756/competitions/400951756/drives/40095175611?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 5,
+    yardLine: 95,
+    yardsToEndzone: 5,
+    downDistanceText: '1st & Goal at NYJ 5',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'NYJ 5',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/17?lang=en&region=us'
+    }
+  },
+  statYardage: 5,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/plays/40095175773?lang=en&region=us',
+  id: '40095175773',
+  sequenceNumber: '7300',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Orleans Darkwa 75 Yd Run (Aldrick Rosas PAT blocked)',
+  shortText: 'Orleans Darkwa 75 Yd Run (Aldrick Rosas PAT blocked)',
+  alternativeText: 'Orleans Darkwa 75 Yd Run (Aldrick Rosas PAT blocked)',
+  shortAlternativeText: 'Orleans Darkwa 75 Yd Run (Aldrick Rosas PAT blocked)',
+  awayScore: 0,
+  homeScore: 6,
+  period: { number: 1 },
+  clock: { value: 883, displayValue: '14:43' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-04T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/probabilities/40095175773?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:04:33Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/drives/4009517571?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 10,
+    yardLine: 25,
+    yardsToEndzone: 75,
+    downDistanceText: '2nd & 10 at NYG 25',
+    shortDownDistanceText: '2nd & 10',
+    possessionText: 'NYG 25',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+    }
+  },
+  statYardage: 75,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/plays/400951757228?lang=en&region=us',
+  id: '400951757228',
+  sequenceNumber: '22800',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Hunter Sharp Pass From Eli Manning for 16 Yrds TWO-POINT CONVERSION ATTEMPT. E.Manning pass to T.Rudolph is incomplete. ATTEMPT FAILS.',
+  shortText: 'Hunter Sharp 16 Yd pass from Eli Manning (Two-Point Pass Conversion Failed)',
+  alternativeText: 'Hunter Sharp Pass From Eli Manning for 16 Yrds TWO-POINT CONVERSION ATTEMPT. E.Manning pass to T.Rudolph is incomplete. ATTEMPT FAILS.',
+  shortAlternativeText: 'Hunter Sharp 16 Yd pass from Eli Manning (Two-Point Pass Conversion Failed)',
+  awayScore: 0,
+  homeScore: 12,
+  period: { number: 1 },
+  clock: { value: 762, displayValue: '12:42' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-04T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patPasser'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/probabilities/400951757228?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:14:43Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/drives/4009517573?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 7,
+    yardLine: 84,
+    yardsToEndzone: 16,
+    downDistanceText: '2nd & 7 at WSH 16',
+    shortDownDistanceText: '2nd & 7',
+    possessionText: 'WSH 16',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/19?lang=en&region=us'
+    }
+  },
+  statYardage: 16,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/plays/400951757545?lang=en&region=us',
+  id: '400951757545',
+  sequenceNumber: '54500',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Kirk Cousins 12 Yard Rush D.Hopkins extra point is GOOD, Center-N.Sundberg, Holder-T.Way.',
+  shortText: 'Kirk Cousins 12 Yd Run (Dustin Hopkins Kick)',
+  alternativeText: 'Kirk Cousins 12 Yard Rush D.Hopkins extra point is GOOD, Center-N.Sundberg, Holder-T.Way.',
+  shortAlternativeText: 'Kirk Cousins 12 Yd Run (Dustin Hopkins Kick)',
+  awayScore: 7,
+  homeScore: 12,
+  period: { number: 1 },
+  clock: { value: 475, displayValue: '7:55' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-04T22:28Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/28?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/probabilities/400951757545?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:28:35Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951757/competitions/400951757/drives/4009517576?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 2,
+    yardLine: 12,
+    yardsToEndzone: 12,
+    downDistanceText: '2nd & 2 at NYG 12',
+    shortDownDistanceText: '2nd & 2',
+    possessionText: 'NYG 12',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/28?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/28?lang=en&region=us'
+    }
+  },
+  statYardage: 12,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951759/competitions/400951759/plays/4009517593023?lang=en&region=us',
+  id: '4009517593023',
+  sequenceNumber: '302300',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Brice Butler 20 Yd pass from Dak Prescott (Dan Bailey PAT failed)',
+  shortText: 'Brice Butler 20 Yd pass from Dak Prescott (Dan Bailey PAT failed)',
+  alternativeText: 'Brice Butler 20 Yd pass from Dak Prescott (Dan Bailey PAT failed)',
+  shortAlternativeText: 'Brice Butler 20 Yd pass from Dak Prescott (Dan Bailey PAT failed)',
+  awayScore: 6,
+  homeScore: 0,
+  period: { number: 4 },
+  clock: { value: 739, displayValue: '12:19' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2017-12-31T21:06Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/6?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951759/competitions/400951759/probabilities/4009517593023?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T20:14:59Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951759/competitions/400951759/drives/40095175918?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 7,
+    yardLine: 20,
+    yardsToEndzone: 20,
+    downDistanceText: '3rd & 7 at PHI 20',
+    shortDownDistanceText: '3rd & 7',
+    possessionText: 'PHI 20',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/6?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/6?lang=en&region=us'
+    }
+  },
+  statYardage: 20,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/400951762219?lang=en&region=us',
+  id: '400951762219',
+  sequenceNumber: '21900',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: '(10:52) (Shotgun) D.Heyward-Bey right end for 29 yards, TOUCHDOWN. Reverse. 33-Toussaint received the first hand-off.C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortText: 'Darrius Heyward-Bey 29 Yd Run (Chris Boswell Kick)',
+  alternativeText: '(10:52) (Shotgun) D.Heyward-Bey right end for 29 yards, TOUCHDOWN. Reverse. 33-Toussaint received the first hand-off.C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortAlternativeText: 'Darrius Heyward-Bey 29 Yd Run (Chris Boswell Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 643, displayValue: '10:43' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/400951762219?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:07:55Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/4009517621?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 8,
+    yardLine: 71,
+    yardsToEndzone: 29,
+    downDistanceText: '2nd & 8 at CLE 29',
+    shortDownDistanceText: '2nd & 8',
+    possessionText: 'CLE 29',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  statYardage: 29,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517621001?lang=en&region=us',
+  id: '4009517621001',
+  sequenceNumber: '100100',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'JuJu Smith-Schuster Pass From Landry Jones for 20 Yrds C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortText: 'JuJu Smith-Schuster 20 Yd pass from Landry Jones (Chris Boswell Kick)',
+  alternativeText: 'JuJu Smith-Schuster Pass From Landry Jones for 20 Yrds C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortAlternativeText: 'JuJu Smith-Schuster 20 Yd pass from Landry Jones (Chris Boswell Kick)',
+  awayScore: 0,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 806, displayValue: '13:26' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517621001?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:44:44Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/4009517627?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 2,
+    yardLine: 80,
+    yardsToEndzone: 20,
+    downDistanceText: '3rd & 2 at CLE 20',
+    shortDownDistanceText: '3rd & 2',
+    possessionText: 'CLE 20',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  statYardage: 20,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517621188?lang=en&region=us',
+  id: '4009517621188',
+  sequenceNumber: '118800',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Duke Johnson Jr. 2 Yard Rush Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortText: 'Duke Johnson Jr. 2 Yd Run (Zane Gonzalez Kick)',
+  alternativeText: 'Duke Johnson Jr. 2 Yard Rush Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortAlternativeText: 'Duke Johnson Jr. 2 Yd Run (Zane Gonzalez Kick)',
+  awayScore: 7,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 706, displayValue: '11:46' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517621188?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T18:52:58Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/4009517628?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 2,
+    yardLine: 2,
+    yardsToEndzone: 2,
+    downDistanceText: '2nd & Goal at PIT 2',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'PIT 2',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  statYardage: 2,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517621446?lang=en&region=us',
+  id: '4009517621446',
+  sequenceNumber: '144600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Stevan Ridley 4 Yard Rush C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortText: 'Stevan Ridley 4 Yd Run (Chris Boswell Kick)',
+  alternativeText: 'Stevan Ridley 4 Yard Rush C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortAlternativeText: 'Stevan Ridley 4 Yd Run (Chris Boswell Kick)',
+  awayScore: 7,
+  homeScore: 21,
+  period: { number: 2 },
+  clock: { value: 479, displayValue: '7:59' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517621446?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:05:09Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/4009517629?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 4,
+    yardLine: 96,
+    yardsToEndzone: 4,
+    downDistanceText: '1st & Goal at CLE 4',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'CLE 4',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  statYardage: 4,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517621520?lang=en&region=us',
+  id: '4009517621520',
+  sequenceNumber: '152000',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Rashard Higgins Pass From DeShone Kizer for 56 Yrds Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortText: 'Rashard Higgins 56 Yd pass from DeShone Kizer (Zane Gonzalez Kick)',
+  alternativeText: 'Rashard Higgins Pass From DeShone Kizer for 56 Yrds Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortAlternativeText: 'Rashard Higgins 56 Yd pass from DeShone Kizer (Zane Gonzalez Kick)',
+  awayScore: 14,
+  homeScore: 21,
+  period: { number: 2 },
+  clock: { value: 433, displayValue: '7:13' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517621520?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:10:28Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/40095176210?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 6,
+    yardLine: 56,
+    yardsToEndzone: 56,
+    downDistanceText: '2nd & 6 at CLE 44',
+    shortDownDistanceText: '2nd & 6',
+    possessionText: 'CLE 44',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  statYardage: 56,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517622333?lang=en&region=us',
+  id: '4009517622333',
+  sequenceNumber: '233300',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Rashard Higgins Pass From DeShone Kizer for 5 Yrds Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortText: 'Rashard Higgins 5 Yd pass from DeShone Kizer (Zane Gonzalez Kick)',
+  alternativeText: 'Rashard Higgins Pass From DeShone Kizer for 5 Yrds Z.Gonzalez extra point is GOOD, Center-C.Hughlett, Holder-B.Colquitt.',
+  shortAlternativeText: 'Rashard Higgins 5 Yd pass from DeShone Kizer (Zane Gonzalez Kick)',
+  awayScore: 21,
+  homeScore: 21,
+  period: { number: 3 },
+  clock: { value: 654, displayValue: '10:54' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517622333?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:55:00Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/40095176216?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 5,
+    yardLine: 5,
+    yardsToEndzone: 5,
+    downDistanceText: '3rd & Goal at PIT 5',
+    shortDownDistanceText: '3rd & Goal',
+    possessionText: 'PIT 5',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  statYardage: 5,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/plays/4009517622369?lang=en&region=us',
+  id: '4009517622369',
+  sequenceNumber: '236900',
+  type: { id: '32', text: 'Kickoff Return Touchdown', abbreviation: 'TD' },
+  text: 'JuJu Smith-Schuster 96 Yrd KO Return C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortText: 'JuJu Smith-Schuster 96 Yd Kickoff Return (Chris Boswell Kick)',
+  alternativeText: 'JuJu Smith-Schuster 96 Yrd KO Return C.Boswell extra point is GOOD, Center-K.Canaday, Holder-J.Berry.',
+  shortAlternativeText: 'JuJu Smith-Schuster 96 Yd Kickoff Return (Chris Boswell Kick)',
+  awayScore: 21,
+  homeScore: 28,
+  period: { number: 3 },
+  clock: { value: 642, displayValue: '10:42' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/probabilities/4009517622369?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T19:58:37Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951762/competitions/400951762/drives/40095176217?lang=en&region=us'
+  },
+  start: {
+    down: 0,
+    distance: 0,
+    yardLine: 4,
+    yardsToEndzone: 65,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/5?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/23?lang=en&region=us'
+    }
+  },
+  statYardage: 96,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/plays/400951734267?lang=en&region=us',
+  id: '400951734267',
+  sequenceNumber: '26700',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Devonta Freeman Pass From Matt Ryan for 19 Yrds M.Bryant extra point is GOOD, Center-J.Harris, Holder-M.Bosher.',
+  shortText: 'Devonta Freeman 19 Yd pass from Matt Ryan (Matt Bryant Kick)',
+  alternativeText: 'Devonta Freeman Pass From Matt Ryan for 19 Yrds M.Bryant extra point is GOOD, Center-J.Harris, Holder-M.Bosher.',
+  shortAlternativeText: 'Devonta Freeman 19 Yd pass from Matt Ryan (Matt Bryant Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 632, displayValue: '10:32' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/1?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/probabilities/400951734267?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:32:38Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/drives/4009517341?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 81,
+    yardsToEndzone: 19,
+    downDistanceText: '1st & 10 at CAR 19',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'CAR 19',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/1?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/1?lang=en&region=us'
+    }
+  },
+  statYardage: 19,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/plays/4009517341858?lang=en&region=us',
+  id: '4009517341858',
+  sequenceNumber: '185800',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Devin Funchess Pass From Cam Newton for 4 Yrds G.Gano extra point is GOOD, Center-J.Jansen, Holder-M.Palardy.',
+  shortText: 'Devin Funchess 4 Yd pass from Cam Newton (Graham Gano Kick)',
+  alternativeText: 'Devin Funchess Pass From Cam Newton for 4 Yrds G.Gano extra point is GOOD, Center-J.Jansen, Holder-M.Palardy.',
+  shortAlternativeText: 'Devin Funchess 4 Yd pass from Cam Newton (Graham Gano Kick)',
+  awayScore: 7,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 50, displayValue: '0:50' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:26Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/29?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/probabilities/4009517341858?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:44:37Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951734/competitions/400951734/drives/40095173410?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 4,
+    yardLine: 4,
+    yardsToEndzone: 4,
+    downDistanceText: '1st & Goal at ATL 4',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'ATL 4',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/29?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/29?lang=en&region=us'
+    }
+  },
+  statYardage: 4,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/400951789161?lang=en&region=us',
+  id: '400951789161',
+  sequenceNumber: '16100',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Kareem Hunt 35 Yard Rush H.Butker extra point is GOOD, Center-J.Winchester, Holder-D.Colquitt.',
+  shortText: 'Kareem Hunt 35 Yd Run (Harrison Butker Kick)',
+  alternativeText: 'Kareem Hunt 35 Yard Rush H.Butker extra point is GOOD, Center-J.Winchester, Holder-D.Colquitt.',
+  shortAlternativeText: 'Kareem Hunt 35 Yd Run (Harrison Butker Kick)',
+  awayScore: 7,
+  homeScore: 0,
+  period: { number: 1 },
+  clock: { value: 843, displayValue: '14:03' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/400951789161?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:28:52Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/4009517891?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 10,
+    yardLine: 35,
+    yardsToEndzone: 35,
+    downDistanceText: '2nd & 10 at DEN 35',
+    shortDownDistanceText: '2nd & 10',
+    possessionText: 'DEN 35',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  statYardage: 35,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/4009517891382?lang=en&region=us',
+  id: '4009517891382',
+  sequenceNumber: '138200',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: "De'Angelo Henderson Pass From Paxton Lynch for 29 Yrds B.McManus extra point is GOOD, Center-C.Kreiter, Holder-R.Dixon. PENALTY on KC-J.Hamilton, Leverage, 15 yards, enforced between downs.",
+  shortText: "De'Angelo Henderson 29 Yd pass from Paxton Lynch (Brandon McManus Kick)",
+  alternativeText: "De'Angelo Henderson Pass From Paxton Lynch for 29 Yrds B.McManus extra point is GOOD, Center-C.Kreiter, Holder-R.Dixon. PENALTY on KC-J.Hamilton, Leverage, 15 yards, enforced between downs.",
+  shortAlternativeText: "De'Angelo Henderson 29 Yd pass from Paxton Lynch (Brandon McManus Kick)",
+  awayScore: 7,
+  homeScore: 10,
+  period: { number: 2 },
+  clock: { value: 296, displayValue: '4:56' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/4009517891382?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:22:26Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/4009517898?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 10,
+    yardLine: 71,
+    yardsToEndzone: 29,
+    downDistanceText: '2nd & 10 at KC 29',
+    shortDownDistanceText: '2nd & 10',
+    possessionText: 'KC 29',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  statYardage: 29,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/4009517891665?lang=en&region=us',
+  id: '4009517891665',
+  sequenceNumber: '166500',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Anthony Sherman 1 Yard Rush H.Butker extra point is GOOD, Center-J.Winchester, Holder-D.Colquitt.',
+  shortText: 'Anthony Sherman 1 Yd Run (Harrison Butker Kick)',
+  alternativeText: 'Anthony Sherman 1 Yard Rush H.Butker extra point is GOOD, Center-J.Winchester, Holder-D.Colquitt.',
+  shortAlternativeText: 'Anthony Sherman 1 Yd Run (Harrison Butker Kick)',
+  awayScore: 14,
+  homeScore: 10,
+  period: { number: 2 },
+  clock: { value: 67, displayValue: '1:07' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/4009517891665?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:39:16Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/4009517899?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 1,
+    yardLine: 1,
+    yardsToEndzone: 1,
+    downDistanceText: '2nd & Goal at DEN 1',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'DEN 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/4009517892665?lang=en&region=us',
+  id: '4009517892665',
+  sequenceNumber: '267750',
+  type: { id: '39', text: 'Fumble Return Touchdown', abbreviation: 'TD' },
+  text: 'Ramik Wilson 11 Yd Fumble Return (Harrison Butker Kick)',
+  shortText: 'Ramik Wilson 11 Yd Fumble Return (Harrison Butker Kick)',
+  alternativeText: 'Ramik Wilson 11 Yd Fumble Return (Harrison Butker Kick)',
+  shortAlternativeText: 'Ramik Wilson 11 Yd Fumble Return (Harrison Butker Kick)',
+  awayScore: 24,
+  homeScore: 10,
+  period: { number: 3 },
+  clock: { value: 184, displayValue: '3:04' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'forcedBy'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'recoverer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'sackedBy'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'fumbler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 6,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 7,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/4009517892665?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:31:15Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/40095178914?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 6,
+    yardLine: 29,
+    yardsToEndzone: 71,
+    downDistanceText: '2nd & 6 at DEN 29',
+    shortDownDistanceText: '2nd & 6',
+    possessionText: 'DEN 29',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 5,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  statYardage: 11,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/4009517893384?lang=en&region=us',
+  id: '4009517893384',
+  sequenceNumber: '338600',
+  type: { id: '39', text: 'Fumble Return Touchdown', abbreviation: 'TD' },
+  text: 'Zaire Anderson 38 Yd Fumble Return (Brandon McManus Kick)',
+  shortText: 'Zaire Anderson 38 Yd Fumble Return (Brandon McManus Kick)',
+  alternativeText: 'Zaire Anderson 38 Yd Fumble Return (Brandon McManus Kick)',
+  shortAlternativeText: 'Zaire Anderson 38 Yd Fumble Return (Brandon McManus Kick)',
+  awayScore: 24,
+  homeScore: 17,
+  period: { number: 4 },
+  clock: { value: 412, displayValue: '6:52' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'recoverer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'fumbler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/4009517893384?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:05:08Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/40095178918?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 58,
+    yardsToEndzone: 58,
+    downDistanceText: '1st & 10 at KC 42',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'KC 42',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/12?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  statYardage: 38,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/plays/4009517893735?lang=en&region=us',
+  id: '4009517893735',
+  sequenceNumber: '373500',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Demaryius Thomas Pass From Paxton Lynch for 6 Yrds B.McManus extra point is GOOD, Center-C.Kreiter, Holder-R.Dixon.',
+  shortText: 'Demaryius Thomas 6 Yd pass from Paxton Lynch (Brandon McManus Kick)',
+  alternativeText: 'Demaryius Thomas Pass From Paxton Lynch for 6 Yrds B.McManus extra point is GOOD, Center-C.Kreiter, Holder-R.Dixon.',
+  shortAlternativeText: 'Demaryius Thomas 6 Yd pass from Paxton Lynch (Brandon McManus Kick)',
+  awayScore: 24,
+  homeScore: 24,
+  period: { number: 4 },
+  clock: { value: 173, displayValue: '2:53' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:21Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/probabilities/4009517893735?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:16:28Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951789/competitions/400951789/drives/40095178920?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 4,
+    yardLine: 94,
+    yardsToEndzone: 6,
+    downDistanceText: '4th & 4 at KC 6',
+    shortDownDistanceText: '4th & 4',
+    possessionText: 'KC 6',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/7?lang=en&region=us'
+    }
+  },
+  statYardage: 6,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/plays/400951788931?lang=en&region=us',
+  id: '400951788931',
+  sequenceNumber: '93100',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Derrick Henry 66 Yd pass from Marcus Mariota (Ryan Succop PAT blocked)',
+  shortText: 'Derrick Henry 66 Yd pass from Marcus Mariota (Ryan Succop PAT blocked)',
+  alternativeText: 'Derrick Henry 66 Yd pass from Marcus Mariota (Ryan Succop PAT blocked)',
+  shortAlternativeText: 'Derrick Henry 66 Yd pass from Marcus Mariota (Ryan Succop PAT blocked)',
+  awayScore: 0,
+  homeScore: 6,
+  period: { number: 2 },
+  clock: { value: 844, displayValue: '14:04' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:23Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/10?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/probabilities/400951788931?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:03:09Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/drives/4009517886?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 14,
+    yardLine: 34,
+    yardsToEndzone: 66,
+    downDistanceText: '2nd & 14 at TEN 34',
+    shortDownDistanceText: '2nd & 14',
+    possessionText: 'TEN 34',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/10?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/10?lang=en&region=us'
+    }
+  },
+  statYardage: 66,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/plays/4009517883220?lang=en&region=us',
+  id: '4009517883220',
+  sequenceNumber: '323500',
+  type: { id: '39', text: 'Fumble Return Touchdown', abbreviation: 'TD' },
+  text: 'Yannick Ngakoue 67 Yd Fumble Return (Josh Lambo Kick)',
+  shortText: 'Yannick Ngakoue 67 Yd Fumble Return (Josh Lambo Kick)',
+  alternativeText: 'Yannick Ngakoue 67 Yd Fumble Return (Josh Lambo Kick)',
+  shortAlternativeText: 'Yannick Ngakoue 67 Yd Fumble Return (Josh Lambo Kick)',
+  awayScore: 10,
+  homeScore: 15,
+  period: { number: 4 },
+  clock: { value: 648, displayValue: '10:48' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:23Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/30?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'recoverer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'fumbler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/probabilities/4009517883220?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:54:20Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951788/competitions/400951788/drives/40095178820?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 6,
+    yardLine: 74,
+    yardsToEndzone: 26,
+    downDistanceText: '2nd & 6 at JAX 26',
+    shortDownDistanceText: '2nd & 6',
+    possessionText: 'JAX 26',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/10?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/30?lang=en&region=us'
+    }
+  },
+  statYardage: 67,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/plays/400951792520?lang=en&region=us',
+  id: '400951792520',
+  sequenceNumber: '52000',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Marquise Goodwin Pass From Jimmy Garoppolo for 8 Yrds R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortText: 'Marquise Goodwin 8 Yd pass from Jimmy Garoppolo (Robbie Gould Kick)',
+  alternativeText: 'Marquise Goodwin Pass From Jimmy Garoppolo for 8 Yrds R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortAlternativeText: 'Marquise Goodwin 8 Yd pass from Jimmy Garoppolo (Robbie Gould Kick)',
+  awayScore: 10,
+  homeScore: 0,
+  period: { number: 1 },
+  clock: { value: 314, displayValue: '5:14' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T00:50Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/probabilities/400951792520?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:44:19Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/drives/4009517923?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 3,
+    yardLine: 8,
+    yardsToEndzone: 8,
+    downDistanceText: '2nd & 3 at LAR 8',
+    shortDownDistanceText: '2nd & 3',
+    possessionText: 'LAR 8',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  statYardage: 8,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/plays/4009517921799?lang=en&region=us',
+  id: '4009517921799',
+  sequenceNumber: '179900',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Carlos Hyde 8 Yard Rush R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortText: 'Carlos Hyde 8 Yd Run (Robbie Gould Kick)',
+  alternativeText: 'Carlos Hyde 8 Yard Rush R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortAlternativeText: 'Carlos Hyde 8 Yd Run (Robbie Gould Kick)',
+  awayScore: 20,
+  homeScore: 3,
+  period: { number: 2 },
+  clock: { value: 73, displayValue: '1:13' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T00:50Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/probabilities/4009517921799?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:44:35Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/drives/40095179211?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 8,
+    yardLine: 8,
+    yardsToEndzone: 8,
+    downDistanceText: '1st & Goal at LAR 8',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'LAR 8',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  statYardage: 8,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/plays/4009517922748?lang=en&region=us',
+  id: '4009517922748',
+  sequenceNumber: '274800',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Carlos Hyde 5 Yard Rush R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortText: 'Carlos Hyde 5 Yd Run (Robbie Gould Kick)',
+  alternativeText: 'Carlos Hyde 5 Yard Rush R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortAlternativeText: 'Carlos Hyde 5 Yd Run (Robbie Gould Kick)',
+  awayScore: 27,
+  homeScore: 6,
+  period: { number: 3 },
+  clock: { value: 372, displayValue: '6:12' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T00:50Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/probabilities/4009517922748?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:33:08Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/drives/40095179218?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 5,
+    yardLine: 5,
+    yardsToEndzone: 5,
+    downDistanceText: '1st & Goal at LAR 5',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'LAR 5',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  statYardage: 5,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/plays/4009517923150?lang=en&region=us',
+  id: '4009517923150',
+  sequenceNumber: '315000',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Aldrick Robinson Pass From Jimmy Garoppolo for 12 Yrds R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortText: 'Aldrick Robinson 12 Yd pass from Jimmy Garoppolo (Robbie Gould Kick)',
+  alternativeText: 'Aldrick Robinson Pass From Jimmy Garoppolo for 12 Yrds R.Gould extra point is GOOD, Center-K.Nelson, Holder-B.Pinion.',
+  shortAlternativeText: 'Aldrick Robinson 12 Yd pass from Jimmy Garoppolo (Robbie Gould Kick)',
+  awayScore: 34,
+  homeScore: 6,
+  period: { number: 4 },
+  clock: { value: 894, displayValue: '14:54' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T00:50Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/probabilities/4009517923150?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:49:36Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/drives/40095179220?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 8,
+    yardLine: 12,
+    yardsToEndzone: 12,
+    downDistanceText: '3rd & 8 at LAR 12',
+    shortDownDistanceText: '3rd & 8',
+    possessionText: 'LAR 12',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/25?lang=en&region=us'
+    }
+  },
+  statYardage: 12,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/plays/4009517923589?lang=en&region=us',
+  id: '4009517923589',
+  sequenceNumber: '358900',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Lance Dunbar 8 Yard Rush S.Ficken extra point is GOOD, Center-J.McQuaide, Holder-J.Hekker.',
+  shortText: 'Lance Dunbar 8 Yd Run (Sam Ficken Kick)',
+  alternativeText: 'Lance Dunbar 8 Yard Rush S.Ficken extra point is GOOD, Center-J.McQuaide, Holder-J.Hekker.',
+  shortAlternativeText: 'Lance Dunbar 8 Yd Run (Sam Ficken Kick)',
+  awayScore: 34,
+  homeScore: 13,
+  period: { number: 4 },
+  clock: { value: 400, displayValue: '6:40' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T00:50Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/14?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/probabilities/4009517923589?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:06:38Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951792/competitions/400951792/drives/40095179221?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 8,
+    yardLine: 92,
+    yardsToEndzone: 8,
+    downDistanceText: '1st & Goal at SF 8',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'SF 8',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/14?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/14?lang=en&region=us'
+    }
+  },
+  statYardage: 8,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/plays/400951748305?lang=en&region=us',
+  id: '400951748305',
+  sequenceNumber: '30500',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: "Nick O'Leary Pass From Tyrod Taylor for 26 Yrds S.Hauschka extra point is GOOD, Center-R.Ferguson, Holder-C.Schmidt.",
+  shortText: "Nick O'Leary 26 Yd pass from Tyrod Taylor (Stephen Hauschka Kick)",
+  alternativeText: "Nick O'Leary Pass From Tyrod Taylor for 26 Yrds S.Hauschka extra point is GOOD, Center-R.Ferguson, Holder-C.Schmidt.",
+  shortAlternativeText: "Nick O'Leary 26 Yd pass from Tyrod Taylor (Stephen Hauschka Kick)",
+  awayScore: 7,
+  homeScore: 0,
+  period: { number: 1 },
+  clock: { value: 614, displayValue: '10:14' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/probabilities/400951748305?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:33:07Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/drives/4009517482?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 26,
+    yardsToEndzone: 26,
+    downDistanceText: '1st & 10 at MIA 26',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'MIA 26',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+    }
+  },
+  statYardage: 26,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/plays/4009517482677?lang=en&region=us',
+  id: '4009517482677',
+  sequenceNumber: '267700',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Kyle Williams 1 Yd Run (Two-Point Run Conversion Failed)',
+  shortText: 'Kyle Williams 1 Yd Run (Two-Point Run Conversion Failed)',
+  alternativeText: 'Kyle Williams 1 Yd Run (Two-Point Run Conversion Failed)',
+  shortAlternativeText: 'Kyle Williams 1 Yd Run (Two-Point Run Conversion Failed)',
+  awayScore: 19,
+  homeScore: 0,
+  period: { number: 3 },
+  clock: { value: 428, displayValue: '7:08' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/probabilities/4009517482677?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:25:36Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/drives/40095174814?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 1,
+    yardLine: 1,
+    yardsToEndzone: 1,
+    downDistanceText: '1st & Goal at MIA 1',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'MIA 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/2?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/plays/4009517483590?lang=en&region=us',
+  id: '4009517483590',
+  sequenceNumber: '359350',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Jarvis Landry 1 Yd pass from David Fales (Two-Point Pass Conversion Failed)',
+  shortText: 'Jarvis Landry 1 Yd pass from David Fales (Two-Point Pass Conversion Failed)',
+  alternativeText: 'Jarvis Landry 1 Yd pass from David Fales (Two-Point Pass Conversion Failed)',
+  shortAlternativeText: 'Jarvis Landry 1 Yd pass from David Fales (Two-Point Pass Conversion Failed)',
+  awayScore: 22,
+  homeScore: 9,
+  period: { number: 4 },
+  clock: { value: 376, displayValue: '6:16' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      order: 3,
+      type: 'assistedBy'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'penalized'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 6,
+      type: 'patPasser'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 7,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/probabilities/4009517483590?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:04:28Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/drives/40095174817?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '1st & Goal at BUF 1',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'BUF 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 30,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/plays/4009517484138?lang=en&region=us',
+  id: '4009517484138',
+  sequenceNumber: '413800',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'David Fales 1 Yard Rush C.Parkey extra point is GOOD, Center-J.Denney, Holder-M.Haack.',
+  shortText: 'David Fales 1 Yd Run (Cody Parkey Kick)',
+  alternativeText: 'David Fales 1 Yard Rush C.Parkey extra point is GOOD, Center-J.Denney, Holder-M.Haack.',
+  shortAlternativeText: 'David Fales 1 Yd Run (Cody Parkey Kick)',
+  awayScore: 22,
+  homeScore: 16,
+  period: { number: 4 },
+  clock: { value: 116, displayValue: '1:56' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/probabilities/4009517484138?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:32:52Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951748/competitions/400951748/drives/40095174819?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '2nd & Goal at BUF 1',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'BUF 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/15?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/plays/400951791847?lang=en&region=us',
+  id: '400951791847',
+  sequenceNumber: '85250',
+  type: { id: '39', text: 'Fumble Return Touchdown', abbreviation: 'TD' },
+  text: 'Keenan Allen 27 Yd Fumble Recovery (Nick Rose Kick)',
+  shortText: 'Keenan Allen 27 Yd Fumble Recovery (Nick Rose Kick)',
+  alternativeText: 'Keenan Allen 27 Yd Fumble Recovery (Nick Rose Kick)',
+  shortAlternativeText: 'Keenan Allen 27 Yd Fumble Recovery (Nick Rose Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 789, displayValue: '13:09' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2025-05-21T04:41Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'forcedBy'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'recoverer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'tackler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'fumbler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 6,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 7,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/probabilities/400951791847?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:59:29Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/drives/4009517914?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 60,
+    yardsToEndzone: 40,
+    downDistanceText: '1st & 10 at LV 40',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'LV 40',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  statYardage: 27,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/plays/400951791982?lang=en&region=us',
+  id: '400951791982',
+  sequenceNumber: '98200',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Amari Cooper Pass From Derek Carr for 87 Yrds G.Tavecchio extra point is GOOD, Center-J.Condo, Holder-M.King.',
+  shortText: 'Amari Cooper 87 Yd pass from Derek Carr (Giorgio Tavecchio Kick)',
+  alternativeText: 'Amari Cooper Pass From Derek Carr for 87 Yrds G.Tavecchio extra point is GOOD, Center-J.Condo, Holder-M.King.',
+  shortAlternativeText: 'Amari Cooper 87 Yd pass from Derek Carr (Giorgio Tavecchio Kick)',
+  awayScore: 7,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 698, displayValue: '11:38' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/13?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/probabilities/400951791982?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:06:49Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/drives/4009517915?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 22,
+    yardLine: 87,
+    yardsToEndzone: 87,
+    downDistanceText: '3rd & 22 at LV 13',
+    shortDownDistanceText: '3rd & 22',
+    possessionText: 'LV 13',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/13?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/13?lang=en&region=us'
+    }
+  },
+  statYardage: 87,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/plays/4009517911490?lang=en&region=us',
+  id: '4009517911490',
+  sequenceNumber: '149950',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Tyrell Williams 56 Yd pass from Philip Rivers (Nick Rose Kick)',
+  shortText: 'Tyrell Williams 56 Yd pass from Philip Rivers (Nick Rose Kick)',
+  alternativeText: 'Tyrell Williams 56 Yd pass from Philip Rivers (Nick Rose Kick)',
+  shortAlternativeText: 'Tyrell Williams 56 Yd pass from Philip Rivers (Nick Rose Kick)',
+  awayScore: 10,
+  homeScore: 14,
+  period: { number: 2 },
+  clock: { value: 312, displayValue: '5:12' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/probabilities/4009517911490?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:32:03Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/drives/4009517918?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 44,
+    yardsToEndzone: 56,
+    downDistanceText: '1st & 10 at LAC 44',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'LAC 44',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  statYardage: 56,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/plays/4009517911976?lang=en&region=us',
+  id: '4009517911976',
+  sequenceNumber: '197600',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Keenan Allen Pass From Philip Rivers for 6 Yrds N.Rose extra point is Blocked (D.Autry), Center-M.Windt, Holder-K.Clemens.',
+  shortText: 'Keenan Allen 6 Yd pass from Philip Rivers  ',
+  alternativeText: 'Keenan Allen Pass From Philip Rivers for 6 Yrds N.Rose extra point is Blocked (D.Autry), Center-M.Windt, Holder-K.Clemens.',
+  shortAlternativeText: 'Keenan Allen 6 Yd pass from Philip Rivers  ',
+  awayScore: 10,
+  homeScore: 20,
+  period: { number: 2 },
+  clock: { value: 24, displayValue: '0:24' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/probabilities/4009517911976?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:52:43Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/drives/40095179110?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 6,
+    yardLine: 94,
+    yardsToEndzone: 6,
+    downDistanceText: '1st & Goal at LV 6',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'LV 6',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  statYardage: 6,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/plays/4009517912793?lang=en&region=us',
+  id: '4009517912793',
+  sequenceNumber: '279300',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Travis Benjamin Pass From Philip Rivers for 62 Yrds N.Rose extra point is GOOD, Center-M.Windt, Holder-K.Clemens.',
+  shortText: 'Travis Benjamin 62 Yd pass from Philip Rivers (Nick Rose Kick)',
+  alternativeText: 'Travis Benjamin Pass From Philip Rivers for 62 Yrds N.Rose extra point is GOOD, Center-M.Windt, Holder-K.Clemens.',
+  shortAlternativeText: 'Travis Benjamin 62 Yd pass from Philip Rivers (Nick Rose Kick)',
+  awayScore: 10,
+  homeScore: 30,
+  period: { number: 3 },
+  clock: { value: 53, displayValue: '0:53' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:19Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/probabilities/4009517912793?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:38:16Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951791/competitions/400951791/drives/40095179114?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 13,
+    yardLine: 38,
+    yardsToEndzone: 62,
+    downDistanceText: '3rd & 13 at LAC 38',
+    shortDownDistanceText: '3rd & 13',
+    possessionText: 'LAC 38',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/24?lang=en&region=us'
+    }
+  },
+  statYardage: 62,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/plays/400951793264?lang=en&region=us',
+  id: '400951793264',
+  sequenceNumber: '26400',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Jaron Brown Pass From Drew Stanton for 25 Yrds P.Dawson extra point is GOOD, Center-A.Brewer, Holder-A.Lee.',
+  shortText: 'Jaron Brown 25 Yd pass from Drew Stanton (Phil Dawson Kick)',
+  alternativeText: 'Jaron Brown Pass From Drew Stanton for 25 Yrds P.Dawson extra point is GOOD, Center-A.Brewer, Holder-A.Lee.',
+  shortAlternativeText: 'Jaron Brown 25 Yd pass from Drew Stanton (Phil Dawson Kick)',
+  awayScore: 7,
+  homeScore: 0,
+  period: { number: 1 },
+  clock: { value: 535, displayValue: '8:55' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:04Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/probabilities/400951793264?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:32:38Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/drives/4009517931?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 25,
+    yardsToEndzone: 25,
+    downDistanceText: '1st & 10 at SEA 25',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'SEA 25',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+    }
+  },
+  statYardage: 25,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/plays/400951793305?lang=en&region=us',
+  id: '400951793305',
+  sequenceNumber: '30500',
+  type: { id: '32', text: 'Kickoff Return Touchdown', abbreviation: 'TD' },
+  text: 'Tyler Lockett 99 Yrd KO Return B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortText: 'Tyler Lockett 99 Yd Kickoff Return (Blair Walsh Kick)',
+  alternativeText: 'Tyler Lockett 99 Yrd KO Return B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortAlternativeText: 'Tyler Lockett 99 Yd Kickoff Return (Blair Walsh Kick)',
+  awayScore: 7,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 523, displayValue: '8:43' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:04Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/probabilities/400951793305?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:36:36Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/drives/4009517932?lang=en&region=us'
+  },
+  start: {
+    down: 0,
+    distance: 0,
+    yardLine: 1,
+    yardsToEndzone: 65,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+    }
+  },
+  statYardage: 99,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/plays/400951793978?lang=en&region=us',
+  id: '400951793978',
+  sequenceNumber: '97800',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Elijhaa Penny 4 Yard Rush P.Dawson extra point is GOOD, Center-A.Brewer, Holder-A.Lee.',
+  shortText: 'Elijhaa Penny 4 Yd Run (Phil Dawson Kick)',
+  alternativeText: 'Elijhaa Penny 4 Yard Rush P.Dawson extra point is GOOD, Center-A.Brewer, Holder-A.Lee.',
+  shortAlternativeText: 'Elijhaa Penny 4 Yd Run (Phil Dawson Kick)',
+  awayScore: 17,
+  homeScore: 7,
+  period: { number: 2 },
+  clock: { value: 739, displayValue: '12:19' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:04Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/probabilities/400951793978?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:07:24Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/drives/4009517937?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 4,
+    yardLine: 4,
+    yardsToEndzone: 4,
+    downDistanceText: '2nd & Goal at SEA 4',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'SEA 4',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/22?lang=en&region=us'
+    }
+  },
+  statYardage: 4,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/plays/4009517932442?lang=en&region=us',
+  id: '4009517932442',
+  sequenceNumber: '244200',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Doug Baldwin Pass From Russell Wilson for 18 Yrds B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortText: 'Doug Baldwin 18 Yd pass from Russell Wilson (Blair Walsh Kick)',
+  alternativeText: 'Doug Baldwin Pass From Russell Wilson for 18 Yrds B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortAlternativeText: 'Doug Baldwin 18 Yd pass from Russell Wilson (Blair Walsh Kick)',
+  awayScore: 20,
+  homeScore: 14,
+  period: { number: 3 },
+  clock: { value: 539, displayValue: '8:59' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:04Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/probabilities/4009517932442?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:16:12Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/drives/40095179315?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 13,
+    yardLine: 82,
+    yardsToEndzone: 18,
+    downDistanceText: '2nd & 13 at ARI 18',
+    shortDownDistanceText: '2nd & 13',
+    possessionText: 'ARI 18',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+    }
+  },
+  statYardage: 18,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/plays/4009517933548?lang=en&region=us',
+  id: '4009517933548',
+  sequenceNumber: '354800',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Doug Baldwin Pass From Russell Wilson for 29 Yrds B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortText: 'Doug Baldwin 29 Yd pass from Russell Wilson (Blair Walsh Kick)',
+  alternativeText: 'Doug Baldwin Pass From Russell Wilson for 29 Yrds B.Walsh extra point is GOOD, Center-T.Ott, Holder-J.Ryan.',
+  shortAlternativeText: 'Doug Baldwin 29 Yd pass from Russell Wilson (Blair Walsh Kick)',
+  awayScore: 23,
+  homeScore: 24,
+  period: { number: 4 },
+  clock: { value: 624, displayValue: '10:24' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:04Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/probabilities/4009517933548?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:08:48Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951793/competitions/400951793/drives/40095179323?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 71,
+    yardsToEndzone: 29,
+    downDistanceText: '1st & 10 at ARI 29',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'ARI 29',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/26?lang=en&region=us'
+    }
+  },
+  statYardage: 29,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/400951764346?lang=en&region=us',
+  id: '400951764346',
+  sequenceNumber: '34600',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Peyton Barber 1 Yard Rush P.Murray extra point is GOOD, Center-G.Sanborn, Holder-B.Anger.',
+  shortText: 'Peyton Barber 1 Yd Run (Patrick Murray Kick)',
+  alternativeText: 'Peyton Barber 1 Yard Rush P.Murray extra point is GOOD, Center-G.Sanborn, Holder-B.Anger.',
+  shortAlternativeText: 'Peyton Barber 1 Yd Run (Patrick Murray Kick)',
+  awayScore: 0,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 582, displayValue: '9:42' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/400951764346?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:33:19Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/4009517641?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '3rd & Goal at NO 1',
+    shortDownDistanceText: '3rd & Goal',
+    possessionText: 'NO 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/400951764381?lang=en&region=us',
+  id: '400951764381',
+  sequenceNumber: '38100',
+  type: { id: '32', text: 'Kickoff Return Touchdown', abbreviation: 'TD' },
+  text: 'Alvin Kamara 106 Yrd KO Return W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortText: 'Alvin Kamara 106 Yd Kickoff Return (Wil Lutz Kick)',
+  alternativeText: 'Alvin Kamara 106 Yrd KO Return W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortAlternativeText: 'Alvin Kamara 106 Yd Kickoff Return (Wil Lutz Kick)',
+  awayScore: 7,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 569, displayValue: '9:29' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/400951764381?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:37:22Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/4009517642?lang=en&region=us'
+  },
+  start: {
+    down: 0,
+    distance: 0,
+    yardLine: 106,
+    yardsToEndzone: 65,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  statYardage: 106,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/400951764755?lang=en&region=us',
+  id: '400951764755',
+  sequenceNumber: '75500',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Alvin Kamara 7 Yard Rush W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortText: 'Alvin Kamara 7 Yd Run (Wil Lutz Kick)',
+  alternativeText: 'Alvin Kamara 7 Yard Rush W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortAlternativeText: 'Alvin Kamara 7 Yd Run (Wil Lutz Kick)',
+  awayScore: 14,
+  homeScore: 7,
+  period: { number: 1 },
+  clock: { value: 156, displayValue: '2:36' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/400951764755?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:51:42Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/4009517644?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 7,
+    yardLine: 7,
+    yardsToEndzone: 7,
+    downDistanceText: '1st & Goal at TB 7',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'TB 7',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 0,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  statYardage: 7,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/4009517641369?lang=en&region=us',
+  id: '4009517641369',
+  sequenceNumber: '137750',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Jameis Winston 1 Yd Run (Patrick Murray PAT failed)',
+  shortText: 'Jameis Winston 1 Yd Run (Patrick Murray PAT failed)',
+  alternativeText: 'Jameis Winston 1 Yd Run (Patrick Murray PAT failed)',
+  shortAlternativeText: 'Jameis Winston 1 Yd Run (Patrick Murray PAT failed)',
+  awayScore: 14,
+  homeScore: 13,
+  period: { number: 2 },
+  clock: { value: 350, displayValue: '5:50' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/4009517641369?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:24:08Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/4009517647?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 1,
+    yardLine: 99,
+    yardsToEndzone: 1,
+    downDistanceText: '3rd & Goal at NO 1',
+    shortDownDistanceText: '3rd & Goal',
+    possessionText: 'NO 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/4009517642854?lang=en&region=us',
+  id: '4009517642854',
+  sequenceNumber: '287100',
+  type: { id: '39', text: 'Fumble Return Touchdown', abbreviation: 'TD' },
+  text: 'Isaiah Johnson 7 Yd Fumble Return (Patrick Murray Kick)',
+  shortText: 'Isaiah Johnson 7 Yd Fumble Return (Patrick Murray Kick)',
+  alternativeText: 'Isaiah Johnson 7 Yd Fumble Return (Patrick Murray Kick)',
+  shortAlternativeText: 'Isaiah Johnson 7 Yd Fumble Return (Patrick Murray Kick)',
+  awayScore: 17,
+  homeScore: 20,
+  period: { number: 4 },
+  clock: { value: 844, displayValue: '14:04' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'punter'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'forcedBy'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'recoverer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'tackler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'fumbler'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 6,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 7,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 8,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/4009517642854?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:39:33Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/40095176415?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 19,
+    yardLine: 32,
+    yardsToEndzone: 68,
+    downDistanceText: '4th & 19 at TB 32',
+    shortDownDistanceText: '4th & 19',
+    possessionText: 'TB 32',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  statYardage: 7,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/4009517643205?lang=en&region=us',
+  id: '4009517643205',
+  sequenceNumber: '320500',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Zach Line Pass From Drew Brees for 3 Yrds W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortText: 'Zach Line 3 Yd pass from Drew Brees (Wil Lutz Kick)',
+  alternativeText: 'Zach Line Pass From Drew Brees for 3 Yrds W.Lutz extra point is GOOD, Center-Z.Wood, Holder-T.Morstead.',
+  shortAlternativeText: 'Zach Line 3 Yd pass from Drew Brees (Wil Lutz Kick)',
+  awayScore: 24,
+  homeScore: 20,
+  period: { number: 4 },
+  clock: { value: 427, displayValue: '7:07' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/4009517643205?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:54:53Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/40095176416?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 3,
+    yardLine: 3,
+    yardsToEndzone: 3,
+    downDistanceText: '2nd & Goal at TB 3',
+    shortDownDistanceText: '2nd & Goal',
+    possessionText: 'TB 3',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/18?lang=en&region=us'
+    }
+  },
+  statYardage: 3,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/plays/4009517644069?lang=en&region=us',
+  id: '4009517644069',
+  sequenceNumber: '406900',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Chris Godwin Pass From Jameis Winston for 39 Yrds TWO-POINT CONVERSION ATTEMPT. J.Winston pass to M.Evans is complete. ATTEMPT SUCCEEDS.',
+  shortText: 'Chris Godwin 39 Yd pass from Jameis Winston (Jameis Winston Pass to Mike Evans for Two-Point Conversion)',
+  alternativeText: 'Chris Godwin Pass From Jameis Winston for 39 Yrds TWO-POINT CONVERSION ATTEMPT. J.Winston pass to M.Evans is complete. ATTEMPT SUCCEEDS.',
+  shortAlternativeText: 'Chris Godwin 39 Yd pass from Jameis Winston (Jameis Winston Pass to Mike Evans for Two-Point Conversion)',
+  awayScore: 24,
+  homeScore: 31,
+  period: { number: 4 },
+  clock: { value: 9, displayValue: '0:09' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-01T01:08Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'patPasser'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/probabilities/4009517644069?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:29:39Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951764/competitions/400951764/drives/40095176419?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 10,
+    yardLine: 61,
+    yardsToEndzone: 39,
+    downDistanceText: '1st & 10 at NO 39',
+    shortDownDistanceText: '1st & 10',
+    possessionText: 'NO 39',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/27?lang=en&region=us'
+    }
+  },
+  statYardage: 39,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/400951739248?lang=en&region=us',
+  id: '400951739248',
+  sequenceNumber: '24800',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Tyler Kroft Pass From Andy Dalton for 1 Yard R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortText: 'Tyler Kroft 1 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  alternativeText: 'Tyler Kroft Pass From Andy Dalton for 1 Yard R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortAlternativeText: 'Tyler Kroft 1 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  awayScore: 7,
+  homeScore: 0,
+  period: { number: 1 },
+  clock: { value: 655, displayValue: '10:55' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/400951739248?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T21:31:53Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/4009517391?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 1,
+    yardLine: 1,
+    yardsToEndzone: 1,
+    downDistanceText: '1st & Goal at BAL 1',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'BAL 1',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  statYardage: 1,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517391981?lang=en&region=us',
+  id: '4009517391981',
+  sequenceNumber: '198100',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Tyler Kroft Pass From Andy Dalton for 5 Yrds R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortText: 'Tyler Kroft 5 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  alternativeText: 'Tyler Kroft Pass From Andy Dalton for 5 Yrds R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortAlternativeText: 'Tyler Kroft 5 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  awayScore: 14,
+  homeScore: 3,
+  period: { number: 2 },
+  clock: { value: 254, displayValue: '4:14' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517391981?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T22:43:21Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173915?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 5,
+    yardLine: 5,
+    yardsToEndzone: 5,
+    downDistanceText: '3rd & Goal at BAL 5',
+    shortDownDistanceText: '3rd & Goal',
+    possessionText: 'BAL 5',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  statYardage: 5,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517392485?lang=en&region=us',
+  id: '4009517392485',
+  sequenceNumber: '249450',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Chris Moore 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  shortText: 'Chris Moore 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  alternativeText: 'Chris Moore 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  shortAlternativeText: 'Chris Moore 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  awayScore: 17,
+  homeScore: 10,
+  period: { number: 2 },
+  clock: { value: 4, displayValue: '0:04' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517392485?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:00:25Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173918?lang=en&region=us'
+  },
+  start: {
+    down: 1,
+    distance: 6,
+    yardLine: 94,
+    yardsToEndzone: 6,
+    downDistanceText: '1st & Goal at CIN 6',
+    shortDownDistanceText: '1st & Goal',
+    possessionText: 'CIN 6',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  statYardage: 6,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517392802?lang=en&region=us',
+  id: '4009517392802',
+  sequenceNumber: '281300',
+  type: {
+    id: '36',
+    text: 'Interception Return Touchdown',
+    abbreviation: 'TD'
+  },
+  text: 'Darqueze Dennard 89 Yd Interception Return (Randy Bullock Kick)',
+  shortText: 'Darqueze Dennard 89 Yd Interception Return (Randy Bullock Kick)',
+  alternativeText: 'Darqueze Dennard 89 Yd Interception Return (Randy Bullock Kick)',
+  shortAlternativeText: 'Darqueze Dennard 89 Yd Interception Return (Randy Bullock Kick)',
+  awayScore: 24,
+  homeScore: 10,
+  period: { number: 3 },
+  clock: { value: 617, displayValue: '10:17' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'passDefender'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'patScorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'returner'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'scorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517392802?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:28:52Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173920?lang=en&region=us'
+  },
+  start: {
+    down: 2,
+    distance: 5,
+    yardLine: 78,
+    yardsToEndzone: 22,
+    downDistanceText: '2nd & 5 at CIN 22',
+    shortDownDistanceText: '2nd & 5',
+    possessionText: 'CIN 22',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  statYardage: 89,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517393113?lang=en&region=us',
+  id: '4009517393113',
+  sequenceNumber: '311300',
+  type: { id: '68', text: 'Rushing Touchdown', abbreviation: 'TD' },
+  text: 'Alex Collins 17 Yard Rush J.Tucker extra point is GOOD, Center-M.Cox, Holder-S.Koch.',
+  shortText: 'Alex Collins 17 Yd Run (Justin Tucker Kick)',
+  alternativeText: 'Alex Collins 17 Yard Rush J.Tucker extra point is GOOD, Center-M.Cox, Holder-S.Koch.',
+  shortAlternativeText: 'Alex Collins 17 Yd Run (Justin Tucker Kick)',
+  awayScore: 24,
+  homeScore: 17,
+  period: { number: 3 },
+  clock: { value: 376, displayValue: '6:16' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'rusher'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517393113?lang=en&region=us'
+  },
+  wallclock: '2017-12-31T23:41:04Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173921?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 3,
+    yardLine: 83,
+    yardsToEndzone: 17,
+    downDistanceText: '4th & 3 at CIN 17',
+    shortDownDistanceText: '4th & 3',
+    possessionText: 'CIN 17',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  statYardage: 17,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517394053?lang=en&region=us',
+  id: '4009517394053',
+  sequenceNumber: '405300',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Mike Wallace Pass From Joe Flacco for 6 Yrds J.Tucker extra point is GOOD, Center-M.Cox, Holder-S.Koch.',
+  shortText: 'Mike Wallace 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  alternativeText: 'Mike Wallace Pass From Joe Flacco for 6 Yrds J.Tucker extra point is GOOD, Center-M.Cox, Holder-S.Koch.',
+  shortAlternativeText: 'Mike Wallace 6 Yd pass from Joe Flacco (Justin Tucker Kick)',
+  awayScore: 24,
+  homeScore: 27,
+  period: { number: 4 },
+  clock: { value: 528, displayValue: '8:48' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517394053?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:24:33Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173925?lang=en&region=us'
+  },
+  start: {
+    down: 3,
+    distance: 5,
+    yardLine: 94,
+    yardsToEndzone: 6,
+    downDistanceText: '3rd & 5 at CIN 6',
+    shortDownDistanceText: '3rd & 5',
+    possessionText: 'CIN 6',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 100,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/33?lang=en&region=us'
+    }
+  },
+  statYardage: 6,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}
+{
+  '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/plays/4009517394772?lang=en&region=us',
+  id: '4009517394772',
+  sequenceNumber: '477200',
+  type: { id: '67', text: 'Passing Touchdown', abbreviation: 'TD' },
+  text: 'Tyler Boyd Pass From Andy Dalton for 49 Yrds R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortText: 'Tyler Boyd 49 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  alternativeText: 'Tyler Boyd Pass From Andy Dalton for 49 Yrds R.Bullock extra point is GOOD, Center-C.Harris, Holder-K.Huber.',
+  shortAlternativeText: 'Tyler Boyd 49 Yd pass from Andy Dalton (Randy Bullock Kick)',
+  awayScore: 31,
+  homeScore: 27,
+  period: { number: 4 },
+  clock: { value: 44, displayValue: '0:44' },
+  scoringPlay: true,
+  priority: false,
+  scoreValue: 6,
+  modified: '2018-01-03T22:27Z',
+  team: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+  },
+  participants: [
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 1,
+      type: 'passer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 2,
+      type: 'receiver'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 3,
+      type: 'scorer'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 4,
+      type: 'kicker'
+    },
+    {
+      athlete: [Object],
+      position: [Object],
+      statistics: [Object],
+      stats: [Array],
+      order: 5,
+      type: 'patScorer'
+    }
+  ],
+  probability: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/probabilities/4009517394772?lang=en&region=us'
+  },
+  wallclock: '2018-01-01T00:51:09Z',
+  drive: {
+    '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/400951739/competitions/400951739/drives/40095173928?lang=en&region=us'
+  },
+  start: {
+    down: 4,
+    distance: 12,
+    yardLine: 49,
+    yardsToEndzone: 49,
+    downDistanceText: '4th & 12 at BAL 49',
+    shortDownDistanceText: '4th & 12',
+    possessionText: 'BAL 49',
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  end: {
+    down: -1,
+    distance: 10,
+    yardLine: 0,
+    yardsToEndzone: 15,
+    team: {
+      '$ref': 'http://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2017/teams/4?lang=en&region=us'
+    }
+  },
+  statYardage: 49,
+  scoringType: { name: 'touchdown', displayName: 'Touchdown', abbreviation: 'TD' }
+}

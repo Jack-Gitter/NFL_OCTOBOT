@@ -25,7 +25,7 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
     const result = await fetch(url)
     const scoringPlayInformation: ScoringPlayInformation = await result.json()
-    const twoPointConversion = scoringPlayInformation?.pointAfterAttempt?.id === POINT_AFTER_ATTEMPT.TWO_POINT_PASS || scoringPlayInformation?.pointAfterAttempt?.id === POINT_AFTER_ATTEMPT.TWO_POINT_RUSH && scoringPlayInformation?.pointAfterAttempt?.value === 2
+    const twoPointConversion = scoringPlayInformation?.pointAfterAttempt?.id === POINT_AFTER_ATTEMPT.TWO_POINT_PASS || scoringPlayInformation?.pointAfterAttempt?.id === POINT_AFTER_ATTEMPT.TWO_POINT_RUSH 
     let patScorer = undefined
     let tdScorer = undefined 
     if (twoPointConversion) {
