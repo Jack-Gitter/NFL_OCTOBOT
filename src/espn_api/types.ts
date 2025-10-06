@@ -19,7 +19,7 @@ export type ScoringPlay = {
 export type ScoringPlayInformation = {
     participants: Participant[]
     pointAfterAttempt: PointAfterAttempt
-    
+    shortText: string
 }
 
 export type Participant = {

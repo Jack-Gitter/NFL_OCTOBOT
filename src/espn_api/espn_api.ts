@@ -1,4 +1,4 @@
-import { Event, Game, Participant, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Athlete, Event, Game, Participant, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
@@ -44,8 +44,9 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
 
 export const getAtheleteInformation = async(playerUrl: string) => {
     const result = await fetch(playerUrl)
-    const player = await result.json()
-
+    const athelete: Athlete = await result.json()
+    console.log(athelete.firstName)
+    console.log(athelete.lastName)
 }
 
 
