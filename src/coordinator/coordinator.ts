@@ -23,7 +23,8 @@ export const run2 = async(twitterClient: TwitterApi, scoringPlayRepository: Repo
     for (const game of games) {
         game.deduplicateProcessedPlays(processedPlayIds)
         game.filterScoringPlays()
-        game.populateOctopusPlayerInformation()
+        await game.populateOctopusPlayerInformation()
+        
     }
 
     

@@ -1,5 +1,7 @@
+import { TwitterApi } from "twitter-api-v2";
 import { getAtheleteInformation } from "../espn_api/espn_api";
 import { Participant, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
+import { postOctopusToTwitter } from "../x_api/x_api";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays?: ScoringPlayInformation[]) {}
@@ -39,6 +41,12 @@ export class Game {
                 scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
             }
             return scoringPlay
+        })
+    }
+
+    public async postOctopiToTwitter(twitterClient: TwitterApi) {
+        this.scoringPlays?.forEach(scoringPlay => {
+            postOctopusToTwitter(twitterClient, scoringPlay.shortText)
         })
     }
 }
