@@ -12,10 +12,13 @@ export const checkForOctopus = async () => {
     const checkedPlayIds = checkedPlays.map(checkedPlay => {
         return checkedPlay.id
     })
+
     const checkedPlayIdsSet = new Set(checkedPlayIds)
+
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))
+
     gameToScoringPlayIdsArray.forEach((gameToScoringPlayIds) => {
         gameToScoringPlayIds.scoringPlayIds = gameToScoringPlayIds.scoringPlayIds.filter(scoringPlayId => {
             return !checkedPlayIdsSet.has(scoringPlayId)
@@ -24,9 +27,11 @@ export const checkForOctopus = async () => {
 
     await Promise.all(gameToScoringPlayIdsArray.map(async (gameToScoringPlayIds) => {
         const scoringPlayIds = gameToScoringPlayIds.scoringPlayIds
+
         const octopusInformationArray = await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
             return await getOctopusInformation(gameToScoringPlayIds.gameId, scoringPlayId)
         }))
+
         const athleteAndOctopusInformationArray = await Promise.all(octopusInformationArray.map(async (octopusInformation) => {
             if (octopusInformation) {
                 const athlete = await getAtheleteInformation(octopusInformation.scorer)
@@ -36,6 +41,7 @@ export const checkForOctopus = async () => {
                 } satisfies AthleteAndOctopusInformation
             }
         }))
+
         await Promise.all(athleteAndOctopusInformationArray.map(async (athleteAndOctopusInformation) => {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
                 const play = new Play()
@@ -44,6 +50,7 @@ export const checkForOctopus = async () => {
                 await postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }))
+
     }))
 }
 
