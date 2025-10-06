@@ -1,7 +1,7 @@
 import { getAtheleteInformation, getDailyGameIds, getGameTouchdownPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 
 const main = async () => {
-    const gameIds = await getDailyGameIds(new Date('12/08/2024'))
+    const gameIds = await getDailyGameIds(new Date('09/18/2023'))
     for (const gameId of gameIds) {
         const tdPlayIds = await getGameTouchdownPlayIds(gameId)
         for (const tdPlayId of tdPlayIds) {
