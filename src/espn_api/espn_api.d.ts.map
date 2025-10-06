@@ -1,1 +1,0 @@
-{"version":3,"file":"espn_api.d.ts","sourceRoot":"","sources":["espn_api.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAuK,MAAM,SAAS,CAAA;AAEtM,eAAO,MAAM,eAAe,GAAU,OAAM,IAAiB,sBAQ5D,CAAA;AAED,eAAO,MAAM,qBAAqB,GAAU,QAAQ,MAAM;;;EAWzD,CAAA;AAED,eAAO,MAAM,qBAAqB,GAAS,QAAQ,MAAM,EAAE,eAAe,MAAM;;;cAqB/E,CAAA;AAED,eAAO,MAAM,sBAAsB,GAAS,WAAW,MAAM,qBAI5D,CAAA"}
