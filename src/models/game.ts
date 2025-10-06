@@ -15,17 +15,18 @@ export class Game {
             const isTwoPointConversion = 
                 scoringPlay?.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
-            let patScorer = undefined
-            let tdScorer = undefined 
+
             if (isTwoPointConversion) {
-                patScorer = scoringPlay.participants.find((participant: Participant) => {
+                const patScorer = scoringPlay.participants.find((participant: Participant) => {
                     return participant.type === SCORER_TYPE.PAT_SCORER
                 })
-                tdScorer = scoringPlay.participants.find((participant: Participant) => {
+                const tdScorer = scoringPlay.participants.find((participant: Participant) => {
                     return participant.type === SCORER_TYPE.TD_SCORER
                 })
+                return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
             }
-            return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
+            return false
+
         })
     }
 }
