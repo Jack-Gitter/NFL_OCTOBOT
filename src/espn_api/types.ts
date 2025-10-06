@@ -54,7 +54,7 @@ export enum SCORER_TYPE {
     TD_SCORER = "scorer"
 }
 
-export type GameToTDPlayIds = {
+export type GameToScoringPlayIds = {
     gameId: number,
     scoringPlayIds: number[]
 }
