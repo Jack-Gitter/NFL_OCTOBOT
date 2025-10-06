@@ -5,10 +5,7 @@ import { post } from "./x_api/x_api"
 
 const main = async () => {
     configDotenv()
-
-    post()
-    
-    const gameIds = await getDailyGameIds(new Date('09/22/2024'))
+    const gameIds = await getDailyGameIds(new Date('11/30/2014'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))
