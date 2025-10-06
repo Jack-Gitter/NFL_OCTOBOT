@@ -62,6 +62,9 @@ export type GameToTDPlayIds = {
 export type OctopusInformation = {
     scorer: string,
     shortText: string,
-
 }
 
+export type AthleteAndOctopusInformation = {
+    athlete: Athlete,
+    octopusInformation: OctopusInformation
+}
