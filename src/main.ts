@@ -5,7 +5,7 @@ import { post } from "./x_api/x_api"
 
 const main = async () => {
     configDotenv()
-    const gameIds = await getDailyGameIds(new Date('11/30/2014'))
+    const gameIds = await getDailyGameIds(new Date('11/12/2017'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))
@@ -26,8 +26,7 @@ const main = async () => {
         }))
         for (const athleteAndOctopusInformation of athleteAndOctopusInformationArray) {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
-                console.log(athleteAndOctopusInformation?.athlete.firstName)
-                console.log(athleteAndOctopusInformation?.athlete.lastName)
+                console.log(`${athleteAndOctopusInformation?.athlete.firstName}, ${athleteAndOctopusInformation?.athlete.lastName}`)
                 console.log(athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }
