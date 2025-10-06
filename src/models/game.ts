@@ -1,6 +1,6 @@
 import { TwitterApi } from "twitter-api-v2";
 import { getAtheleteInformation } from "../espn_api/espn_api";
-import { Participant, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
+import { ParticipantResponse, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
 import { postOctopusToTwitter } from "../x_api/x_api";
 import { ScoringPlay } from "../entities/Play";
 import { Repository } from "typeorm";
@@ -22,10 +22,10 @@ export class Game {
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
 
             if (isTwoPointConversion) {
-                const patScorer = scoringPlay.participants.find((participant: Participant) => {
+                const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
                     return participant.type === SCORER_TYPE.PAT_SCORER
                 })
-                const tdScorer = scoringPlay.participants.find((participant: Participant) => {
+                const tdScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
                     return participant.type === SCORER_TYPE.TD_SCORER
                 })
                 return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
@@ -36,7 +36,7 @@ export class Game {
 
     public async populateOctopusPlayerInformation() {
         this.scoringPlays?.map(async (scoringPlay) => {
-            const patScorer = scoringPlay.participants.find((participant: Participant) => {
+            const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
                 return participant.type === SCORER_TYPE.PAT_SCORER
             })
             if (patScorer) {
@@ -56,7 +56,10 @@ export class Game {
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
-            await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
+            console.log(scoringPlay.octopusScorer.firstName)
+            console.log(scoringPlay.octopusScorer.lastName)
+            return []
+            //await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
         }))
     }
 }

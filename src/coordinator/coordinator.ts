@@ -2,6 +2,7 @@ import { TwitterApi } from "twitter-api-v2"
 import { ScoringPlay } from "../entities/Play"
 import { Repository } from "typeorm"
 import { getDailyGameIds, getGameInformation } from "../espn_api/espn_api"
+import { Game } from "../models/game"
 
 const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedOctopusPlays = await scoringPlayRepository.find()
@@ -14,11 +15,11 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
     const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
     const currentGameIds = await getDailyGameIds()
 
-    const games = await Promise.all(currentGameIds.map(async (gameId) => {
+    const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)
     }))
 
-    await Promise.all(games.map(async (game) => {
+    await Promise.all(games.map(async (game: Game) => {
         game.deduplicateProcessedPlays(processedPlayIds)
         game.filterScoringPlays()
         await game.populateOctopusPlayerInformation()
