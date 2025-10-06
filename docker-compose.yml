@@ -2,6 +2,7 @@ services:
   app:
     build:
       context: .
+      tty: true
       dockerfile: Dockerfile
   db:
     image: postgres:15
