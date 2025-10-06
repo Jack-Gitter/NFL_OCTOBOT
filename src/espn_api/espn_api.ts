@@ -11,7 +11,6 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
 }
 
 export const getGameTouchdownPlayIds = async (gameId: number) => {
-    console.log(gameId)
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: Game = await result.json()
@@ -38,15 +37,17 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
         })
     }
     if (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) {
-        console.log('octo!')
+        return {
+            scorer: patScorer,
+            text: scoringPlayInformation.shortText
+        }
     }
 }
 
 export const getAtheleteInformation = async(playerUrl: string) => {
     const result = await fetch(playerUrl)
     const athelete: Athlete = await result.json()
-    console.log(athelete.firstName)
-    console.log(athelete.lastName)
+    return athelete
 }
 
 
