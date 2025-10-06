@@ -30,10 +30,15 @@ export class Game {
         })
     }
 
-    public getOctopusPlayerInformation() {
-        // loop over all scoring plays, get player info
-
-        getAtheleteInformation()
-
+    public async getOctopusPlayerInformation() {
+        this.scoringPlays?.map((scoringPlay) => {
+            const patScorer = scoringPlay.participants.find((participant: Participant) => {
+                return participant.type === SCORER_TYPE.PAT_SCORER
+            })
+            if (patScorer) {
+                scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
+            }
+            return scoringPlay
+        })
     }
 }
