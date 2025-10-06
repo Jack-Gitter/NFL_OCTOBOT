@@ -3,6 +3,23 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    tty: true
+    environment:
+      # X/Twitter API credentials
+      X_API_KEY: ${X_API_KEY}
+      X_API_KEY_SECRET: ${X_API_KEY_SECRET}
+      X_BEARER_TOKEN: ${X_BEARER_TOKEN}
+      X_ACCESS_TOKEN: ${X_ACCESS_TOKEN}
+      X_ACCESS_TOKEN_SECRET: ${X_ACCESS_TOKEN_SECRET}
+      X_CLIENT_ID: ${X_CLIENT_ID}
+      X_CLIENT_SECRET: ${X_CLIENT_SECRET}
+      # Database credentials
+      PG_USER: ${PG_USER}
+      PG_PASS: ${PG_PASS}
+      PG_DB: ${PG_DB}
+      # Database connection (important!)
+      PG_HOST: db
+      PG_PORT: 5432
   db:
     image: postgres:15
     restart: always
@@ -11,7 +28,7 @@ services:
       POSTGRES_PASSWORD: ${PG_PASS}
       POSTGRES_DB: ${PG_DB}
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
