@@ -41,7 +41,7 @@ export const checkForOctopus = async () => {
                 const play = new Play()
                 play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
                 await playRepository.save(play)
-                postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
+                await postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }))
     }))
