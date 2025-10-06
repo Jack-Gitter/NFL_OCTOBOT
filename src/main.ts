@@ -6,7 +6,7 @@ import { AthleteAndOctopusInformation } from "./espn_api/types"*/
 const main = async () => {
     configDotenv()
     const client = initXClient()
-    post(client, 'test!')
+    await post(client, 'test!')
     /*
     const gameIds = await getDailyGameIds(new Date('09/22/2024'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
