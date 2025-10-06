@@ -16,7 +16,7 @@ export class Game {
     }
 
     public filterScoringPlays() {
-        this.scoringPlays?.filter((scoringPlay) => {
+        this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             const isTwoPointConversion = 
                 scoringPlay?.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
