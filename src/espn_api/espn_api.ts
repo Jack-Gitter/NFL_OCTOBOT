@@ -14,11 +14,13 @@ export const getGameTouchdownPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: Game = await result.json()
-    return game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
+    const scoringPlayIds = game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
         return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
     })
+    return {gameId: gameId, scoringPlayIds: scoringPlayIds}
+
 }
 
 export const getOctopusInformation = async(gameId: number, scoringPlayId: number) => {
