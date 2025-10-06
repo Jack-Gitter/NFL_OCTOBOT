@@ -4,7 +4,7 @@ import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOcto
 import { AthleteAndOctopusInformation } from "../espn_api/types"
 import { getTwitterClient, postOctopusToTwitter } from "../x_api/x_api"
 
-export const checkForOctopus = async () => {
+export const run = async () => {
     const twitterClient = await getTwitterClient()
     const playRepository = datasource.getRepository(ScoringPlay)
     const checkedPlays = await playRepository.find()
