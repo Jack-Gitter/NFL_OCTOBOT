@@ -30,7 +30,7 @@ export class Game {
         })
     }
 
-    public async getOctopusPlayerInformation() {
+    public async populateOctopusPlayerInformation() {
         this.scoringPlays?.map(async (scoringPlay) => {
             const patScorer = scoringPlay.participants.find((participant: Participant) => {
                 return participant.type === SCORER_TYPE.PAT_SCORER
