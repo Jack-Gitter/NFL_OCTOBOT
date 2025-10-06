@@ -15,3 +15,6 @@ export const post = async (client: Client, text: string) => {
     await client.tweets.createTweet(body)
 }
 
+
+export const xClient = initXClient()
+

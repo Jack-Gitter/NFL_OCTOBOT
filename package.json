@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "jiti": "^2.6.1",
     "twitter-api-sdk": "^1.2.1"
   }
