@@ -29,7 +29,6 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     let patScorer = undefined
     let tdScorer = undefined 
     if (twoPointConversion) {
-        console.log(scoringPlayInformation)
         patScorer = scoringPlayInformation.participants.find((participant: Participant) => {
             return participant.type === 'patScorer'
         })
