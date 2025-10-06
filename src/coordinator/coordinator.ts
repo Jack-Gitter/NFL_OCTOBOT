@@ -6,7 +6,7 @@ import { getTwitterClient, postOctopusToTwitter } from "../x_api/x_api"
 
 export const checkForOctopus = async () => {
     const twitterClient = await getTwitterClient()
-    const gameIds = await getDailyGameIds(new Date('09/29/2024'))
+    const gameIds = await getDailyGameIds()
     const playRepository = datasource.getRepository(Play)
     const checkedPlays = await playRepository.find()
     const checkedPlayIds = checkedPlays.map(checkedPlay => {
