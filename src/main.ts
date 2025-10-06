@@ -6,7 +6,7 @@ const main = async () => {
         return await getGameTouchdownPlayIds(gameId)
     }))
 
-    for (const gameToTdPlays of gameToTdPlaysMap) {
+    gameToTdPlaysMap.map(async (gameToTdPlays) => {
         const scoringPlayIds = gameToTdPlays.scoringPlayIds
         const octoInfoForAllPlays = await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
             return await getOctopusInformation(gameToTdPlays.gameId, scoringPlayId)
@@ -27,7 +27,8 @@ const main = async () => {
                 console.log(data?.octoInfo.text)
             }
         }
-    }
+
+    })
 }
 
 main()
