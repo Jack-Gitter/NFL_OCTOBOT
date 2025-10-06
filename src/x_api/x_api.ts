@@ -1,6 +1,6 @@
 import { TwitterApi } from 'twitter-api-v2';
 
-export const twitterBaseUrl = `https://api.x.com/2/`
+export const twitterBaseUrl = `https://api.x.com/2`
 
 export const getTwitterClient = async () => {
     return new TwitterApi({

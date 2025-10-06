@@ -1,9 +1,11 @@
 import { configDotenv } from "dotenv"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "./espn_api/types"
+import { getTwitterClient, postOctopus } from "./x_api/x_api"
 
 const main = async () => {
     configDotenv()
+    const twitterClient = await getTwitterClient()
     const gameIds = await getDailyGameIds(new Date('09/29/2024'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
@@ -25,11 +27,13 @@ const main = async () => {
         }))
         for (const athleteAndOctopusInformation of athleteAndOctopusInformationArray) {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
-                console.log(`${athleteAndOctopusInformation?.athlete.firstName}, ${athleteAndOctopusInformation?.athlete.lastName}`)
-                console.log(athleteAndOctopusInformation?.octopusInformation.shortText)
+                /*console.log(`${athleteAndOctopusInformation?.athlete.firstName}, ${athleteAndOctopusInformation?.athlete.lastName}`)
+                console.log(athleteAndOctopusInformation?.octopusInformation.shortText)*/
+                postOctopus(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }
     }))
+
 }
 
 main()
