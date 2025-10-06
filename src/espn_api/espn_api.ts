@@ -15,7 +15,8 @@ export const getGameTouchdownPlayIds = async (gameId: number) => {
     const result = await fetch(url)
     const game: Game = await result.json()
     return game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
-        return scoringPlay.scoringType.name === 'touchdown'
+        console.log(scoringPlay)
+        return scoringPlay?.scoringType?.name === 'touchdown'
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
     })
