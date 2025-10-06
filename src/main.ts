@@ -8,13 +8,16 @@ import { ScoringPlay } from "./entities/Play"
 
 const main = async () => {
 
+    console.log('App Starting Up!')
+
     configDotenv()
 
     await datasource.initialize()
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
+
     const twitterClient = await getTwitterClient()
+
     cron.schedule('* * * * *', async () => {
-        console.log('running!')
         await run(twitterClient, scoringPlayRepository)
     })
 }
