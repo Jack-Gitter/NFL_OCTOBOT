@@ -1,15 +1,15 @@
-import { getAtheleteInformation, getDailyGameIds, getGameTouchdownPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
+import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 
 const main = async () => {
     const gameIds = await getDailyGameIds(new Date('09/16/2018'))
-    const gameToTdPlaysMap = await Promise.all(gameIds.map(async (gameId: number) => {
-        return await getGameTouchdownPlayIds(gameId)
+    const gameToTdPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
+        return await getGameScoringPlayIds(gameId)
     }))
 
-    gameToTdPlaysMap.map(async (gameToTdPlays) => {
-        const scoringPlayIds = gameToTdPlays.scoringPlayIds
+    gameToTdPlayIdsArray.map(async (gameToTdPlayIds) => {
+        const scoringPlayIds = gameToTdPlayIds.scoringPlayIds
         const octoInfoForAllPlays = await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
-            return await getOctopusInformation(gameToTdPlays.gameId, scoringPlayId)
+            return await getOctopusInformation(gameToTdPlayIds.gameId, scoringPlayId)
         }))
         const datas = await Promise.all(octoInfoForAllPlays.map(async (octoInfo) => {
             if (octoInfo) {
