@@ -1,7 +1,6 @@
 import { configDotenv } from "dotenv"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "./espn_api/types"
-import { post } from "./x_api/x_api"
 
 const main = async () => {
     configDotenv()
@@ -30,7 +29,6 @@ const main = async () => {
                 console.log(athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }
-
     }))
 }
 
