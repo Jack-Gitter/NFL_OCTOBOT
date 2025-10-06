@@ -1,9 +1,9 @@
 import { getDailyGameIds, getGameTouchdownPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 
 const main = async () => {
-    const gameIds = await getDailyGameIds()
-    const tdPlayIds = await getGameTouchdownPlayIds(gameIds[1] ?? 0)
-    await getOctopusInformation(gameIds[1] ?? 0, tdPlayIds[1] ?? 0)
+    const gameIds = await getDailyGameIds(new Date('10/05/2025'))
+    const tdPlayIds = await getGameTouchdownPlayIds(401772746)
+    await getOctopusInformation(401772746, 4017727462324)
 }
 
 main()

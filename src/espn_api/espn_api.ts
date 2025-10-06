@@ -1,4 +1,4 @@
-import { Event, Game, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Event, Game, Participant, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
@@ -26,14 +26,20 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
     const result = await fetch(url)
     const scoringPlayInformation: ScoringPlayInformation = await result.json()
-    // not just 16, there are probably other ids that are two point conversions
-    const twoPointConversion = scoringPlayInformation.pointAfterAttempt.id === 16
+    const twoPointConversion = scoringPlayInformation.pointAfterAttempt.id === 16 || scoringPlayInformation.pointAfterAttempt.id === 15
+    let patScorer = undefined
+    let tdScorer = undefined 
     if (twoPointConversion) {
-        // get the participants who have values "patScorer" and "scorer"
-        // if they are the same, we found one!
-
+        patScorer = scoringPlayInformation.participants.find((participant: Participant) => {
+            return participant.type === 'patScorer'
+        })
+        tdScorer = scoringPlayInformation.participants.find((participant: Participant) => {
+            return participant.type === 'scorer'
+        })
     }
-    console.log(scoringPlayInformation.participants)
+    if (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) {
+        console.log('octo!')
+    }
 }
 
 
