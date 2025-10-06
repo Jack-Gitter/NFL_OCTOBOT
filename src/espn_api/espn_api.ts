@@ -1,4 +1,4 @@
-import { Athlete, Event, Game, Participant, Scoreboard, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Athlete, Event, Game, Participant, POINT_AFTER_ATTEMPT, Scoreboard, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
@@ -15,8 +15,7 @@ export const getGameTouchdownPlayIds = async (gameId: number) => {
     const result = await fetch(url)
     const game: Game = await result.json()
     return game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
-        console.log(scoringPlay)
-        return scoringPlay?.scoringType?.name === 'touchdown'
+        return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
     })
@@ -26,7 +25,7 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
     const result = await fetch(url)
     const scoringPlayInformation: ScoringPlayInformation = await result.json()
-    const twoPointConversion = scoringPlayInformation.pointAfterAttempt.id === 16 || scoringPlayInformation.pointAfterAttempt.id === 15 && scoringPlayInformation.pointAfterAttempt.value === 2
+    const twoPointConversion = scoringPlayInformation.pointAfterAttempt.id === POINT_AFTER_ATTEMPT.TWO_POINT_PASS || scoringPlayInformation.pointAfterAttempt.id === POINT_AFTER_ATTEMPT.TWO_POINT_RUSH && scoringPlayInformation.pointAfterAttempt.value === 2
     let patScorer = undefined
     let tdScorer = undefined 
     if (twoPointConversion) {

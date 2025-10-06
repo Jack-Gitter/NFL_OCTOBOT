@@ -38,3 +38,12 @@ export type Athlete = {
     firstName: string,
     lastName: string,
 }
+
+export enum SCORING_TYPE {
+    TOUCHDOWN = "touchdown"
+}
+
+export enum POINT_AFTER_ATTEMPT {
+    TWO_POINT_PASS = 15,
+    TWO_POINT_RUSH = 16
+}
