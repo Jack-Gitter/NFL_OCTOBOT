@@ -1,12 +1,12 @@
 import datasource from "../datasource/datasource"
-import { Play } from "../entities/Play"
+import { ScoringPlay } from "../entities/Play"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "../espn_api/types"
 import { getTwitterClient, postOctopusToTwitter } from "../x_api/x_api"
 
 export const checkForOctopus = async () => {
     const twitterClient = await getTwitterClient()
-    const playRepository = datasource.getRepository(Play)
+    const playRepository = datasource.getRepository(ScoringPlay)
     const checkedPlays = await playRepository.find()
     const checkedPlayIds = checkedPlays.map(checkedPlay => {
         return checkedPlay.id
@@ -45,7 +45,7 @@ export const checkForOctopus = async () => {
 
         await Promise.all(athleteAndOctopusInformationArray.map(async (athleteAndOctopusInformation) => {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
-                const play = new Play()
+                const play = new ScoringPlay()
                 play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
                 await playRepository.save(play)
                 await postOctopusToTwitter(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)

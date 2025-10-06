@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm"
-import { Play } from "../entities/Play"
+import { ScoringPlay } from "../entities/Play"
 import { configDotenv } from "dotenv"
 import "reflect-metadata"
 
@@ -12,6 +12,6 @@ export default new DataSource({
     username: process.env.PG_USER as string,
     password: process.env.PG_PASS as string,
     database: process.env.PG_DB as string,
-    entities: [Play],
+    entities: [ScoringPlay],
     migrations: [],
 })
