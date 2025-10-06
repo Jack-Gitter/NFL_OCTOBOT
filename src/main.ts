@@ -4,7 +4,7 @@ import { checkForOctopus } from "./coordinator/coordinator"
 
 const main = async () => {
     configDotenv()
-    cron.schedule('* * * * *', () => {
+    cron.schedule('* 10-23 * * 4-1', () => {
         checkForOctopus()
     })
 }
