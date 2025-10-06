@@ -3,25 +3,23 @@ import { ScoringPlay } from "../entities/Play"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "../espn_api/types"
 import { postOctopusToTwitter } from "../x_api/x_api"
-import { DataSource, Repository } from "typeorm"
+import { Repository } from "typeorm"
 
 export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
-    const checkedPlays = await scoringPlayRepository.find()
-    const checkedPlayIds = checkedPlays.map(checkedPlay => {
+
+    const processedOctopusPlays = await scoringPlayRepository.find()
+    const proccessedOctopusPlayIds = processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
+    const processedOctopusPlayIdsSet = new Set(proccessedOctopusPlayIds)
 
     const gameIds = await getDailyGameIds()
-
-    const checkedPlayIdsSet = new Set(checkedPlayIds)
-
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))
-
     gameToScoringPlayIdsArray.forEach((gameToScoringPlayIds) => {
         gameToScoringPlayIds.scoringPlayIds = gameToScoringPlayIds.scoringPlayIds.filter(scoringPlayId => {
-            return !checkedPlayIdsSet.has(scoringPlayId)
+            return !processedOctopusPlayIdsSet.has(scoringPlayId)
         })
     })
 
