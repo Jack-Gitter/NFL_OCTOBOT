@@ -2,8 +2,8 @@ import { Client, auth } from "twitter-api-sdk";
 
 export const initXClient = () => {
     const creds = new auth.OAuth2User({
-     client_id: process.env.CLIENT_ID as string,
-     client_secret: process.env.CLIENT_SECRET as string,
+     client_id: process.env.X_CLIENT_ID as string,
+     client_secret: process.env.X_CLIENT_SECRET as string,
      callback: "",
      scopes: [],
     });
