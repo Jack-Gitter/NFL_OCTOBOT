@@ -13,11 +13,13 @@ const main = async () => {
     await datasource.initialize()
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
     const twitterClient = await getTwitterClient()
-
     cron.schedule('* * * * *', async () => {
         console.log('running!')
         await run(twitterClient, scoringPlayRepository)
     })
+    setInterval(() => {
+        console.log('Heartbeat - Container running...')
+    }, 60000) 
 }
 
 
