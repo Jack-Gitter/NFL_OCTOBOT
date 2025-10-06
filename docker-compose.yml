@@ -3,7 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    tty: true
   db:
     image: postgres:15
     restart: always

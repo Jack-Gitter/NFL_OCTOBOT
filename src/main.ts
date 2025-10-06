@@ -17,6 +17,9 @@ const main = async () => {
         console.log('running!')
         await run(twitterClient, scoringPlayRepository)
     })
+    setInterval(() => {
+        console.log('Heartbeat - Container running...')
+    }, 60000) 
 }
 
 
