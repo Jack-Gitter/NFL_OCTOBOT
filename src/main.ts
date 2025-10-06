@@ -14,7 +14,8 @@ const main = async () => {
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
     const twitterClient = await getTwitterClient()
 
-    cron.schedule('* 10-23 * * 4-1', async () => {
+    cron.schedule('* * * * *', async () => {
+        console.log('running!')
         await run(twitterClient, scoringPlayRepository)
     })
 }
