@@ -3,6 +3,6 @@ import { Column, Entity } from "typeorm";
 @Entity()
 export class Play {
 
-    @Column()
+    @Column({primary: true})
     id: number
 }

@@ -23,7 +23,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
   }
 }

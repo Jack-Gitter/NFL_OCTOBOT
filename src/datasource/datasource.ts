@@ -1,6 +1,10 @@
 import { DataSource } from "typeorm"
 import { Play } from "../entities/Play"
+import { configDotenv } from "dotenv"
 import "reflect-metadata"
+
+configDotenv()
+
 export default new DataSource({
     type: "postgres",
     host: "localhost",
