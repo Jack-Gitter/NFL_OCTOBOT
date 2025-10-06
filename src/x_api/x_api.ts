@@ -8,6 +8,5 @@ export const initXClient = () => {
 export const post = async (client: Client, text: string) => {
     const body = {text}
     await client.tweets.createTweet(body)
-
 }
 
