@@ -1,33 +1,13 @@
 import { Game } from "../models/game"
 import { Athlete, Event, Game, GameResponse, GameToScoringPlayIds, OctopusInformation, Participant, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
-export const getDailyGameIds = async (date: Date = new Date()) => {
-    const formattedDate = formatDate(date)
-    const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`
-    const result = await fetch(url)
-    const scoreboard: Scoreboard = await result.json()
-    return scoreboard.events.map((event: Event) => {
-        return event.id
-    })
-}
-
-export const getGameInformation = async (gameId: number) => {
-    const scoringPlayIds = await getGameScoringPlayIds(gameId)
-    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
-    const game = new Game(gameId, scoringPlayInformation)
-    return game
-
-}
-
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
-    const res = []
-    for (const scoringPlayId of scoringPlayIds) {
+    return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
         const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
         const result = await fetch(url)
         const scoringPlayInformation: ScoringPlayInformation = await result.json()
-        res.push(scoringPlayInformation)
-    }
-    return res
+        return scoringPlayInformation
+    }))
 }
 
 export const getGameScoringPlayIds = async (gameId: number) => {
@@ -38,6 +18,24 @@ export const getGameScoringPlayIds = async (gameId: number) => {
         return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
+    })
+}
+
+export const getGameInformation = async (gameId: number) => {
+    const scoringPlayIds = await getGameScoringPlayIds(gameId)
+    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
+    return new Game(gameId, scoringPlayInformation)
+
+}
+
+
+export const getDailyGameIds = async (date: Date = new Date()) => {
+    const formattedDate = formatDate(date)
+    const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`
+    const result = await fetch(url)
+    const scoreboard: Scoreboard = await result.json()
+    return scoreboard.events.map((event: Event) => {
+        return event.id
     })
 }
 

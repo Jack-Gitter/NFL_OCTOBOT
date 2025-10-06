@@ -1,21 +1,29 @@
 import { TwitterApi } from "twitter-api-v2"
 import { ScoringPlay } from "../entities/Play"
-import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
+import { getAtheleteInformation, getDailyGameIds, getGameInformation, getGameScoringPlayIds, getOctopusInformation } from "../espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "../espn_api/types"
 import { postOctopusToTwitter } from "../x_api/x_api"
 import { Repository } from "typeorm"
 
 const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedOctopusPlays = await scoringPlayRepository.find()
-    const proccessedOctopusPlayIds = processedOctopusPlays.map(checkedPlay => {
+    return processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
-    return new Set(proccessedOctopusPlayIds)
 
 }
 export const run2 = async(twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
     const currentGameIds = await getDailyGameIds()
+
+    const games = await Promise.all(currentGameIds.map(async (gameId) => {
+        return getGameInformation(gameId)
+    }))
+
+    for (const game of games) {
+        game.deduplicateProcessedPlays(processedPlayIds)
+    }
+
 
 }
 
