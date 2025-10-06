@@ -1,4 +1,4 @@
-import { getAtheleteInformation, getScoringPlayInformation } from "../espn_api/espn_api";
+import { getAtheleteInformation } from "../espn_api/espn_api";
 import { Participant, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
 
 export class Game {
@@ -31,7 +31,7 @@ export class Game {
     }
 
     public async getOctopusPlayerInformation() {
-        this.scoringPlays?.map((scoringPlay) => {
+        this.scoringPlays?.map(async (scoringPlay) => {
             const patScorer = scoringPlay.participants.find((participant: Participant) => {
                 return participant.type === SCORER_TYPE.PAT_SCORER
             })
