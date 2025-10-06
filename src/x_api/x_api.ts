@@ -1,9 +1,10 @@
+import { RequestOptions } from "http";
 import { Client, auth } from "twitter-api-sdk";
 
 export const initXClient = () => {
     const creds = new auth.OAuth2User({
-     client_id: process.env.X_CLIENT_ID as string,
-     client_secret: process.env.X_CLIENT_SECRET as string,
+     client_id: process.env.X_API_KEY as string,
+     client_secret: process.env.X_SECRET_KEY as string,
      callback: "",
      scopes: [],
     });
@@ -12,6 +13,9 @@ export const initXClient = () => {
 
 export const post = async (client: Client, text: string) => {
     const body = {text}
-    await client.tweets.createTweet(body)
+    const requestOptions: RequestOptions = {
+
+    }
+    await client.tweets.createTweet(body, )
 }
 
