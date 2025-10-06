@@ -36,13 +36,13 @@ export const checkForOctopus = async () => {
                 } satisfies AthleteAndOctopusInformation
             }
         }))
-        athleteAndOctopusInformationArray.map(async (athleteAndOctopusInformation) => {
+        await Promise.all(athleteAndOctopusInformationArray.map(async (athleteAndOctopusInformation) => {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
                 const play = new Play()
                 play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
                 await playRepository.save(play)
                 postOctopus(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
-        })
+        }))
     }))
 }
