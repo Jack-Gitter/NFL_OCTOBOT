@@ -10,13 +10,15 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     })
 }
 
-export const getGameTouchdownPlays = async (gameId: number) => {
+export const getGameTouchdownPlayIds = async (gameId: number) => {
     console.log(gameId)
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: Game = await result.json()
     return game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
-        return scoringPlay.type === 'touchdown'
+        return scoringPlay.scoringType.name === 'touchdown'
+    }).map((scoringPlay: ScoringPlay) => {
+        return scoringPlay.id
     })
 }
 
