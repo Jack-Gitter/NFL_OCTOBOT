@@ -55,8 +55,8 @@ export class Game {
     }
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
-        this.scoringPlays?.forEach(scoringPlay => {
-            postOctopusToTwitter(twitterClient, scoringPlay.shortText)
-        })
+        await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
+            await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
+        }))
     }
 }
