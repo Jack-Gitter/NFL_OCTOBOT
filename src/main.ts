@@ -1,7 +1,9 @@
+import { configDotenv } from "dotenv"
 import { getAtheleteInformation, getDailyGameIds, getGameScoringPlayIds, getOctopusInformation, } from "./espn_api/espn_api"
 import { AthleteAndOctopusInformation } from "./espn_api/types"
 
 const main = async () => {
+    configDotenv()
     const gameIds = await getDailyGameIds(new Date('09/22/2024'))
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
