@@ -22,7 +22,7 @@ export const checkForOctopus = async () => {
         })
     })
 
-    await Promise.all (gameToScoringPlayIdsArray.map(async (gameToScoringPlayIds) => {
+    await Promise.all(gameToScoringPlayIdsArray.map(async (gameToScoringPlayIds) => {
         const scoringPlayIds = gameToScoringPlayIds.scoringPlayIds
         const octopusInformationArray = await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
             return await getOctopusInformation(gameToScoringPlayIds.gameId, scoringPlayId)
