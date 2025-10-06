@@ -1,8 +1,8 @@
-import { getDailyGameIds, getGameScoringPlays, } from "./espn_api/espn_api"
+import { getDailyGameIds, getGameTouchdownPlays, } from "./espn_api/espn_api"
 
 const main = async () => {
     const gameIds = await getDailyGameIds()
-    getGameScoringPlays(gameIds[0] ?? 0)
+    getGameTouchdownPlays(gameIds[1] ?? 0)
 }
 
 main()

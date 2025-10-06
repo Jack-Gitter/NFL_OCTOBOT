@@ -8,5 +8,10 @@ export type Event = {
 }
 
 export type Game = {
-    scoringPlays: unknown[]
+    scoringPlays: ScoringPlay[]
+}
+
+export type ScoringPlay = {
+    id: number,
+    scoringType: {name: "touchdown" | "fieldgoal"}
 }
