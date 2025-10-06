@@ -1,10 +1,14 @@
-import { Client, auth } from "twitter-api-sdk";
- 
-export const authClient = new auth.OAuth2User({
- client_id: process.env.CLIENT_ID as string,
- client_secret: process.env.CLIENT_SECRET as string,
- callback: "",
- scopes: ["tweet.read", "users.read", "offline.access"],
-});
+import { TwitterApi } from 'twitter-api-v2';
 
-export const userClient = new Client(authClient);
+export const post = async () => {
+    const url = `https://api.x.com/2/tweets`
+
+    const userClient = new TwitterApi({
+      appKey: process.env.X_API_KEY as string,
+      appSecret: process.env.X_API_KEY_SECRET as string,
+      accessToken: process.env.X_ACCESS_TOKEN as string,
+      accessSecret: process.env.X_ACCESS_TOKEN_SECRET as string
+    });
+
+    userClient.post(url, {text: 'hi!'})
+}
