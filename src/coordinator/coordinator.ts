@@ -24,10 +24,7 @@ export const run2 = async(twitterClient: TwitterApi, scoringPlayRepository: Repo
         game.deduplicateProcessedPlays(processedPlayIds)
         game.filterScoringPlays()
         await game.populateOctopusPlayerInformation()
-
-                const play = new ScoringPlay()
-                play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
-                await scoringPlayRepository.save(play)
+        await game.saveOctopiToDatabase(scoringPlayRepository)
         await game.postOctopiToTwitter(twitterClient)
     }
 }
