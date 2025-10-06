@@ -10,7 +10,7 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     })
 }
 
-export const getGameTouchdownPlayIds = async (gameId: number) => {
+export const getGameScoringPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: Game = await result.json()

@@ -12,20 +12,20 @@ const main = async () => {
         const octopusInformationArray = await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
             return await getOctopusInformation(gameToScoringPlayIds.gameId, scoringPlayId)
         }))
-        const athleteAndOctopusInformationArray = await Promise.all(octopusInformationArray.map(async (octoInfo) => {
-            if (octoInfo) {
-                const athlete = await getAtheleteInformation(octoInfo.scorer)
+        const athleteAndOctopusInformationArray = await Promise.all(octopusInformationArray.map(async (octopusInformation) => {
+            if (octopusInformation) {
+                const athlete = await getAtheleteInformation(octopusInformation.scorer)
                 return {
                     athlete, 
-                    octoInfo
+                    octopusInformation
                 } satisfies AthleteAndOctopusInformation
             }
         }))
-        for (const data of athleteAndOctopusInformationArray) {
-            if (data?.athlete && data.octoInfo) {
-                console.log(data?.athlete.firstName)
-                console.log(data?.athlete.lastName)
-                console.log(data?.octoInfo.shortText)
+        for (const athleteAndOctopusInformation of athleteAndOctopusInformationArray) {
+            if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
+                console.log(athleteAndOctopusInformation?.athlete.firstName)
+                console.log(athleteAndOctopusInformation?.athlete.lastName)
+                console.log(athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }
 
