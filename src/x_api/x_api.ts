@@ -1,4 +1,3 @@
-import { RequestOptions } from "http";
 import { Client, auth } from "twitter-api-sdk";
 
 export const initXClient = () => {
@@ -13,9 +12,6 @@ export const initXClient = () => {
 
 export const post = async (client: Client, text: string) => {
     const body = {text}
-    const requestOptions: RequestOptions = {
-
-    }
-    await client.tweets.createTweet(body, )
+    await client.tweets.createTweet(body)
 }
 
