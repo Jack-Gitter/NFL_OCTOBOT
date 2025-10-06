@@ -8,8 +8,8 @@ configDotenv()
 
 export default new DataSource({
     type: "postgres",
-    host: "host.docker.internal",
-    port: 5433,
+    host: process.env.PG_HOST as string,
+    port: Number(process.env.PG_PORT),
     username: process.env.PG_USER as string,
     password: process.env.PG_PASS as string,
     database: process.env.PG_DB as string,

@@ -1,5 +1,5 @@
 import { Game } from "../models/game"
-import { Athlete, Event, GameResponse, Scoreboard, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
+import { AthleteResponse, EventResponse, GameResponse, ScoreboardResponse, SCORING_TYPE, ScoringPlayInformation, ScoringPlayResponse } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
@@ -14,9 +14,9 @@ export const getGameScoringPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: GameResponse = await result.json()
-    return game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
+    return game.scoringPlays.filter((scoringPlay: ScoringPlayResponse) => {
         return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
-    }).map((scoringPlay: ScoringPlay) => {
+    }).map((scoringPlay: ScoringPlayResponse) => {
         return scoringPlay.id
     })
 }
@@ -32,15 +32,15 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`
     const result = await fetch(url)
-    const scoreboard: Scoreboard = await result.json()
-    return scoreboard.events.map((event: Event) => {
+    const scoreboard: ScoreboardResponse = await result.json()
+    return scoreboard.events.map((event: EventResponse) => {
         return event.id
     })
 }
 
 export const getAtheleteInformation = async(playerUrl: string) => {
     const result = await fetch(playerUrl)
-    const athelete: Athlete = await result.json()
+    const athelete: AthleteResponse = await result.json()
     return athelete
 }
 

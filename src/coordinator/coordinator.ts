@@ -13,7 +13,7 @@ const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPla
 }
 export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
-    const currentGameIds = await getDailyGameIds()
+    const currentGameIds = await getDailyGameIds(new Date('10/05/2025'))
 
     const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)
