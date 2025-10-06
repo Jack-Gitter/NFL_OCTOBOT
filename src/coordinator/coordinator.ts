@@ -5,15 +5,29 @@ import { AthleteAndOctopusInformation } from "../espn_api/types"
 import { postOctopusToTwitter } from "../x_api/x_api"
 import { Repository } from "typeorm"
 
-export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
-
+const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedOctopusPlays = await scoringPlayRepository.find()
     const proccessedOctopusPlayIds = processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
-    const processedOctopusPlayIdsSet = new Set(proccessedOctopusPlayIds)
+    return new Set(proccessedOctopusPlayIds)
 
-    const gameIds = await getDailyGameIds()
+}
+export const run2 = async(twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
+    const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
+    const currentGameIds = await getDailyGameIds()
+
+}
+
+export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
+
+    /*const processedOctopusPlays = await scoringPlayRepository.find()
+    const proccessedOctopusPlayIds = processedOctopusPlays.map(checkedPlay => {
+        return checkedPlay.id
+    })
+    const processedOctopusPlayIdsSet = new Set(proccessedOctopusPlayIds)*/
+
+    //const gameIds = await getDailyGameIds()
     const gameToScoringPlayIdsArray = await Promise.all(gameIds.map(async (gameId: number) => {
         return await getGameScoringPlayIds(gameId)
     }))

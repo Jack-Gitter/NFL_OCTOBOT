@@ -1,4 +1,5 @@
-import { Athlete, Event, Game, GameToScoringPlayIds, OctopusInformation, Participant, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
+import { Game } from "../models/game"
+import { Athlete, Event, Game, GameResponse, GameToScoringPlayIds, OctopusInformation, Participant, Scoreboard, SCORER_TYPE, SCORING_TYPE, ScoringPlay, ScoringPlayInformation } from "./types"
 
 export const getDailyGameIds = async (date: Date = new Date()) => {
     const formattedDate = formatDate(date)
@@ -10,16 +11,35 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     })
 }
 
+export const getGameInformation = async (gameId: number) => {
+    const scoringPlayIds = await getGameScoringPlayIds(gameId)
+    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
+    const game = new Game(gameId, scoringPlayInformation)
+    return game
+
+}
+
+export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
+    const res = []
+    for (const scoringPlayId of scoringPlayIds) {
+        const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
+        const result = await fetch(url)
+        const scoringPlayInformation: ScoringPlayInformation = await result.json()
+        res.push(scoringPlayInformation)
+    }
+    return res
+}
+
 export const getGameScoringPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
-    const game: Game = await result.json()
+    const game: GameResponse = await result.json()
     const scoringPlayIds = game.scoringPlays.filter((scoringPlay: ScoringPlay) => {
         return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
     }).map((scoringPlay: ScoringPlay) => {
         return scoringPlay.id
     })
-    return { gameId: gameId, scoringPlayIds: scoringPlayIds } satisfies GameToScoringPlayIds
+    return scoringPlayIds
 
 }
 

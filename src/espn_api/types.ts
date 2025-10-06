@@ -7,7 +7,7 @@ export type Event = {
     id: number
 }
 
-export type Game = {
+export type GameResponse = {
     scoringPlays: ScoringPlay[]
 }
 
@@ -17,6 +17,7 @@ export type ScoringPlay = {
 }
 
 export type ScoringPlayInformation = {
+    id: number,
     participants: Participant[]
     pointAfterAttempt: PointAfterAttempt
     shortText: string
