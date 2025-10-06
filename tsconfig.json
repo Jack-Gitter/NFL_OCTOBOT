@@ -8,7 +8,6 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
     "module": "nodenext",
     "target": "esnext",
     "types": ["node"],
@@ -25,5 +24,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "emitDecoratorMetadata": true
+    "strictPropertyInitialization": false,
   }
 }
