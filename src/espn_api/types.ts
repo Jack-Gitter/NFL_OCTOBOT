@@ -47,3 +47,8 @@ export enum POINT_AFTER_ATTEMPT {
     TWO_POINT_PASS = 15,
     TWO_POINT_RUSH = 16
 }
+
+export enum SCORER_TYPE {
+    PAT_SCORER = "patScorer",
+    TD_SCORER = "scorer"
+}
