@@ -6,7 +6,7 @@ import { ScoringPlay } from "../entities/Play";
 import { Repository } from "typeorm";
 
 export class Game {
-    constructor(public gameId: number, public scoringPlays?: ScoringPlayInformation[]) {}
+    constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
 
     public deduplicateProcessedPlays(playIds: number[]) {
         const playIdsSet = new Set(playIds)
@@ -47,11 +47,11 @@ export class Game {
     }
 
     public async saveOctopiToDatabase(scoringPlayRepository: Repository<ScoringPlay>) {
-        this.scoringPlays?.forEach(async scoringPlay => {
+        await Promise.all(this.scoringPlays?.map(async (scoringPlay) => {
             const play = new ScoringPlay()
             play.id = scoringPlay.id
-            await scoringPlayRepository.save(play)
-        })
+            return await scoringPlayRepository.save(play)
+        }))
     }
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
