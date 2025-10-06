@@ -2,6 +2,8 @@ import { TwitterApi } from "twitter-api-v2";
 import { getAtheleteInformation } from "../espn_api/espn_api";
 import { Participant, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
 import { postOctopusToTwitter } from "../x_api/x_api";
+import { ScoringPlay } from "../entities/Play";
+import { Repository } from "typeorm";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays?: ScoringPlayInformation[]) {}
@@ -41,6 +43,14 @@ export class Game {
                 scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
             }
             return scoringPlay
+        })
+    }
+
+    public async saveOctopiToDatabase(scoringPlayRepository: Repository<ScoringPlay>) {
+        this.scoringPlays?.forEach(async scoringPlay => {
+            const play = new ScoringPlay()
+            play.id = scoringPlay.id
+            await scoringPlayRepository.save(play)
         })
     }
 
