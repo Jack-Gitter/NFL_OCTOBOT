@@ -62,6 +62,7 @@ export type GameToScoringPlayIds = {
 export type OctopusInformation = {
     scorer: string,
     shortText: string,
+    scoringPlayId: number
 }
 
 export type AthleteAndOctopusInformation = {

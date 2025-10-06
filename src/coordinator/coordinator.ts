@@ -38,6 +38,9 @@ export const checkForOctopus = async () => {
         }))
         for (const athleteAndOctopusInformation of athleteAndOctopusInformationArray) {
             if (athleteAndOctopusInformation?.athlete && athleteAndOctopusInformation.octopusInformation) {
+                const play = new Play()
+                play.id = athleteAndOctopusInformation.octopusInformation.scoringPlayId
+                playRepository.save(play)
                 postOctopus(twitterClient, athleteAndOctopusInformation?.octopusInformation.shortText)
             }
         }

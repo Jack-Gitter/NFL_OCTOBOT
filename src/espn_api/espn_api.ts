@@ -41,7 +41,8 @@ export const getOctopusInformation = async(gameId: number, scoringPlayId: number
     if (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) {
         return {
             scorer: patScorer.athlete.$ref,
-            shortText: scoringPlayInformation.shortText
+            shortText: scoringPlayInformation.shortText,
+            scoringPlayId: scoringPlayId
         } satisfies OctopusInformation
     }
 }
