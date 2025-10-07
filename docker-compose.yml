@@ -19,6 +19,7 @@ services:
       PG_HOST: ${PG_HOST}
       PG_PORT: ${PG_PORT}
       STARTING_OCTOPUS_COUNT: ${STARTING_OCTOPUS_COUNT}
+      PORT: ${PORT}
   db:
     image: postgres:15
     profiles: [pg, all]
