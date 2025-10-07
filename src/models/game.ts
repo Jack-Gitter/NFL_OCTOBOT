@@ -54,14 +54,38 @@ export class Game {
     }
 
 
-    public async postOctopiToTwitter(twitterClient: TwitterApi) {
+    public async postOctopiToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
             console.log(scoringPlay?.octopusScorer?.firstName)
             console.log(scoringPlay?.octopusScorer?.lastName)
-            const text = `OCTOPUS ✅
-                        ${scoringPlay.shortText}
-            `
-            // return await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
+            let playerOctopusCount = 0
+            let globalOctopusCount = 0
+            datasource.transaction(async (entityManager) => {
+                if (scoringPlay.octopusScorer)  {
+                    const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
+                    const octopusCountRepository = entityManager.getRepository(OctopusCount)
+
+                    const octopusCount = await octopusCountRepository.findOneBy({id: 1})
+                    const playerOctopus = await playerOctopusCountRepository.findOneBy({id: scoringPlay.octopusScorer.id})
+                    if (playerOctopus?.octopusCount && octopusCount?.count) {
+                        globalOctopusCount = octopusCount.count
+                        playerOctopusCount = playerOctopus.octopusCount
+                    }
+
+                }
+            })
+
+
+            if (scoringPlay.octopusScorer) {
+                return await postOctopusToTwitter(
+                    twitterClient, 
+                    scoringPlay.shortText, 
+                    scoringPlay.octopusScorer?.firstName, 
+                    scoringPlay.octopusScorer?.lastName, 
+                    playerOctopusCount, 
+                    globalOctopusCount
+                )
+            }
         }))
     }
 }
