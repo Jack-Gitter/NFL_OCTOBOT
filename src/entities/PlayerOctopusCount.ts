@@ -1,5 +1,6 @@
-import { Column } from "typeorm"
+import { Column, Entity } from "typeorm"
 
+@Entity()
 export class PlayerOctopusCount {
 
     constructor(id: number, octopusCount: number) {
