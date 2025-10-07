@@ -15,8 +15,8 @@ services:
       PG_USER: ${PG_USER}
       PG_PASS: ${PG_PASS}
       PG_DB: ${PG_DB}
-      PG_HOST: db
-      PG_PORT: 5432
+      PG_HOST: ${PG_HOST}
+      PG_PORT: ${PG_PORT}
   db:
     image: postgres:15
     restart: always
