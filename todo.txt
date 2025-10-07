@@ -1,2 +1,4 @@
 scoring plays should be its own class --> should have a "isOctopus" method on it
 start to transform all data from api responses to classes
+
+get historical data about how many octopus there have been, include that
