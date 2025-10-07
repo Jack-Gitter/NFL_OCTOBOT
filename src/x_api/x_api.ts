@@ -45,9 +45,9 @@ export const formatOctopusTweet = (
 
 ${playSummary}
 
-This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} octopus! 
+This is ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} octopus! 
 
-${playerFirstName} ${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! 
+${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! 
 
 This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} octopus!
 
