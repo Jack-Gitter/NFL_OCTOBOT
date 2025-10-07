@@ -13,14 +13,11 @@ export class ScoringPlayInformation {
     ) {}
 
     public isOctopus() {
-        if (this.pointAfterAttempt.isTwoPointAttempt && this.pointAfterAttempt.success) {
-                const patScorer = this.participants.find((participant: Athlete) => {
-                    return participant.type === SCORER_TYPE.PAT_SCORER
-                })
-                const tdScorer = this.participants.find((participant: Athlete) => {
-                    return participant.type === SCORER_TYPE.TD_SCORER
-                })
-                return (patScorer && tdScorer && patScorer.id === tdScorer.id) 
+        if (this.pointAfterAttempt.isTwoPointAttempt && this.pointAfterAttempt.success && this.pointAfterAttempt.scorer) {
+            const tdScorer = this.participants.find((participant: Athlete) => {
+                return participant.type === SCORER_TYPE.TD_SCORER
+            })
+            return (tdScorer && this.pointAfterAttempt.scorer.id === tdScorer.id) 
             }
             return false
     }

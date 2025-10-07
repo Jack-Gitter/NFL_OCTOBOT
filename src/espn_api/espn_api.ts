@@ -2,7 +2,7 @@ import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
 import { PointAfterAttempt } from "../models/pointAfterAttempt"
 import { ScoringPlayInformation } from "../models/scoringPlay"
-import { AthleteResponse, EventResponse, GameResponse, ScoreboardResponse, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
+import { AthleteResponse, EventResponse, GameResponse, ParticipantResponse, ScoreboardResponse, SCORER_TYPE, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
@@ -33,15 +33,26 @@ export const getGameInformation = async (gameId: number) => {
         const athletes = []
         for (const participants of scoringPlay.participants) {
             const athleteResponse = await getAtheleteInformation(participants.athlete.$ref)
-            const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participants.type)
-            athletes.push(athlete)
+            if (athleteResponse) {
+                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participants.type)
+                athletes.push(athlete)
+            }
         }
 
         const isTwoPointAttempt = 
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
 
-        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt)
+        const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
+            return participant.type === SCORER_TYPE.PAT_SCORER
+        })
+
+        const temp = await getAtheleteInformation(patScorer?.athlete.$ref)
+        let test = undefined
+        if (temp && patScorer) {
+            test = new Athlete(temp.firstName, temp.lastName, temp.id, patScorer.type)
+        }
+        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, test)
         return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
@@ -60,7 +71,10 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     })
 }
 
-export const getAtheleteInformation = async(playerUrl: string) => {
+export const getAtheleteInformation = async(playerUrl?: string) => {
+    if (!playerUrl) {
+        return undefined
+    }
     const result = await fetch(playerUrl)
     const athelete: AthleteResponse = await result.json()
     return athelete
