@@ -2,4 +2,6 @@
 
 * keep track of individual player octo count since the start of this octobot
 
-* get "spiders" => where a player was thrown the ball, and had the chance for an octopus, but it was incomplete
+* tweet when a player was thrown the ball for the two point, and had the chance for an octopus, but it was incomplete
+
+* keep a leaderboard of top 5 octopi players
