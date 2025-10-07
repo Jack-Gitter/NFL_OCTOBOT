@@ -30,14 +30,15 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
 
     const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
-        const athletes = []
-        for (const participants of scoringPlay.participants) {
-            const athleteResponse = await getAtheleteInformation(participants.athlete.$ref)
+        const athletes: Athlete[] = []
+
+        await Promise.all(scoringPlay.participants.map(async (participant) => {
+            const athleteResponse = await getAtheleteInformation(participant.athlete.$ref)
             if (athleteResponse) {
-                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participants.type)
+                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participant.type)
                 athletes.push(athlete)
             }
-        }
+        }))
 
         const isTwoPointAttempt = 
                 scoringPlay.pointAfterAttempt?.value === 2 || 
