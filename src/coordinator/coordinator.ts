@@ -10,7 +10,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
     const processedPlayIds = processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
-    const currentGameIds = await getDailyGameIds(new Date())
+    const currentGameIds = await getDailyGameIds(new Date('09/18/2023'))
 
     const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)

@@ -22,8 +22,7 @@ export const postOctopusToTwitter = async (
     try {
         const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount)
         const body = { text }
-        console.log(text)
-        //await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
     } catch (error) {
         console.error(error)
     }
