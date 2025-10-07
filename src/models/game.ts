@@ -5,7 +5,6 @@ import { postOctopusToTwitter } from "../x_api/x_api";
 import { DataSource } from "typeorm/browser";
 import { OctopusCount } from "../entities/OctopusCount";
 import { PlayerOctopusCount } from "../entities/PlayerOctopusCount";
-import { shorten } from "typeorm/util/StringUtils.js";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
