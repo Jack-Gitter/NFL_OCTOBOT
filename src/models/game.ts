@@ -35,7 +35,7 @@ export class Game {
     }
 
     public async populateOctopusPlayerInformation() {
-        this.scoringPlays?.map(async (scoringPlay) => {
+        this.scoringPlays = await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
             const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
                 return participant.type === SCORER_TYPE.PAT_SCORER
             })
@@ -43,7 +43,7 @@ export class Game {
                 scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
             }
             return scoringPlay
-        })
+        }))
     }
 
     public async saveOctopiToDatabase(scoringPlayRepository: Repository<ScoringPlay>) {
@@ -56,7 +56,6 @@ export class Game {
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
-            console.log(scoringPlay)
             console.log(scoringPlay.octopusScorer.firstName)
             console.log(scoringPlay.octopusScorer.lastName)
             return []
