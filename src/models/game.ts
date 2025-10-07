@@ -2,7 +2,7 @@ import { TwitterApi } from "twitter-api-v2";
 import { ScoringPlay } from "../entities/Play";
 import { ScoringPlayInformation } from "./scoringPlay";
 import { postOctopusToTwitter } from "../x_api/x_api";
-import { DataSource } from "typeorm/browser";
+import { DataSource, MoreThan } from "typeorm/browser";
 import { OctopusCount } from "../entities/OctopusCount";
 import { PlayerOctopusCount } from "../entities/PlayerOctopusCount";
 
@@ -68,6 +68,7 @@ export class Game {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
             let playerOctopusCount = 0
             let globalOctopusCount = 0
+            let playerOctopusRanking = 0
             await datasource.transaction(async (entityManager) => {
                 if (scoringPlay.octopusScorer)  {
                     const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
@@ -79,7 +80,9 @@ export class Game {
                     if (playerOctopus && octopusCount) {
                         globalOctopusCount = octopusCount.count
                         playerOctopusCount = playerOctopus.octopusCount
+                        playerOctopusRanking = await playerOctopusCountRepository.count({where: {octopusCount: MoreThan(playerOctopusCount)}}) + 1
                     }
+
                 }
             })
 
@@ -90,7 +93,8 @@ export class Game {
                     scoringPlay.octopusScorer?.firstName, 
                     scoringPlay.octopusScorer?.lastName, 
                     playerOctopusCount, 
-                    globalOctopusCount
+                    globalOctopusCount,
+                    playerOctopusRanking
                 )
             }
         }))

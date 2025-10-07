@@ -17,10 +17,11 @@ export const postOctopusToTwitter = async (
     playerFirstName: string, 
     playerLastName: string, 
     playerOctopusCount: number, 
-    globalOctopusCount: number
+    globalOctopusCount: number,
+    playerOctopusRanking: number
 ) => {
     try {
-        const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount)
+        const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking)
         const body = { text }
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
@@ -29,13 +30,15 @@ export const postOctopusToTwitter = async (
     }
 }
 
-export const formatOctopusTweet = (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number) => {
+export const formatOctopusTweet = (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number, playerOctopusRanking: number) => {
 
     return `OCTOPUS ✅ 
 
 ${playSummary}
 
 This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} ever Octopus! (Since the 2025/26 Season) 
+
+${playerFirstName} ${playerLastName} is ranked ${playerOctopusRanking} on the octopus leaderboard! (Since the 2025/26 Season)
 
 This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} ever Octopus!`
 
