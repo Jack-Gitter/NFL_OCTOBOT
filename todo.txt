@@ -1,4 +1,5 @@
-start to transform all data from api responses to classes
-scoring plays should be its own class --> should have a "isOctopus" method on it
-keep track of individual player octo count
-keep trakc of total nfl octo count
+keep track of individual player octo count since the start of this octobot
+
+keep track of total nfl octopus count
+
+get "spiders" => where a player was thrown the ball, and had the chance for an octopus, but it was incomplete
