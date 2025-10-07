@@ -1,4 +1,3 @@
-import { ScoringPlay } from "../entities/Play"
 import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
 import { PointAfterAttempt } from "../models/pointAfterAttempt"
@@ -9,8 +8,8 @@ export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: 
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
         const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
         const result = await fetch(url)
-        const scoringPlayInformation: ScoringPlayInformationResponse = await result.json()
-        return scoringPlayInformation
+        const scoringPlayInformationResponse: ScoringPlayInformationResponse = await result.json()
+        return scoringPlayInformationResponse
     }))
 }
 
@@ -43,14 +42,14 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
 
-        const patScorerParticipantResponse = scoringPlay.participants.find((participant: ParticipantResponse) => {
+        const participant = scoringPlay.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
 
-        const patScorerResponse = await getAtheleteInformation(patScorerParticipantResponse?.athlete.$ref)
+        const patScorerResponse = await getAtheleteInformation(participant?.athlete.$ref)
         let patScorer = undefined
-        if (patScorerResponse && patScorerParticipantResponse) {
-            patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, patScorerParticipantResponse.type)
+        if (patScorerResponse && participant) {
+            patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, participant.type)
         }
         const pointAfterAttempt = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
         return pointAfterAttempt
@@ -60,9 +59,9 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
 export const getGameInformation = async (gameId: number) => {
 
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
-    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
+    const scoringPlayInformationResponse = await getScoringPlayInformation(gameId, scoringPlayIds)
 
-    const scoringPlays = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
+    const scoringPlays = await Promise.all(scoringPlayInformationResponse.map(async (scoringPlay) => {
         const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
         const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
         return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, undefined)
