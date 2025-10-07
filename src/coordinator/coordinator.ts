@@ -6,11 +6,15 @@ import { Game } from "../models/game"
 import { DataSource } from "typeorm/browser"
 
 export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
+
     const processedOctopusPlays = await scoringPlayRepository.find()
     const processedPlayIds = processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
-    const currentGameIds = await getDailyGameIds(new Date('09/18/2023'))
+
+    const date = new Date()
+    console.log(`Fetching games for today, ${date.toISOString()}`)
+    const currentGameIds = await getDailyGameIds(new Date(date))
 
     const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)
