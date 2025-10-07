@@ -47,12 +47,14 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
         })
 
         const patScorerResponse = await getAtheleteInformation(participant?.athlete.$ref)
+
         let patScorer = undefined
+
         if (patScorerResponse && participant) {
             patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, participant.type)
         }
-        const pointAfterAttempt = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
-        return pointAfterAttempt
+
+        return new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
 
 }
 
