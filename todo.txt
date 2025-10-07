@@ -1,7 +1,3 @@
-* keep track of total nfl octopus count
-
-* keep track of individual player octo count since the start of this octobot
-
 * tweet when a player was thrown the ball for the two point, and had the chance for an octopus, but it was incomplete
 
 * keep a leaderboard of top 5 octopi players
