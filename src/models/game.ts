@@ -65,7 +65,7 @@ export class Game {
 
 
     public async postOctopiToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
-        await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
+        for (const scoringPlay of this.scoringPlays) {
             let playerOctopusCount = 0
             let globalOctopusCount = 0
             let playerOctopusRanking = 0
@@ -100,6 +100,6 @@ export class Game {
                     playerOctopusRankingTiedWith
                 )
             }
-        }))
+        }
     }
 }
