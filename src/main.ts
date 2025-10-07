@@ -5,6 +5,7 @@ import { run } from "./coordinator/coordinator"
 import { getTwitterClient } from "./x_api/x_api"
 import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
+import { OctopusCount } from "./entities/OctopusCount"
 
 const main = async () => {
 
@@ -14,6 +15,13 @@ const main = async () => {
 
     await datasource.initialize()
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
+    const octopusCountRepository = datasource.getRepository(OctopusCount)
+    
+    const startingOctopusCount = 
+        new OctopusCount(Number(process.env.STARTING_OCTOPUS_COUNT))
+
+    octopusCountRepository.insert(startingOctopusCount)
+
 
     const twitterClient = await getTwitterClient()
 
