@@ -1,13 +1,14 @@
-import { AthleteResponse, ParticipantResponse, PointAfterAttemptResponse } from "../espn_api/types";
 import { Athlete } from "./athlete";
+import { PointAfterAttempt } from "./pointAfterAttempt";
 
-export class ScoringPlay {
+export class ScoringPlayInformation {
     constructor(
         public id: number,
         public participants: Athlete[],
-        public pointAfterAttempt: PointAfterAttemptResponse,
+        public pointAfterAttempt: PointAfterAttempt,
         public shortText: string,
         public text: string,
-        public octopusScorer: Athlete
+        public octopusScorer?: Athlete
     ) {}
+
 }

@@ -16,7 +16,7 @@ export type ScoringPlayResponse = {
     scoringType: {name: "touchdown" | "fieldgoal"}
 }
 
-export type ScoringPlayInformation = {
+export type ScoringPlayInformationResponse = {
     id: number,
     participants: ParticipantResponse[]
     pointAfterAttempt: PointAfterAttemptResponse
@@ -40,6 +40,7 @@ export type PointAfterAttemptResponse = {
 export type AthleteResponse = {
     firstName: string,
     lastName: string,
+    id: number,
 }
 
 export enum SCORING_TYPE {

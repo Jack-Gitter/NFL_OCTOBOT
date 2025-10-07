@@ -1,9 +1,10 @@
 import { TwitterApi } from "twitter-api-v2";
 import { getAtheleteInformation } from "../espn_api/espn_api";
-import { ParticipantResponse, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
+import { ParticipantResponse, SCORER_TYPE } from "../espn_api/types";
 import { postOctopusToTwitter } from "../x_api/x_api";
 import { ScoringPlay } from "../entities/Play";
 import { Repository } from "typeorm";
+import { ScoringPlayInformation } from "./scoringPlay";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}

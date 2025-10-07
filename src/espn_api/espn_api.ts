@@ -1,11 +1,15 @@
+import { ScoringPlay } from "../entities/Play"
+import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
-import { AthleteResponse, EventResponse, GameResponse, ScoreboardResponse, SCORING_TYPE, ScoringPlayInformation, ScoringPlayResponse } from "./types"
+import { PointAfterAttempt } from "../models/pointAfterAttempt"
+import { ScoringPlayInformation } from "../models/scoringPlay"
+import { AthleteResponse, EventResponse, GameResponse, ScoreboardResponse, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
         const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
         const result = await fetch(url)
-        const scoringPlayInformation: ScoringPlayInformation = await result.json()
+        const scoringPlayInformation: ScoringPlayInformationResponse = await result.json()
         return scoringPlayInformation
     }))
 }
@@ -24,7 +28,18 @@ export const getGameScoringPlayIds = async (gameId: number) => {
 export const getGameInformation = async (gameId: number) => {
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
-    return new Game(gameId, scoringPlayInformation)
+    const scoringPlayInfo = scoringPlayInformation.map(async (scoringPlay) => {
+        const athletes = []
+        for (const participants of scoringPlay.participants) {
+            const athleteResponse = await getAtheleteInformation(participants.athlete.$ref)
+            const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participants.type)
+            athletes.push(athlete)
+        }
+        const isTwoPointAttempt = scoringPlay.pointAfterAttempt?.value === 2 || (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
+        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt)
+        return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
+    })
+    return new Game(gameId, scoringPlayInfo)
 
 }
 
