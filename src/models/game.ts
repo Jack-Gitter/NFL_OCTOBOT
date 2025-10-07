@@ -2,6 +2,7 @@ import { TwitterApi } from "twitter-api-v2";
 import { ScoringPlay } from "../entities/Play";
 import { Repository } from "typeorm";
 import { ScoringPlayInformation } from "./scoringPlay";
+import { postOctopusToTwitter } from "../x_api/x_api";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
@@ -37,7 +38,7 @@ export class Game {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
             console.log(scoringPlay?.octopusScorer?.firstName)
             console.log(scoringPlay?.octopusScorer?.lastName)
-            //return await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
+            // return await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
         }))
     }
 }
