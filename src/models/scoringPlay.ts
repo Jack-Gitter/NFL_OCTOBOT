@@ -18,8 +18,8 @@ export class ScoringPlayInformation {
                 return participant.type === SCORER_TYPE.TD_SCORER
             })
             return (tdScorer && this.pointAfterAttempt.scorer.id === tdScorer.id) 
-            }
-            return false
+        }
+        return false
     }
 
     public setOctopusScorer() {
