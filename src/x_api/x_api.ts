@@ -39,8 +39,6 @@ export const formatOctopusTweet = async (playSummary: string, playerFirstName: s
         This is ${playerFirstName} ${playerLastName}'s ${playerOctopusCount}${ordinalSuffixOf(playerOctopusCount)} ever Octopus! 
 
         This is the NFL's ${globalOctopusCount}${ordinalSuffixOf(globalOctopusCount)} ever Octopus!
-
-
         `
 
 }
