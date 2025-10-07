@@ -2,9 +2,8 @@ import { DataSource } from "typeorm"
 import { ScoringPlay } from "../entities/Play"
 import { configDotenv } from "dotenv"
 import "reflect-metadata"
-import { Migrations1759786272039 } from "./migrations/1759786272039-migrations"
 import { OctopusCount } from "../entities/OctopusCount"
-import { Migrations1759840030730 } from "./migrations/1759840030730-migrations"
+import { Migrations1759842320859 } from "./migrations/1759842320859-migrations"
 
 configDotenv()
 
@@ -16,6 +15,6 @@ export default new DataSource({
     password: process.env.PG_PASS as string,
     database: process.env.PG_DB as string,
     entities: [ScoringPlay, OctopusCount],
-    migrations: [Migrations1759786272039, Migrations1759840030730],
+    migrations: [Migrations1759842320859],
     migrationsRun: true,
 })
