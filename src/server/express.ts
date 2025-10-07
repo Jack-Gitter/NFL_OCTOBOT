@@ -3,7 +3,7 @@ import express from 'express'
 export const runServer = () => {
 
     const app = express()
-    const port = 3000
+    const port = Number(process.env.PORT)
 
     app.get('/ping', (req, res) => {
       res.send('pong')
