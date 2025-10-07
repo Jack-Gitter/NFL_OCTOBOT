@@ -26,13 +26,12 @@ export class ScoringPlayInformation {
     }
 
     public setOctopusScorer() {
-        const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
+        const patScorer = this.participants.find((participant: Athlete) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
         if (patScorer) {
-            scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
+            this.octopusScorer = patScorer
         }
-        return scoringPlay
     }
 
 }
