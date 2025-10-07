@@ -4,6 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     tty: true
+    profiles: [app, all]
     environment:
       X_API_KEY: ${X_API_KEY}
       X_API_KEY_SECRET: ${X_API_KEY_SECRET}
@@ -19,11 +20,14 @@ services:
       PG_PORT: ${PG_PORT}
   db:
     image: postgres:15
+    profiles: [pg, all]
     restart: always
     environment:
       POSTGRES_USER: ${PG_USER}
       POSTGRES_PASSWORD: ${PG_PASS}
       POSTGRES_DB: ${PG_DB}
+    ports: 
+      - 5433:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
