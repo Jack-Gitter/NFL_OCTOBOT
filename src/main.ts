@@ -25,6 +25,7 @@ const main = async () => {
     const twitterClient = await getTwitterClient()
 
     //cron.schedule('* * * * *', async () => {
+        console.log('Checking for Octopi!')
         await run(twitterClient, scoringPlayRepository, datasource)
     //})
 }
