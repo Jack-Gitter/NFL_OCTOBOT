@@ -75,7 +75,6 @@ export class Game {
                 }
             })
 
-
             if (scoringPlay.octopusScorer) {
                 return await postOctopusToTwitter(
                     twitterClient, 
