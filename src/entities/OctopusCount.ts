@@ -11,7 +11,7 @@ export class OctopusCount {
     @Column({primary: true})
     id: number
 
-    @Column({type: 'bigint'})
+    @Column({type: 'int'})
     count: number
 
 }

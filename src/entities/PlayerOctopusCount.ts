@@ -11,7 +11,7 @@ export class PlayerOctopusCount {
     @Column({primary: true, type: 'bigint'})
     public id: number
 
-    @Column({type: 'bigint', default: 0})
+    @Column({type: 'int', default: 0})
     public octopusCount: number
 
 }
