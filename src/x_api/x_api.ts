@@ -30,16 +30,13 @@ export const postOctopusToTwitter = async (
 
 export const formatOctopusTweet = (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number) => {
 
-    return  
-        `
-        OCTOPUS ✅
+    return `OCTOPUS ✅ 
 
-        ${playSummary}
+    ${playSummary}
 
-        This is ${playerFirstName} ${playerLastName}'s ${playerOctopusCount}${ordinalSuffixOf(playerOctopusCount)} ever Octopus! 
+    This is ${playerFirstName} ${playerLastName}'s ${playerOctopusCount}${ordinalSuffixOf(playerOctopusCount)} ever Octopus! 
 
-        This is the NFL's ${globalOctopusCount}${ordinalSuffixOf(globalOctopusCount)} ever Octopus!
-        `
+    This is the NFL's ${globalOctopusCount}${ordinalSuffixOf(globalOctopusCount)} ever Octopus!`
 
 }
 
