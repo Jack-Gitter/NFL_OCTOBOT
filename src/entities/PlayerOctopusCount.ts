@@ -3,7 +3,7 @@ import { Column, Entity } from "typeorm"
 @Entity()
 export class PlayerOctopusCount {
 
-    constructor(id: number, octopusCount: number) {
+    constructor(id: number, octopusCount: number = 0) {
         this.id = id
         this.octopusCount = octopusCount
     }
@@ -11,7 +11,7 @@ export class PlayerOctopusCount {
     @Column({primary: true, type: 'bigint'})
     public id: number
 
-    @Column({type: 'bigint'})
+    @Column({type: 'bigint', default: 0})
     public octopusCount: number
 
 }
