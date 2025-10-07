@@ -61,14 +61,14 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
 
-    const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
+    const scoringPlays = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
         const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
         const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
         return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
 
-    return new Game(gameId, scoringPlayInfo)
+    return new Game(gameId, scoringPlays)
 
 }
 
