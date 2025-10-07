@@ -1,4 +1,4 @@
-scoring plays should be its own class --> should have a "isOctopus" method on it
 start to transform all data from api responses to classes
-
-get historical data about how many octopus there have been, include that
+scoring plays should be its own class --> should have a "isOctopus" method on it
+keep track of individual player octo count
+keep trakc of total nfl octo count
