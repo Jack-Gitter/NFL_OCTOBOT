@@ -67,11 +67,11 @@ export class Game {
 
                     const octopusCount = await octopusCountRepository.findOneBy({id: 1})
                     const playerOctopus = await playerOctopusCountRepository.findOneBy({id: scoringPlay.octopusScorer.id})
-                    if (playerOctopus?.octopusCount && octopusCount?.count) {
+
+                    if (playerOctopus && octopusCount) {
                         globalOctopusCount = octopusCount.count
                         playerOctopusCount = playerOctopus.octopusCount
                     }
-
                 }
             })
 
