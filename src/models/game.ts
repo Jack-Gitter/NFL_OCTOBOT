@@ -30,7 +30,7 @@ export class Game {
     }
 
     public async saveOctopiToDatabase(datasource: DataSource, playerId: number) {
-        datasource.transaction(async (entityManager) => {
+        await datasource.transaction(async (entityManager) => {
             const scoringPlayRepository = entityManager.getRepository(ScoringPlay)
             const octopusCountRepository = entityManager.getRepository(OctopusCount)
             const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
