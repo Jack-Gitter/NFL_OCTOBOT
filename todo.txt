@@ -1,1 +1,2 @@
-write playIds to the database to make sure that we do not get octopus that already happened!
+scoring plays should be its own class --> should have a "isOctopus" method on it
+start to transform all data from api responses to classes
