@@ -28,7 +28,7 @@ export const getGameScoringPlayIds = async (gameId: number) => {
 export const getGameInformation = async (gameId: number) => {
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
-    const scoringPlayInfo = scoringPlayInformation.map(async (scoringPlay) => {
+    const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
         const athletes = []
         for (const participants of scoringPlay.participants) {
             const athleteResponse = await getAtheleteInformation(participants.athlete.$ref)
@@ -38,7 +38,7 @@ export const getGameInformation = async (gameId: number) => {
         const isTwoPointAttempt = scoringPlay.pointAfterAttempt?.value === 2 || (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
         const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt)
         return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
-    })
+    }))
     return new Game(gameId, scoringPlayInfo)
 
 }
