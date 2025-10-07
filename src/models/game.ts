@@ -36,13 +36,14 @@ export class Game {
             const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
             await Promise.all(this.scoringPlays?.map(async (scoringPlay) => {
                 if (scoringPlay.octopusScorer) {
+                    console.log('saving!')
                     const playerId = scoringPlay.octopusScorer?.id
                     const play = new ScoringPlay(scoringPlay.id)
                     await scoringPlayRepository.save(play)
                     await octopusCountRepository.increment({id: 1}, 'count', 1)
                     const playerOctopusCount = await playerOctopusCountRepository.findOneBy({id: playerId})
                     if (!playerOctopusCount) {
-                        const newPlayerOctopusCount = new PlayerOctopusCount(playerId)
+                        const newPlayerOctopusCount = new PlayerOctopusCount(playerId, 1)
                         await playerOctopusCountRepository.save(newPlayerOctopusCount)
                     } else {
                         playerOctopusCount.octopusCount += 1
