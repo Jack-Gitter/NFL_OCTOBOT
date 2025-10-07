@@ -82,7 +82,7 @@ export class Game {
                         globalOctopusCount = octopusCount.count
                         playerOctopusCount = playerOctopus.octopusCount
                         playerOctopusRanking = await playerOctopusCountRepository.count({where: {octopusCount: MoreThan(playerOctopusCount)}}) + 1
-                        playerOctopusRankingTiedWith = await playerOctopusCountRepository.count({where: {octopusCount: Equal(playerOctopusCount)}}) 
+                        playerOctopusRankingTiedWith = await playerOctopusCountRepository.count({where: {octopusCount: Equal(playerOctopusCount)}}) - 1
                     }
 
                 }
