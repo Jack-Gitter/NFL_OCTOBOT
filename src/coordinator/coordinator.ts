@@ -21,11 +21,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
 
     await Promise.all(games.map(async (game: Game) => {
         game.deduplicateProcessedPlays(processedPlayIds)
-        console.log('all scoring plays ================================')
-        console.log(game.scoringPlays)
         game.filterScoringPlays()
-        console.log('filtered scoring plays ================================')
-        console.log(game.scoringPlays)
         await game.populateOctopusPlayerInformation()
         await game.saveOctopiToDatabase(scoringPlayRepository)
         await game.postOctopiToTwitter(twitterClient)
