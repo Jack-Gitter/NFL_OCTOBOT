@@ -57,8 +57,6 @@ export class Game {
 
     public async postOctopiToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
-            console.log(scoringPlay?.octopusScorer?.firstName)
-            console.log(scoringPlay?.octopusScorer?.lastName)
             let playerOctopusCount = 0
             let globalOctopusCount = 0
             await datasource.transaction(async (entityManager) => {
