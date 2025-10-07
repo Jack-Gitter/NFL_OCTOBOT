@@ -23,10 +23,10 @@ const main = async () => {
 
     const twitterClient = await getTwitterClient()
 
-    //cron.schedule('* * * * *', async () => {
+    cron.schedule('* 10-22,23 * * 4-6,0,1', async () => {
         console.log('Checking for Octopi!')
         await run(twitterClient, scoringPlayRepository, datasource)
-    //})
+    })
 }
 
 
