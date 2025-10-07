@@ -23,12 +23,7 @@ export class ScoringPlayInformation {
     }
 
     public setOctopusScorer() {
-        const patScorer = this.participants.find((participant: Athlete) => {
-            return participant.type === SCORER_TYPE.PAT_SCORER
-        })
-        if (patScorer) {
-            this.octopusScorer = patScorer
-        }
+        this.octopusScorer = this.pointAfterAttempt.scorer
     }
 
 }
