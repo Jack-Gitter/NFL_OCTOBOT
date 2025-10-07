@@ -1,9 +1,7 @@
 import { TwitterApi } from "twitter-api-v2";
-import { getAtheleteInformation } from "../espn_api/espn_api";
-import { ParticipantResponse, SCORER_TYPE, ScoringPlayInformation } from "../espn_api/types";
-import { postOctopusToTwitter } from "../x_api/x_api";
 import { ScoringPlay } from "../entities/Play";
 import { Repository } from "typeorm";
+import { ScoringPlayInformation } from "./scoringPlay";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
@@ -17,33 +15,14 @@ export class Game {
 
     public filterScoringPlays() {
         this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
-            const isTwoPointConversion = 
-                scoringPlay?.pointAfterAttempt?.value === 2 || 
-                (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
-
-            if (isTwoPointConversion) {
-                const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
-                    return participant.type === SCORER_TYPE.PAT_SCORER
-                })
-                const tdScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
-                    return participant.type === SCORER_TYPE.TD_SCORER
-                })
-                return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
-            }
-            return false
+            return scoringPlay.isOctopus()
         })
     }
 
     public async populateOctopusPlayerInformation() {
-        this.scoringPlays = await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
-            const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
-                return participant.type === SCORER_TYPE.PAT_SCORER
-            })
-            if (patScorer) {
-                scoringPlay.octopusScorer = await getAtheleteInformation(patScorer?.athlete.$ref)
-            }
-            return scoringPlay
-        }))
+        this.scoringPlays.forEach((scoringPlay) => {
+            scoringPlay.setOctopusScorer()
+        })
     }
 
     public async saveOctopiToDatabase(scoringPlayRepository: Repository<ScoringPlay>) {
@@ -56,8 +35,8 @@ export class Game {
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
-            console.log(scoringPlay.octopusScorer.firstName)
-            console.log(scoringPlay.octopusScorer.lastName)
+            console.log(scoringPlay?.octopusScorer?.firstName)
+            console.log(scoringPlay?.octopusScorer?.lastName)
             //return await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
         }))
     }

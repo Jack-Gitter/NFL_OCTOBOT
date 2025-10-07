@@ -1,11 +1,14 @@
+import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
-import { AthleteResponse, EventResponse, GameResponse, ScoreboardResponse, SCORING_TYPE, ScoringPlayInformation, ScoringPlayResponse } from "./types"
+import { PointAfterAttempt } from "../models/pointAfterAttempt"
+import { ScoringPlayInformation } from "../models/scoringPlay"
+import { AthleteResponse, EventResponse, GameResponse, ParticipantResponse, ScoreboardResponse, SCORER_TYPE, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
     return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
         const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
         const result = await fetch(url)
-        const scoringPlayInformation: ScoringPlayInformation = await result.json()
+        const scoringPlayInformation: ScoringPlayInformationResponse = await result.json()
         return scoringPlayInformation
     }))
 }
@@ -22,9 +25,39 @@ export const getGameScoringPlayIds = async (gameId: number) => {
 }
 
 export const getGameInformation = async (gameId: number) => {
+
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
-    return new Game(gameId, scoringPlayInformation)
+
+    const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
+        const athletes = []
+        for (const participants of scoringPlay.participants) {
+            const athleteResponse = await getAtheleteInformation(participants.athlete.$ref)
+            if (athleteResponse) {
+                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participants.type)
+                athletes.push(athlete)
+            }
+        }
+
+        const isTwoPointAttempt = 
+                scoringPlay.pointAfterAttempt?.value === 2 || 
+                (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
+
+        const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
+            return participant.type === SCORER_TYPE.PAT_SCORER
+        })
+
+        const temp = await getAtheleteInformation(patScorer?.athlete.$ref)
+        let test = undefined
+        if (temp && patScorer) {
+            test = new Athlete(temp.firstName, temp.lastName, temp.id, patScorer.type)
+        }
+        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, test)
+        return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
+
+    }))
+
+    return new Game(gameId, scoringPlayInfo)
 
 }
 
@@ -38,7 +71,10 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     })
 }
 
-export const getAtheleteInformation = async(playerUrl: string) => {
+export const getAtheleteInformation = async(playerUrl?: string) => {
+    if (!playerUrl) {
+        return undefined
+    }
     const result = await fetch(playerUrl)
     const athelete: AthleteResponse = await result.json()
     return athelete
