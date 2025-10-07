@@ -61,7 +61,7 @@ export class Game {
             console.log(scoringPlay?.octopusScorer?.lastName)
             let playerOctopusCount = 0
             let globalOctopusCount = 0
-            datasource.transaction(async (entityManager) => {
+            await datasource.transaction(async (entityManager) => {
                 if (scoringPlay.octopusScorer)  {
                     const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
                     const octopusCountRepository = entityManager.getRepository(OctopusCount)
