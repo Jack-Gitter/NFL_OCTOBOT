@@ -17,9 +17,9 @@ const main = async () => {
 
     const twitterClient = await getTwitterClient()
 
-    cron.schedule('* * * * *', async () => {
+    //cron.schedule('* * * * *', async () => {
         await run(twitterClient, scoringPlayRepository)
-    })
+    //})
 }
 
 
