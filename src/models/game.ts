@@ -18,20 +18,7 @@ export class Game {
 
     public filterScoringPlays() {
         this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
-            const isTwoPointConversion = 
-                scoringPlay?.pointAfterAttempt?.value === 2 || 
-                (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
-
-            if (isTwoPointConversion) {
-                const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
-                    return participant.type === SCORER_TYPE.PAT_SCORER
-                })
-                const tdScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
-                    return participant.type === SCORER_TYPE.TD_SCORER
-                })
-                return (patScorer && tdScorer && patScorer.athlete.$ref === tdScorer.athlete.$ref) 
-            }
-            return false
+            return scoringPlay.isOctopus()
         })
     }
 
