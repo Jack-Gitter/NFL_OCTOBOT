@@ -5,16 +5,12 @@ import { getDailyGameIds, getGameInformation } from "../espn_api/espn_api"
 import { Game } from "../models/game"
 import { DataSource } from "typeorm/browser"
 
-const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPlay>) => {
+export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
     const processedOctopusPlays = await scoringPlayRepository.find()
-    return processedOctopusPlays.map(checkedPlay => {
+    const processedPlayIds = processedOctopusPlays.map(checkedPlay => {
         return checkedPlay.id
     })
-
-}
-export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
-    const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
-    const currentGameIds = await getDailyGameIds(new Date('09/18/2023'))
+    const currentGameIds = await getDailyGameIds(new Date())
 
     const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)
