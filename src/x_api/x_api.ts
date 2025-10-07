@@ -28,9 +28,9 @@ export const postOctopusToTwitter = async (
     }
 }
 
-export const formatOctopusTweet = async (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number) {
+export const formatOctopusTweet = (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number) => {
 
-    const text = 
+    return  
         `
         OCTOPUS ✅
 
@@ -45,7 +45,7 @@ export const formatOctopusTweet = async (playSummary: string, playerFirstName: s
 
 
 function ordinalSuffixOf(i: number) {
-    let j = i % 10,
+    const j = i % 10,
         k = i % 100;
     if (j === 1 && k !== 11) {
         return i + "st";
