@@ -45,9 +45,9 @@ export const formatOctopusTweet = (
 
 ${playSummary}
 
-This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} ever Octopus! (Since the 2025/26 Season) 
+This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} Octopus! (Since the 2025/26 Season) 
 
-${playerFirstName} ${playerLastName} is ranked ${playerOctopusRanking} on the octopus leaderboard, tied with ${playerOctopusRankingTiedWith} other players! (Since the 2025/26 Season)
+${playerFirstName} ${playerLastName} is ranked ${playerOctopusRanking} on the octopus leaderboard, tied with ${playerOctopusRankingTiedWith} other players! 
 
 This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} ever Octopus!`
 
