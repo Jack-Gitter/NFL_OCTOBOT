@@ -31,13 +31,13 @@ export const getGameInformation = async (gameId: number) => {
 
     const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
 
-        const athletes: Athlete[] = []
+        const scoringPlayAthletes: Athlete[] = []
 
         await Promise.all(scoringPlay.participants.map(async (participant) => {
-            const athleteResponse = await getAtheleteInformation(participant.athlete.$ref)
-            if (athleteResponse) {
-                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participant.type)
-                athletes.push(athlete)
+            const scoringPlayAthleteResponse = await getAtheleteInformation(participant.athlete.$ref)
+            if (scoringPlayAthleteResponse) {
+                const scoringPlayAthlete = new Athlete(scoringPlayAthleteResponse.firstName, scoringPlayAthleteResponse.lastName, scoringPlayAthleteResponse.id, participant.type)
+                scoringPlayAthletes.push(scoringPlayAthlete)
             }
         }))
 
@@ -45,17 +45,17 @@ export const getGameInformation = async (gameId: number) => {
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
 
-        const participant = scoringPlay.participants.find((participant: ParticipantResponse) => {
+        const patScorerParticipantResponse = scoringPlay.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
 
-        const athleteInformationResponse = await getAtheleteInformation(participant?.athlete.$ref)
+        const patScorerResponse = await getAtheleteInformation(patScorerParticipantResponse?.athlete.$ref)
         let patScorer = undefined
-        if (athleteInformationResponse && participant) {
-            patScorer = new Athlete(athleteInformationResponse.firstName, athleteInformationResponse.lastName, athleteInformationResponse.id, participant.type)
+        if (patScorerResponse && patScorerParticipantResponse) {
+            patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, patScorerParticipantResponse.type)
         }
         const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
-        return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
+        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
 
