@@ -3,6 +3,7 @@ import { ScoringPlay } from "../entities/Play"
 import { Repository } from "typeorm"
 import { getDailyGameIds, getGameInformation } from "../espn_api/espn_api"
 import { Game } from "../models/game"
+import { DataSource } from "typeorm/browser"
 
 const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPlay>) => {
     const processedOctopusPlays = await scoringPlayRepository.find()
@@ -11,7 +12,7 @@ const getProccessedPlayIds = async (scoringPlayRepository: Repository<ScoringPla
     })
 
 }
-export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>) => {
+export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
     const processedPlayIds = await getProccessedPlayIds(scoringPlayRepository)
     const currentGameIds = await getDailyGameIds(new Date('10/05/2025'))
 
@@ -23,7 +24,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
         game.deduplicateProcessedPlays(processedPlayIds)
         game.filterScoringPlays()
         await game.populateOctopusPlayerInformation()
-        await game.saveOctopiToDatabase(scoringPlayRepository)
+        await game.saveOctopiToDatabase(datasource)
         await game.postOctopiToTwitter(twitterClient)
     }))
 }

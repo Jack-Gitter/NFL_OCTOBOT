@@ -18,15 +18,14 @@ const main = async () => {
     const octopusCountRepository = datasource.getRepository(OctopusCount)
     
     const startingOctopusCount = 
-        new OctopusCount(Number(process.env.STARTING_OCTOPUS_COUNT))
+        new OctopusCount(1, Number(process.env.STARTING_OCTOPUS_COUNT))
 
     octopusCountRepository.insert(startingOctopusCount)
-
 
     const twitterClient = await getTwitterClient()
 
     //cron.schedule('* * * * *', async () => {
-        await run(twitterClient, scoringPlayRepository)
+        await run(twitterClient, scoringPlayRepository, datasource)
     //})
 }
 
