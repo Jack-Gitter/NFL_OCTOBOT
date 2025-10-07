@@ -1,6 +1,5 @@
 import { TwitterApi } from "twitter-api-v2";
 import { ScoringPlay } from "../entities/Play";
-import { Repository } from "typeorm";
 import { ScoringPlayInformation } from "./scoringPlay";
 import { postOctopusToTwitter } from "../x_api/x_api";
 import { DataSource } from "typeorm/browser";
@@ -29,25 +28,27 @@ export class Game {
         })
     }
 
-    public async saveOctopiToDatabase(datasource: DataSource, playerId: number) {
+    public async saveOctopiToDatabase(datasource: DataSource) {
         await datasource.transaction(async (entityManager) => {
             const scoringPlayRepository = entityManager.getRepository(ScoringPlay)
             const octopusCountRepository = entityManager.getRepository(OctopusCount)
             const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
             await Promise.all(this.scoringPlays?.map(async (scoringPlay) => {
-                const play = new ScoringPlay(scoringPlay.id)
-                await scoringPlayRepository.save(play)
-                await octopusCountRepository.increment({id: 1}, 'count', 1)
-                const playerOctopusCount = await playerOctopusCountRepository.findOneBy({id: playerId})
-                if (!playerOctopusCount) {
-                    const newPlayerOctopusCount = new PlayerOctopusCount(playerId)
-                    await playerOctopusCountRepository.save(newPlayerOctopusCount)
-                } else {
-                    playerOctopusCount.octopusCount += 1
-                    await playerOctopusCountRepository.save(playerOctopusCount)
+                if (scoringPlay.octopusScorer) {
+                    const playerId = scoringPlay.octopusScorer?.id
+                    const play = new ScoringPlay(scoringPlay.id)
+                    await scoringPlayRepository.save(play)
+                    await octopusCountRepository.increment({id: 1}, 'count', 1)
+                    const playerOctopusCount = await playerOctopusCountRepository.findOneBy({id: playerId})
+                    if (!playerOctopusCount) {
+                        const newPlayerOctopusCount = new PlayerOctopusCount(playerId)
+                        await playerOctopusCountRepository.save(newPlayerOctopusCount)
+                    } else {
+                        playerOctopusCount.octopusCount += 1
+                        await playerOctopusCountRepository.save(playerOctopusCount)
+                    }
                 }
             }))
-
         })
     }
 
