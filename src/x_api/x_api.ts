@@ -32,11 +32,11 @@ export const formatOctopusTweet = (playSummary: string, playerFirstName: string,
 
     return `OCTOPUS ✅ 
 
-    ${playSummary}
+${playSummary}
 
-    This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} ever Octopus! (Since the 2025/26 Season) 
+This is ${playerFirstName} ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} ever Octopus! (Since the 2025/26 Season) 
 
-    This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} ever Octopus!`
+This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} ever Octopus!`
 
 }
 
