@@ -26,16 +26,16 @@ export const getGameScoringPlayIds = async (gameId: number) => {
 }
 
 export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformationResponse) => {
-        const scoringPlayAthletes: Athlete[] = []
+        const athletes: Athlete[] = []
 
         await Promise.all(scoringPlay.participants.map(async (participant) => {
-            const scoringPlayAthleteResponse = await getAtheleteInformation(participant.athlete.$ref)
-            if (scoringPlayAthleteResponse) {
-                const scoringPlayAthlete = new Athlete(scoringPlayAthleteResponse.firstName, scoringPlayAthleteResponse.lastName, scoringPlayAthleteResponse.id, participant.type)
-                scoringPlayAthletes.push(scoringPlayAthlete)
+            const athleteResponse = await getAtheleteInformation(participant.athlete.$ref)
+            if (athleteResponse) {
+                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participant.type)
+                athletes.push(athlete)
             }
         }))
-        return scoringPlayAthletes
+        return athletes
 }
 
 export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
