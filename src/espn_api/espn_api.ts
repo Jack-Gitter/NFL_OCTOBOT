@@ -45,16 +45,16 @@ export const getGameInformation = async (gameId: number) => {
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
 
-        const patScorer = scoringPlay.participants.find((participant: ParticipantResponse) => {
+        const participant = scoringPlay.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
 
-        const athleteInformationResponse = await getAtheleteInformation(patScorer?.athlete.$ref)
-        let athlete = undefined
-        if (athleteInformationResponse && patScorer) {
-            athlete = new Athlete(athleteInformationResponse.firstName, athleteInformationResponse.lastName, athleteInformationResponse.id, patScorer.type)
+        const athleteInformationResponse = await getAtheleteInformation(participant?.athlete.$ref)
+        let patScorer = undefined
+        if (athleteInformationResponse && participant) {
+            patScorer = new Athlete(athleteInformationResponse.firstName, athleteInformationResponse.lastName, athleteInformationResponse.id, participant.type)
         }
-        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, athlete)
+        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
         return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
