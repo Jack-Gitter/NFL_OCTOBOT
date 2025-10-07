@@ -10,16 +10,24 @@ export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
 
     public deduplicateProcessedPlays(playIds: number[]) {
+        const gameScoringPlays = this.scoringPlays?.length
         const playIdsSet = new Set(playIds)
         this.scoringPlays = this.scoringPlays?.filter(scoringPlay => {
             return !playIdsSet.has(scoringPlay.id)
         })
+        const unprocessedGameScoringPlays = this.scoringPlays.length
+        console.log(
+            `Filtered ${gameScoringPlays - unprocessedGameScoringPlays} scoring plays
+             from game ${this.gameId} as they have been processed already`
+        )
+
     }
 
     public filterScoringPlays() {
         this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus()
         })
+        console.log(`Found ${this.scoringPlays.length} new octopus plays`)
     }
 
     public async populateOctopusPlayerInformation() {
@@ -35,7 +43,6 @@ export class Game {
             const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
             await Promise.all(this.scoringPlays?.map(async (scoringPlay) => {
                 if (scoringPlay.octopusScorer) {
-                    console.log('saving!')
                     const playerId = scoringPlay.octopusScorer?.id
                     const play = new ScoringPlay(scoringPlay.id)
                     await scoringPlayRepository.save(play)
@@ -48,6 +55,9 @@ export class Game {
                         playerOctopusCount.octopusCount += 1
                         await playerOctopusCountRepository.save(playerOctopusCount)
                     }
+                    console.log(`Successfully saved the playId ${scoringPlay.id}`)
+                    console.log(`Successfully updated player octopus count for player with id ${playerId}`)
+                    console.log(`Successfully updated global octopus count`)
                 }
             }))
         })

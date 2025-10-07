@@ -12,9 +12,10 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
         return checkedPlay.id
     })
 
-    const date = new Date()
-    console.log(`Fetching games for today, ${date.toISOString()}`)
+    const date = new Date('10/29/2023')
     const currentGameIds = await getDailyGameIds(new Date(date))
+
+    console.log(`Fetched ${currentGameIds.length} games for today, ${date.toISOString()}`)
 
     const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
         return getGameInformation(gameId)
