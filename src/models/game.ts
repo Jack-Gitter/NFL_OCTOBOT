@@ -27,12 +27,14 @@ export class Game {
     }
 
     public async saveOctopiToDatabase(scoringPlayRepository: Repository<ScoringPlay>) {
+        // start a transaction and increase the count of the global octopus and player octopus at the same time that we save to db I think is the best option
         await Promise.all(this.scoringPlays?.map(async (scoringPlay) => {
             const play = new ScoringPlay()
             play.id = scoringPlay.id
             return await scoringPlayRepository.save(play)
         }))
     }
+
 
     public async postOctopiToTwitter(twitterClient: TwitterApi) {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
