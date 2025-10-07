@@ -12,7 +12,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
         return checkedPlay.id
     })
 
-    const date = new Date()
+    const date = new Date('10/05/2025')
     const currentGameIds = await getDailyGameIds(new Date(date))
 
     console.log(`Fetched ${currentGameIds.length} games for today, ${date.toISOString()}`)
