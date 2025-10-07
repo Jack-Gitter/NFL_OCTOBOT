@@ -38,6 +38,10 @@ export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformation
 }
 
 export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
+    if (scoringPlay.text.toLowerCase().includes('mark')) {
+        console.log(scoringPlay)
+
+    }
         const isTwoPointAttempt = 
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.toLowerCase()?.includes('two-point') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))

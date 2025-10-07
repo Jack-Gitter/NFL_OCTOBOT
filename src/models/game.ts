@@ -17,15 +17,9 @@ export class Game {
     }
 
     public filterScoringPlays() {
-        for (const scoringPlay of this.scoringPlays) {
-            if (scoringPlay.shortText.toLowerCase().includes('mark'))  {
-                console.log(scoringPlay)
-            }
-        }
         this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus()
         })
-        //console.log(this.scoringPlays)
     }
 
     public async populateOctopusPlayerInformation() {
