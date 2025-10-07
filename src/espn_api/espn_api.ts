@@ -1,3 +1,4 @@
+import { ScoringPlay } from "../entities/Play"
 import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
 import { PointAfterAttempt } from "../models/pointAfterAttempt"
@@ -24,13 +25,7 @@ export const getGameScoringPlayIds = async (gameId: number) => {
     })
 }
 
-export const getGameInformation = async (gameId: number) => {
-
-    const scoringPlayIds = await getGameScoringPlayIds(gameId)
-    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
-
-    const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
-
+export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformationResponse) => {
         const scoringPlayAthletes: Athlete[] = []
 
         await Promise.all(scoringPlay.participants.map(async (participant) => {
@@ -40,11 +35,13 @@ export const getGameInformation = async (gameId: number) => {
                 scoringPlayAthletes.push(scoringPlayAthlete)
             }
         }))
+        return scoringPlayAthletes
+}
 
+export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
         const isTwoPointAttempt = 
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.includes('TWO-POINT CONVERSION ATTEMPT') && scoringPlay?.text?.includes('ATTEMPT SUCCEEDS'))
-
         const patScorerParticipantResponse = scoringPlay.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
@@ -55,6 +52,18 @@ export const getGameInformation = async (gameId: number) => {
             patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, patScorerParticipantResponse.type)
         }
         const pointAfterAttempt = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
+        return pointAfterAttempt
+
+}
+
+export const getGameInformation = async (gameId: number) => {
+
+    const scoringPlayIds = await getGameScoringPlayIds(gameId)
+    const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
+
+    const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
+        const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
+        const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
         return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
