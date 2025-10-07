@@ -91,7 +91,7 @@ export class Game {
             if (scoringPlay.octopusScorer) {
                 return await postOctopusToTwitter(
                     twitterClient, 
-                    scoringPlay.shortText.replace(/\(.*?\)/g, ""),
+                    scoringPlay.shortText,
                     scoringPlay.octopusScorer?.firstName, 
                     scoringPlay.octopusScorer?.lastName, 
                     playerOctopusCount, 
