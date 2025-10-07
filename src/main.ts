@@ -20,7 +20,7 @@ const main = async () => {
     const startingOctopusCount = 
         new OctopusCount(1, Number(process.env.STARTING_OCTOPUS_COUNT))
 
-    octopusCountRepository.insert(startingOctopusCount)
+    await octopusCountRepository.insert(startingOctopusCount)
 
     const twitterClient = await getTwitterClient()
 
