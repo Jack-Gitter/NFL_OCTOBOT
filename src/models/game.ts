@@ -5,6 +5,7 @@ import { postOctopusToTwitter } from "../x_api/x_api";
 import { DataSource } from "typeorm/browser";
 import { OctopusCount } from "../entities/OctopusCount";
 import { PlayerOctopusCount } from "../entities/PlayerOctopusCount";
+import { shorten } from "typeorm/util/StringUtils.js";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
@@ -57,6 +58,9 @@ export class Game {
         await Promise.all(this.scoringPlays.map(async (scoringPlay) => {
             console.log(scoringPlay?.octopusScorer?.firstName)
             console.log(scoringPlay?.octopusScorer?.lastName)
+            const text = `OCTOPUS ✅
+                        ${scoringPlay.shortText}
+            `
             // return await postOctopusToTwitter(twitterClient, scoringPlay.shortText)
         }))
     }

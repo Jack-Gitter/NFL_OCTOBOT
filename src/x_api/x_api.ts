@@ -11,11 +11,52 @@ export const getTwitterClient = async () => {
     });
 }
 
-export const postOctopusToTwitter = async (twitterClient: TwitterApi, text: string) => {
+export const postOctopusToTwitter = async (
+    twitterClient: TwitterApi, 
+    playSummary: string, 
+    playerFirstName: string, 
+    playerLastName: string, 
+    playerOctopusCount: number, 
+    globalOctopusCount: number
+) => {
     try {
+        const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount)
         const body = { text }
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
     } catch (error) {
         console.error(error)
     }
+}
+
+export const formatOctopusTweet = async (playSummary: string, playerFirstName: string, playerLastName: string, playerOctopusCount: number, globalOctopusCount: number) {
+
+    const text = 
+        `
+        OCTOPUS ✅
+
+        ${playSummary}
+
+        This is ${playerFirstName} ${playerLastName}'s ${playerOctopusCount}${ordinalSuffixOf(playerOctopusCount)} ever Octopus! 
+
+        This is the NFL's ${globalOctopusCount}${ordinalSuffixOf(globalOctopusCount)} ever Octopus!
+
+
+        `
+
+}
+
+
+function ordinalSuffixOf(i: number) {
+    let j = i % 10,
+        k = i % 100;
+    if (j === 1 && k !== 11) {
+        return i + "st";
+    }
+    if (j === 2 && k !== 12) {
+        return i + "nd";
+    }
+    if (j === 3 && k !== 13) {
+        return i + "rd";
+    }
+    return i + "th";
 }
