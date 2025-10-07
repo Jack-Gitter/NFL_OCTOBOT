@@ -30,6 +30,7 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlayInformation = await getScoringPlayInformation(gameId, scoringPlayIds)
 
     const scoringPlayInfo = await Promise.all(scoringPlayInformation.map(async (scoringPlay) => {
+
         const athletes: Athlete[] = []
 
         await Promise.all(scoringPlay.participants.map(async (participant) => {
@@ -48,12 +49,12 @@ export const getGameInformation = async (gameId: number) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
 
-        const temp = await getAtheleteInformation(patScorer?.athlete.$ref)
-        let test = undefined
-        if (temp && patScorer) {
-            test = new Athlete(temp.firstName, temp.lastName, temp.id, patScorer.type)
+        const athleteInformationResponse = await getAtheleteInformation(patScorer?.athlete.$ref)
+        let athlete = undefined
+        if (athleteInformationResponse && patScorer) {
+            athlete = new Athlete(athleteInformationResponse.firstName, athleteInformationResponse.lastName, athleteInformationResponse.id, patScorer.type)
         }
-        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, test)
+        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, athlete)
         return new ScoringPlayInformation(scoringPlay.id, athletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
