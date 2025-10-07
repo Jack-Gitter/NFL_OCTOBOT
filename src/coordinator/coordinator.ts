@@ -2,7 +2,6 @@ import { TwitterApi } from "twitter-api-v2"
 import { ScoringPlay } from "../entities/Play"
 import { Repository } from "typeorm"
 import { getDailyGameIds, getGameInformation } from "../espn_api/espn_api"
-import { Game } from "../models/game"
 import { DataSource } from "typeorm/browser"
 
 export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
