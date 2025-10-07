@@ -6,12 +6,15 @@ import { getTwitterClient } from "./x_api/x_api"
 import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
 import { OctopusCount } from "./entities/OctopusCount"
+import { runServer } from "./server/express"
 
 const main = async () => {
 
     console.log('App Starting Up!')
 
     configDotenv()
+
+    runServer()
 
     await datasource.initialize()
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
