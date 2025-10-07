@@ -1,4 +1,3 @@
-import { ScoringPlay } from "../entities/Play"
 import { Athlete } from "../models/athlete"
 import { Game } from "../models/game"
 import { PointAfterAttempt } from "../models/pointAfterAttempt"
