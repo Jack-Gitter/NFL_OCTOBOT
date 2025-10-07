@@ -2,7 +2,7 @@ import { TwitterApi } from "twitter-api-v2";
 import { ScoringPlay } from "../entities/Play";
 import { ScoringPlayInformation } from "./scoringPlay";
 import { postOctopusToTwitter } from "../x_api/x_api";
-import { DataSource, MoreThan } from "typeorm/browser";
+import { DataSource, MoreThan } from "typeorm";
 import { OctopusCount } from "../entities/OctopusCount";
 import { PlayerOctopusCount } from "../entities/PlayerOctopusCount";
 
