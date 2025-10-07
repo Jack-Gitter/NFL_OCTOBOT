@@ -54,8 +54,8 @@ export const getGameInformation = async (gameId: number) => {
         if (patScorerResponse && patScorerParticipantResponse) {
             patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, patScorerParticipantResponse.type)
         }
-        const pointAfterAttemptModel = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
-        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttemptModel, scoringPlay.shortText, scoringPlay.text, undefined)
+        const pointAfterAttempt = new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
+        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, undefined)
 
     }))
 
