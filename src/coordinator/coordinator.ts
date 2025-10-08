@@ -22,10 +22,16 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
 
     for (const game of games) {
         game.deduplicateProcessedPlays(processedPlayIds)
-        game.filterOctopusPlays()
-        await game.populateOctopusPlayerInformation()
-        await game.saveOctopiToDatabase(datasource)
-        await game.postOctopiToTwitter(twitterClient, datasource)
+        const successfulOctopi = game.filterOctopusPlays()
+        const failedOctipi = game.filterFailedOctopusPlays()
+        for (const successfulOctopus of successfulOctopi) {
+            successfulOctopus.populateOctopusPlayerInformation()
+            successfulOctopus.saveOctopusToDatabase(datasource)
+            successfulOctopus.postOctopusToTwitter(twitterClient, datasource)
+        }
+        for (const failedOctopus of failedOctipi) {
+
+        }
     }
 }
 

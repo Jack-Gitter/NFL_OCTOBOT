@@ -24,18 +24,30 @@ export class Game {
     }
 
     public filterOctopusPlays() {
-        this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
+        const successfulOctopi = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus()
         })
         console.log(`Found ${this.scoringPlays.length} new octopus plays`)
+        return successfulOctopi
     }
 
+    public async filterFailedOctopusPlays() {
+        const failedOctopi = this.scoringPlays?.filter((scoringPlay) => {
+            return scoringPlay.isMissedOctopus()
+        })
+        console.log(`Found ${this.scoringPlays.length} new failed octopus plays`)
+        return failedOctopi
+
+    }
+
+    // move this to the scoring play class?
     public async populateOctopusPlayerInformation() {
         this.scoringPlays.forEach((scoringPlay) => {
             scoringPlay.setOctopusScorer()
         })
     }
 
+    // move this to the scoring play class?
     public async saveOctopiToDatabase(datasource: DataSource) {
         await datasource.transaction(async (entityManager) => {
             const scoringPlayRepository = entityManager.getRepository(ScoringPlay)
