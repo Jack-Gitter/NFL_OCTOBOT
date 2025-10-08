@@ -3,3 +3,5 @@
 * also include where the player ranks in the all time octopus rankings with how many octopi they have 
 
 * rankings can just be since the 2025/26 season, so we can say they are ranked in 2nd place since 2025/26 season
+
+* sort the games by time
