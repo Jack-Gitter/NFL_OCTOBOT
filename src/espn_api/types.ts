@@ -18,6 +18,7 @@ export type ScoringPlayResponse = {
 
 export type ScoringPlayInformationResponse = {
     id: number,
+    wallclock: string;
     participants: ParticipantResponse[]
     pointAfterAttempt: PointAfterAttemptResponse
     shortText: string

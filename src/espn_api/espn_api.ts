@@ -69,8 +69,7 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlays = await Promise.all(scoringPlayInformationResponse.map(async (scoringPlay) => {
         const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
         const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
-        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text)
-
+        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, new Date(scoringPlay.wallclock))
     }))
 
     return new Game(gameId, scoringPlays)

@@ -15,8 +15,9 @@ export class ScoringPlayInformation {
         public pointAfterAttempt: PointAfterAttempt,
         public shortText: string,
         public text: string,
+        public wallclock: Date,
         public octopusScorer?: Athlete,
-        public octopusMissedAthlete?: Athlete
+        public octopusMissedAthlete?: Athlete,
     ) {}
 
     public isOctopus() {
@@ -65,10 +66,12 @@ export class ScoringPlayInformation {
         })
     }
 
-    public async postFailedOctopusToTwitter(twitterClient: TwitterApi) {
+    public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
 
-        if (this.octopusMissedAthlete) {
-            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName)
+        const octopusCountRepository = datasource.getRepository(OctopusCount)
+        const octopusCount = await octopusCountRepository.findOneBy({id: 1}) 
+        if (this.octopusMissedAthlete && octopusCount) {
+            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount?.count + 1)
         }
 
     }

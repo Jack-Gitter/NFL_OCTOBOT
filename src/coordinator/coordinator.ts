@@ -21,17 +21,24 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
     }))
 
     for (const game of games) {
+
         game.deduplicateProcessedPlays(processedPlayIds)
-        const successfulOctopi = game.filterOctopusPlays()
-        const failedOctipi = game.filterFailedOctopusPlays()
-        for (const successfulOctopus of successfulOctopi) {
-            successfulOctopus.populateOctopusPlayerInformation()
-            await successfulOctopus.saveOctopusToDatabase(datasource)
-            await successfulOctopus.postOctopusToTwitter(twitterClient, datasource)
-        }
-        for (const failedOctopus of failedOctipi) {
-            failedOctopus.populateFailedOctopusPlayerInformation()
-            await failedOctopus.postFailedOctopusToTwitter(twitterClient)
+
+        const allOctopi = game.filterScoringPlays()
+
+        allOctopi.sort((scoringPlay1, scoringPlay2) => {
+            return scoringPlay1.wallclock.getTime() - scoringPlay2.wallclock.getTime()
+        })
+
+        for (const scoringPlay of allOctopi) {
+            if (scoringPlay.isOctopus()) {
+                scoringPlay.populateOctopusPlayerInformation()
+                await scoringPlay.saveOctopusToDatabase(datasource)
+                await scoringPlay.postOctopusToTwitter(twitterClient, datasource)
+            } else if (scoringPlay.isMissedOctopus())  {
+                scoringPlay.populateFailedOctopusPlayerInformation()
+                await scoringPlay.postFailedOctopusToTwitter(twitterClient, datasource)
+            }
         }
     }
 }
