@@ -35,7 +35,7 @@ export const formatFailedOctopusTweet = (
 
 ${playSummary}
 
-This would have been the NFL's ${octopusCount} octopus
+This would have been the NFL's ${ordinalSuffixOf(octopusCount)} octopus
 `
 
 }
