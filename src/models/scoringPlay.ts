@@ -66,10 +66,12 @@ export class ScoringPlayInformation {
         })
     }
 
-    public async postFailedOctopusToTwitter(twitterClient: TwitterApi) {
+    public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
 
+        const octopusCountRepository = datasource.getRepository(OctopusCount)
+        const octopusCount = await octopusCountRepository.findOneBy({id: 1})
         if (this.octopusMissedAthlete) {
-            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName)
+            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount)
         }
 
     }

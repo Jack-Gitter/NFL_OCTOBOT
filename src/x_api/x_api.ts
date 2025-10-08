@@ -16,9 +16,10 @@ export const postFailedOctopusToTwitter = async (
     playSummary: string, 
     playerFirstName: string, 
     playerLastName: string, 
+    octopusCount: number
 ) => {
     try {
-        const text = formatFailedOctopusTweet(playSummary)
+        const text = formatFailedOctopusTweet(playSummary, octopusCount)
         const body = { text }
         // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted failed octopus to twitter for player ${playerFirstName} ${playerLastName}`)
@@ -28,10 +29,13 @@ export const postFailedOctopusToTwitter = async (
 }
 export const formatFailedOctopusTweet = (
     playSummary: string, 
+    octopusCount: number
 ) => {
     return `OCTOPUS ❌
 
 ${playSummary}
+
+This would have been the NFL's ${octopusCount} octopus
 `
 
 }
