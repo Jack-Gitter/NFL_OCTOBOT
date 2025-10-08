@@ -1,3 +1,2 @@
-* tweet when a player was thrown the ball for the two point, and had the chance for an octopus, but it was incomplete
 
 * sort the games by time
