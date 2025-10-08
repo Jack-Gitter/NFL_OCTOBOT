@@ -18,9 +18,10 @@ export const postFailedOctopusToTwitter = async (
     playerLastName: string, 
 ) => {
     try {
-        const text = formatFailedOctopusTweet(playSummary, playerFirstName, playerLastName)
+        const text = formatFailedOctopusTweet(playSummary)
         const body = { text }
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        console.log(body)
+        //await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted failed octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)
@@ -28,15 +29,10 @@ export const postFailedOctopusToTwitter = async (
 }
 export const formatFailedOctopusTweet = (
     playSummary: string, 
-    playerFirstName: string, 
-    playerLastName: string, 
 ) => {
     return `OCTOPUS ❌
 
 ${playSummary}
-
-The intended two toint conversion scorer ${playerFirstName} ${playerLastName} missed the chance for an octopus!
-
 `
 
 }
@@ -53,7 +49,8 @@ export const postOctopusToTwitter = async (
     try {
         const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
         const body = { text }
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        console.log(body)
+        //await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)
