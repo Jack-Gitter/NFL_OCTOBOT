@@ -68,7 +68,7 @@ export class ScoringPlayInformation {
     public async postFailedOctopusToTwitter(twitterClient: TwitterApi) {
 
         if (this.octopusMissedAthlete) {
-            await postFailedOctopusToTwitter(twitterClient, this.shortText, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName)
+            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName)
         }
 
     }
