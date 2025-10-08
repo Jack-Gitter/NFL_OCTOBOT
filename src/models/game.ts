@@ -23,7 +23,7 @@ export class Game {
 
     }
 
-    public filterScoringPlays() {
+    public filterOctopusPlays() {
         this.scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus()
         })
