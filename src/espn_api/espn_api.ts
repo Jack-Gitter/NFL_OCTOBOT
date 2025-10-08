@@ -38,7 +38,9 @@ export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformation
 }
 
 export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
-        const isTwoPointAttempt = 
+        const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === 15 || scoringPlay?.pointAfterAttempt?.id === 16 || scoringPlay?.text?.toLowerCase()?.includes('two point')
+
+        const twoPointAttemptSuccess = 
                 scoringPlay.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.toLowerCase()?.includes('two-point') && 
                 scoringPlay?.text?.toLowerCase()?.includes('attempt succeeds'))
@@ -55,7 +57,7 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
             patScorer = new Athlete(patScorerResponse.firstName, patScorerResponse.lastName, patScorerResponse.id, participant.type)
         }
 
-        return new PointAfterAttempt(true, isTwoPointAttempt, patScorer)
+        return new PointAfterAttempt(twoPointAttemptSuccess, isTwoPointAttempt, patScorer)
 
 }
 
@@ -67,7 +69,7 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlays = await Promise.all(scoringPlayInformationResponse.map(async (scoringPlay) => {
         const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
         const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
-        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, undefined)
+        return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text)
 
     }))
 
