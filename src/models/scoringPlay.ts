@@ -22,6 +22,17 @@ export class ScoringPlayInformation {
         return false
     }
 
+    public isMissedOctopus() {
+        if (this.pointAfterAttempt.isTwoPointAttempt && !this.pointAfterAttempt.success && this.pointAfterAttempt.scorer) {
+            const tdScorer = this.participants.find((participant: Athlete) => {
+                return participant.type === SCORER_TYPE.TD_SCORER
+            })
+            return (tdScorer && this.pointAfterAttempt.scorer.id === tdScorer.id) 
+        }
+        return false
+
+    }
+
     public setOctopusScorer() {
         this.octopusScorer = this.pointAfterAttempt.scorer
     }
