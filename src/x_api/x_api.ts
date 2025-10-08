@@ -31,7 +31,7 @@ export const formatFailedOctopusTweet = (
     playSummary: string, 
     octopusCount: number
 ) => {
-    return `OCTOPUS ❌
+    return `UNFINISHED OCTOPUS ❌
 
 ${playSummary}
 
