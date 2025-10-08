@@ -5,7 +5,7 @@ import { PlayerOctopusCount } from "../entities/PlayerOctopusCount";
 import { SCORER_TYPE } from "../espn_api/types";
 import { Athlete } from "./athlete";
 import { PointAfterAttempt } from "./pointAfterAttempt";
-import { postOctopusToTwitter } from "../x_api/x_api";
+import { postFailedOctopusToTwitter, postOctopusToTwitter } from "../x_api/x_api";
 import TwitterApi from "twitter-api-v2";
 
 export class ScoringPlayInformation {
@@ -15,7 +15,8 @@ export class ScoringPlayInformation {
         public pointAfterAttempt: PointAfterAttempt,
         public shortText: string,
         public text: string,
-        public octopusScorer?: Athlete
+        public octopusScorer?: Athlete,
+        public octopusMissedAthlete?: Athlete
     ) {}
 
     public isOctopus() {
@@ -66,6 +67,9 @@ export class ScoringPlayInformation {
 
     public async postFailedOctopusToTwitter(twitterClient: TwitterApi) {
 
+        if (this.octopusMissedAthlete) {
+            await postFailedOctopusToTwitter(twitterClient, this.shortText, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName)
+        }
 
     }
 
@@ -110,7 +114,7 @@ export class ScoringPlayInformation {
     }
 
     public async populateFailedOctopusPlayerInformation() {
-        this.octopusScorer = this.pointAfterAttempt.scorer
+        this.octopusMissedAthlete = this.pointAfterAttempt.scorer
     }
 
     public setOctopusScorer() {
