@@ -22,7 +22,7 @@ export class Game {
         const scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus() || scoringPlay.isMissedOctopus()
         })
-        console.log(`Found ${this.scoringPlays.length} new plays that are either octopi, or missed octopi`)
+        console.log(`Found ${scoringPlays.length} new plays that are either octopi, or missed octopi`)
         return scoringPlays
     }
 }
