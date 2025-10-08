@@ -31,7 +31,7 @@ export class Game {
         return successfulOctopi
     }
 
-    public async filterFailedOctopusPlays() {
+    public filterFailedOctopusPlays() {
         const failedOctopi = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isMissedOctopus()
         })

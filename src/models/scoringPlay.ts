@@ -64,6 +64,10 @@ export class ScoringPlayInformation {
         })
     }
 
+    public async postFailedOctopusToTwitter(twitterClient: TwitterApi) {
+
+
+    }
 
     public async postOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
         let playerOctopusCount = 0
@@ -102,6 +106,10 @@ export class ScoringPlayInformation {
         }
     }
     public async populateOctopusPlayerInformation() {
+        this.octopusScorer = this.pointAfterAttempt.scorer
+    }
+
+    public async populateFailedOctopusPlayerInformation() {
         this.octopusScorer = this.pointAfterAttempt.scorer
     }
 
