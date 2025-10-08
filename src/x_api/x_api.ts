@@ -46,7 +46,7 @@ export const postOctopusToTwitter = async (
     playerOctopusRankingTiedWith: number
 ) => {
     try {
-        const text = formatOctopusTweet(playSummary, playerFirstName, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
+        const text = formatOctopusTweet(playSummary, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
         const body = { text }
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
@@ -58,7 +58,6 @@ export const postOctopusToTwitter = async (
 
 export const formatOctopusTweet = (
     playSummary: string, 
-    playerFirstName: string, 
     playerLastName: string, 
     playerOctopusCount: number, 
     globalOctopusCount: number, 
