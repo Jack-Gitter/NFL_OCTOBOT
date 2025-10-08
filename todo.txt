@@ -1,2 +1,4 @@
 
 * sort the games by time
+
+* get the # the octopus would have been all time if completed
