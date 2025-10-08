@@ -20,7 +20,7 @@ export const postFailedOctopusToTwitter = async (
     try {
         const text = formatFailedOctopusTweet(playSummary)
         const body = { text }
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted failed octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)
@@ -48,7 +48,7 @@ export const postOctopusToTwitter = async (
     try {
         const text = formatOctopusTweet(playSummary, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
         const body = { text }
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        //await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)

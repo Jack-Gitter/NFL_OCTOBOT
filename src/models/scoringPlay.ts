@@ -15,8 +15,9 @@ export class ScoringPlayInformation {
         public pointAfterAttempt: PointAfterAttempt,
         public shortText: string,
         public text: string,
+        public wallclock: Date,
         public octopusScorer?: Athlete,
-        public octopusMissedAthlete?: Athlete
+        public octopusMissedAthlete?: Athlete,
     ) {}
 
     public isOctopus() {

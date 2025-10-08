@@ -2,6 +2,7 @@ import { ScoringPlayInformation } from "./scoringPlay";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
+    // we could sort all the scoring plays within the class, but need to sort them globally
 
     public deduplicateProcessedPlays(playIds: number[]) {
         const gameScoringPlays = this.scoringPlays?.length
@@ -17,20 +18,11 @@ export class Game {
 
     }
 
-    public filterOctopusPlays() {
-        const successfulOctopi = this.scoringPlays?.filter((scoringPlay) => {
-            return scoringPlay.isOctopus()
+    public filterScoringPlays() {
+        const scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
+            return scoringPlay.isOctopus() || scoringPlay.isMissedOctopus()
         })
-        console.log(`Found ${this.scoringPlays.length} new octopus plays`)
-        return successfulOctopi
-    }
-
-    public filterFailedOctopusPlays() {
-        const failedOctopi = this.scoringPlays?.filter((scoringPlay) => {
-            return scoringPlay.isMissedOctopus()
-        })
-        console.log(`Found ${this.scoringPlays.length} new failed octopus plays`)
-        return failedOctopi
-
+        console.log(`Found ${this.scoringPlays.length} new plays that are either octopi, or missed octopi`)
+        return scoringPlays
     }
 }
