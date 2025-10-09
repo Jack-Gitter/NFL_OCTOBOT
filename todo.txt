@@ -1,4 +1,20 @@
+nov 25th, 2021 - present for all octopus
 
-* sort the games by time -- wallclock
+37 total octopus
 
-* get the # the octopus would have been all time if completed
+we need to make the count 162
+need to clear the database of all records
+need to set the recovery mode true
+set the recovery start date to nov 25th, 2021
+
+
+set the recovery end date to — 2023-09-17T00:00:00.000Z
+
+2023-09-17T00:00:00.000Z - 2024-09-22T00:00:00.000Z
+
+2024-09-22T00:00:00.000Z - 2025-09-28T00:00:00.000Z
+
+2025-09-28T00:00:00.000Z - present
+
+
+
