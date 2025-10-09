@@ -30,11 +30,12 @@ const main = async () => {
     const twitterClient = await getTwitterClient()
 
     const recoveryMode = process.env.RECOVERY_MODE?.toLowerCase() === 'true' ? true : false
-    const recoveryDate = new Date(process.env.RECOVERY_DATE as string)
+    const recoveryStartDate = new Date(process.env.RECOVERY_START_DATE as string)
+    const recoveryEndDate = new Date(process.env.RECOVERY_START_DATE as string)
 
-    if (recoveryMode && recoveryDate) {
+    if (recoveryMode && recoveryStartDate) {
         console.log(`Entering recovery mode`)
-        const dates = generateDates(recoveryDate)
+        const dates = generateDates(recoveryStartDate, recoveryEndDate)
         for (const date of dates) {
             await new Promise(r => setTimeout(r, 500));
             await processDay(twitterClient, scoringPlayRepository, datasource, date)

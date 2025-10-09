@@ -21,7 +21,8 @@ services:
       STARTING_OCTOPUS_COUNT: ${STARTING_OCTOPUS_COUNT}
       PORT: ${PORT}
       RECOVERY_MODE: ${RECOVERY_MODE}
-      RECOVERY_DATE: ${RECOVERY_DATE}
+      RECOVERY_START_DATE: ${RECOVERY_START_DATE}
+      RECOVERY_END_DATE: ${RECOVERY_END_DATE}
   db:
     image: postgres:15
     profiles: [pg, all]
