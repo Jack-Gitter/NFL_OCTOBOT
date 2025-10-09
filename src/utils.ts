@@ -1,4 +1,4 @@
-export const generateDates = (startDate) => {
+export const generateDates = (startDate: Date) => {
   const dates = []
   const current = new Date(startDate)
   const today = new Date()
