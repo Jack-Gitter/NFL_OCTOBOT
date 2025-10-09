@@ -29,7 +29,7 @@ const main = async () => {
 
     const twitterClient = await getTwitterClient()
 
-    const recoveryMode = process.env.RECOVERY_MODE
+    const recoveryMode = process.env.RECOVERY_MODE?.toLowerCase() === 'true' ? true : false
     const recoveryDate = new Date(process.env.RECOVERY_DATE as string)
 
     if (recoveryMode && recoveryDate) {
