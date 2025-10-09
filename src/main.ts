@@ -7,6 +7,8 @@ import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
 import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
+import { TwitterApi } from "twitter-api-v2"
+import { DataSource, Repository } from "typeorm"
 
 const main = async () => {
 
@@ -27,21 +29,24 @@ const main = async () => {
     const twitterClient = await getTwitterClient()
 
     cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
-        try {
-            console.log('Checking for Octopi!')
-            await run(twitterClient, scoringPlayRepository, datasource)
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error('Error Name:')
-                console.error(error.name)
-                console.error('Error Message:')
-                console.error(error.message)
-                console.error('Error Stack:')
-                console.error(error.stack)
-            }
-        }
+        processDay(twitterClient, scoringPlayRepository, datasource)
     })
 }
 
+const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
+    try {
+        console.log('Checking for Octopi!')
+        await run(twitterClient, scoringPlayRepository, datasource)
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error('Error Name:')
+            console.error(error.name)
+            console.error('Error Message:')
+            console.error(error.message)
+            console.error('Error Stack:')
+            console.error(error.stack)
+        }
+    }
+}
 
 main()
