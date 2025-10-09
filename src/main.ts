@@ -36,6 +36,7 @@ const main = async () => {
         console.log(`Entering recovery mode`)
         const dates = generateDates(recoveryDate)
         for (const date of dates) {
+            await new Promise(r => setTimeout(r, 500));
             await processDay(twitterClient, scoringPlayRepository, datasource, date)
         }
     }
