@@ -9,6 +9,7 @@ import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
 import { TwitterApi } from "twitter-api-v2"
 import { DataSource, Repository } from "typeorm"
+import { generateDates } from "./utils"
 
 const main = async () => {
 
@@ -28,15 +29,25 @@ const main = async () => {
 
     const twitterClient = await getTwitterClient()
 
+    const recoveryMode = process.env.RECOVERY_MODE
+    const recoveryDate = new Date(process.env.RECOVERY_DATE as string)
+
+    if (recoveryMode && recoveryDate) {
+        const dates = generateDates(recoveryDate)
+        for (const date of dates) {
+            await processDay(twitterClient, scoringPlayRepository, datasource, date)
+        }
+    }
+
     cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
         processDay(twitterClient, scoringPlayRepository, datasource)
     })
 }
 
-const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource) => {
+const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date = new Date()) => {
     try {
         console.log('Checking for Octopi!')
-        await run(twitterClient, scoringPlayRepository, datasource)
+        await run(twitterClient, scoringPlayRepository, datasource, date)
     } catch (error) {
         if (error instanceof Error) {
             console.error('Error Name:')

@@ -4,7 +4,7 @@ import { Repository } from "typeorm"
 import { getDailyGameIds, getGameInformation } from "../espn_api/espn_api"
 import { DataSource } from "typeorm/browser"
 
-export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date = new Date()) => {
+export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date) => {
 
     const processedOctopusPlays = await scoringPlayRepository.find()
     const processedPlayIds = processedOctopusPlays.map(checkedPlay => {
