@@ -20,6 +20,8 @@ services:
       PG_PORT: ${PG_PORT}
       STARTING_OCTOPUS_COUNT: ${STARTING_OCTOPUS_COUNT}
       PORT: ${PORT}
+      RECOVERY_MODE: ${RECOVERY_MODE}
+      RECOVERY_DATE: ${RECOVERY_DATE}
   db:
     image: postgres:15
     profiles: [pg, all]
