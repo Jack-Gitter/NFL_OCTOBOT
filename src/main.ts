@@ -7,6 +7,9 @@ import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
 import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
+import { TwitterApi } from "twitter-api-v2"
+import { DataSource, Repository } from "typeorm"
+import { generateDates } from "./utils"
 
 const main = async () => {
 
@@ -26,22 +29,44 @@ const main = async () => {
 
     const twitterClient = await getTwitterClient()
 
-    cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
-        try {
-            console.log('Checking for Octopi!')
-            await run(twitterClient, scoringPlayRepository, datasource)
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error('Error Name:')
-                console.error(error.name)
-                console.error('Error Message:')
-                console.error(error.message)
-                console.error('Error Stack:')
-                console.error(error.stack)
-            }
+    const recoveryMode = process.env.RECOVERY_MODE?.toLowerCase() === 'true' ? true : false
+    const recoveryStartDate = new Date(process.env.RECOVERY_START_DATE as string)
+    const recoveryEndDate = new Date(process.env.RECOVERY_END_DATE as string)
+
+    if (recoveryMode && recoveryStartDate) {
+        console.log(`Entering recovery mode`)
+        console.log(`Recovering games between ${recoveryStartDate.toISOString()} and ${recoveryEndDate.toISOString()}`)
+        const dates = generateDates(recoveryStartDate, recoveryEndDate)
+        for (const date of dates) {
+            await new Promise(r => setTimeout(r, 500));
+            await processDay(twitterClient, scoringPlayRepository, datasource, date)
         }
+    }
+
+    cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
+        processDay(twitterClient, scoringPlayRepository, datasource)
+    })
+
+    cron.schedule('0 4 * * 3', async () => {
+        console.log(`Purging scoring plays from database`)
+        await scoringPlayRepository.clear()
     })
 }
 
+const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date = new Date()) => {
+    try {
+        console.log('Checking for Octopi!')
+        await run(twitterClient, scoringPlayRepository, datasource, date)
+    } catch (error) {
+        if (error instanceof Error) {
+            console.error('Error Name:')
+            console.error(error.name)
+            console.error('Error Message:')
+            console.error(error.message)
+            console.error('Error Stack:')
+            console.error(error.stack)
+        }
+    }
+}
 
 main()

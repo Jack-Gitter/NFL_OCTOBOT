@@ -21,6 +21,7 @@ export const postFailedOctopusToTwitter = async (
     try {
         const text = formatFailedOctopusTweet(playSummary, octopusCount)
         const body = { text }
+        console.log(body)
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted failed octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
@@ -52,6 +53,7 @@ export const postOctopusToTwitter = async (
     try {
         const text = formatOctopusTweet(playSummary, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
         const body = { text }
+        console.log(body)
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
@@ -75,11 +77,9 @@ ${playSummary}
 
 This is ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} octopus! 
 
-${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! 
+${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! (Post 2021) 
 
-This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} octopus!
-
-(2025/26 Season and After) 
+This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 `
 }
 
