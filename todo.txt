@@ -6,7 +6,7 @@ need to clear the database of all records
 need to set the recovery mode true
 set the recovery start date to nov 25th, 2021
 
-set the recovery end date to — 2023-09-18T00:00:00.000Z
+set the recovery end date to — 2023-09-18T00:00:00.000Z (done!)
 
 2023-09-18T00:00:00.000Z - 2024-09-22T00:00:00.000Z
 
