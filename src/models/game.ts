@@ -12,7 +12,7 @@ export class Game {
         })
         const unprocessedGameScoringPlays = this.scoringPlays.length
         console.log(
-            `Filtered ${gameScoringPlays - unprocessedGameScoringPlays} scoring plays from game ${this.gameId} as they have been processed already`
+            `Removed ${gameScoringPlays - unprocessedGameScoringPlays} already processed scooring from game ${this.gameId}`
         )
 
     }
