@@ -77,11 +77,9 @@ ${playSummary}
 
 This is ${playerLastName}'s ${ordinalSuffixOf(playerOctopusCount)} octopus! 
 
-${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! 
+${playerLastName} is ranked ${ordinalSuffixOf(playerOctopusRanking)} on the leaderboard, tied with ${playerOctopusRankingTiedWith} others! (Post 2021) 
 
-This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} octopus!
-
-(2025/26 Season and After) 
+This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 `
 }
 
