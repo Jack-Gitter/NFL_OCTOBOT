@@ -22,7 +22,6 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
 
     for (const game of games) {
 
-        console.log(game)
         game.deduplicateProcessedPlays(processedPlayIds)
 
         const allOctopi = game.filterScoringPlays()
