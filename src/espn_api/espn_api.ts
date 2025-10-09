@@ -17,7 +17,7 @@ export const getGameScoringPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: GameResponse = await result.json()
-    return game.scoringPlays.filter((scoringPlay: ScoringPlayResponse) => {
+    return game?.scoringPlays.filter((scoringPlay: ScoringPlayResponse) => {
         return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
     }).map((scoringPlay: ScoringPlayResponse) => {
         return scoringPlay.id
