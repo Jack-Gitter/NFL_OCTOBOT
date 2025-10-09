@@ -33,6 +33,7 @@ const main = async () => {
     const recoveryDate = new Date(process.env.RECOVERY_DATE as string)
 
     if (recoveryMode && recoveryDate) {
+        console.log(`Entering recovery mode`)
         const dates = generateDates(recoveryDate)
         for (const date of dates) {
             await processDay(twitterClient, scoringPlayRepository, datasource, date)
