@@ -6,7 +6,7 @@ export const runServer = () => {
     const port = Number(process.env.PORT)
 
     app.get('/ping', (req, res) => {
-        console.log('pinged')
+        console.log('sending pong')
         res.send('pong')
     })
 
