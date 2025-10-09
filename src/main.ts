@@ -31,10 +31,11 @@ const main = async () => {
 
     const recoveryMode = process.env.RECOVERY_MODE?.toLowerCase() === 'true' ? true : false
     const recoveryStartDate = new Date(process.env.RECOVERY_START_DATE as string)
-    const recoveryEndDate = new Date(process.env.RECOVERY_START_DATE as string)
+    const recoveryEndDate = new Date(process.env.RECOVERY_END_DATE as string)
 
     if (recoveryMode && recoveryStartDate) {
         console.log(`Entering recovery mode`)
+        console.log(`Recovering games between ${recoveryStartDate.toISOString()} and ${recoveryEndDate.toISOString()}`)
         const dates = generateDates(recoveryStartDate, recoveryEndDate)
         for (const date of dates) {
             await new Promise(r => setTimeout(r, 500));
