@@ -5,35 +5,42 @@ import { ScoringPlayInformation } from "../models/scoringPlay"
 import { AthleteResponse, EventResponse, GameResponse, ParticipantResponse, ScoreboardResponse, SCORER_TYPE, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
 
 export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
-    return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
-        const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
-        const result = await fetch(url)
-        const scoringPlayInformationResponse: ScoringPlayInformationResponse = await result.json()
-        return scoringPlayInformationResponse
-    }))
+    if (scoringPlayIds) {
+        return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
+            const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
+            const result = await fetch(url)
+            const scoringPlayInformationResponse: ScoringPlayInformationResponse = await result.json()
+            return scoringPlayInformationResponse
+        }))
+    }
 }
 
 export const getGameScoringPlayIds = async (gameId: number) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: GameResponse = await result.json()
-    return game?.scoringPlays.filter((scoringPlay: ScoringPlayResponse) => {
-        return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
-    }).map((scoringPlay: ScoringPlayResponse) => {
-        return scoringPlay.id
-    })
+    let ids: number[] = []
+    if (game?.scoringPlays) {
+        ids = game?.scoringPlays?.filter((scoringPlay: ScoringPlayResponse) => {
+            return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
+        }).map((scoringPlay: ScoringPlayResponse) => {
+            return scoringPlay.id
+        })
+    } 
+    return ids
 }
 
 export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformationResponse) => {
         const athletes: Athlete[] = []
-
-        await Promise.all(scoringPlay.participants.map(async (participant) => {
-            const athleteResponse = await getAtheleteInformation(participant.athlete.$ref)
-            if (athleteResponse) {
-                const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participant.type)
-                athletes.push(athlete)
-            }
-        }))
+        if (scoringPlay?.participants) {
+            await Promise.all(scoringPlay?.participants.map(async (participant) => {
+                const athleteResponse = await getAtheleteInformation(participant.athlete.$ref)
+                if (athleteResponse) {
+                    const athlete = new Athlete(athleteResponse.firstName, athleteResponse.lastName, athleteResponse.id, participant.type)
+                    athletes.push(athlete)
+                }
+            }))
+        }
         return athletes
 }
 
@@ -41,11 +48,11 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
         const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === 15 || scoringPlay?.pointAfterAttempt?.id === 16 || scoringPlay?.text?.toLowerCase()?.includes('two point')
 
         const twoPointAttemptSuccess = 
-                scoringPlay.pointAfterAttempt?.value === 2 || 
+                scoringPlay?.pointAfterAttempt?.value === 2 || 
                 (scoringPlay?.text?.toLowerCase()?.includes('two-point') && 
                 scoringPlay?.text?.toLowerCase()?.includes('attempt succeeds'))
 
-        const participant = scoringPlay.participants.find((participant: ParticipantResponse) => {
+        const participant = scoringPlay?.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
         })
 
@@ -66,7 +73,7 @@ export const getGameInformation = async (gameId: number) => {
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformationResponse = await getScoringPlayInformation(gameId, scoringPlayIds)
 
-    const scoringPlays = await Promise.all(scoringPlayInformationResponse.map(async (scoringPlay) => {
+    const scoringPlays = await Promise.all(scoringPlayInformationResponse?.map(async (scoringPlay) => {
         const scoringPlayAthletes = await getScoringPlayAthletes(scoringPlay)
         const pointAfterAttempt = await getScoringPlayPat(scoringPlay)
         return new ScoringPlayInformation(scoringPlay.id, scoringPlayAthletes, pointAfterAttempt, scoringPlay.shortText, scoringPlay.text, new Date(scoringPlay.wallclock))
@@ -81,7 +88,7 @@ export const getDailyGameIds = async (date: Date = new Date()) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${formattedDate}`
     const result = await fetch(url)
     const scoreboard: ScoreboardResponse = await result.json()
-    return scoreboard.events.map((event: EventResponse) => {
+    return scoreboard?.events.map((event: EventResponse) => {
         return event.id
     })
 }
