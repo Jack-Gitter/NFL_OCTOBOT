@@ -44,6 +44,11 @@ const main = async () => {
     cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
         processDay(twitterClient, scoringPlayRepository, datasource)
     })
+
+    cron.schedule('0 4 * * 3', async () => {
+        console.log(`Purging scoring plays from database`)
+        await scoringPlayRepository.clear()
+    })
 }
 
 const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date = new Date()) => {
