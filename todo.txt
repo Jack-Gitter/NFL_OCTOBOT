@@ -8,16 +8,16 @@ set the recovery start date to nov 25th, 2021
 
 set the recovery end date to — 2023-09-18T00:00:00.000Z (done!)
 
-2023-09-18T00:00:00.000Z - 2024-09-22T00:00:00.000Z
+2023-09-18T00:00:00.000Z - 2024-09-29T00:00:00.000Z
 
-2024-09-22T00:00:00.000Z - 2025-09-28T00:00:00.000Z
+2024-09-29T00:00:00.000Z - 2025-09-28T00:00:00.000Z
 
 2025-09-28T00:00:00.000Z - present
 
 
 
 
-check global octopus count is correct in db -- and by counting remaining from logs
+check global octopus count is correct in db -- and by counting remaining from logs (21)
 check player octopus count is correct in db
 
 
