@@ -17,5 +17,8 @@ set the recovery end date to — 2023-09-18T00:00:00.000Z (done!)
 
 
 
+check global octopus count is correct in db -- and by counting remaining from logs
+check player octopus count is correct in db
+
 
 
