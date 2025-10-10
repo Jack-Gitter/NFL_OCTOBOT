@@ -71,7 +71,7 @@ export class ScoringPlayInformation {
         const octopusCountRepository = datasource.getRepository(OctopusCount)
         const octopusCount = await octopusCountRepository.findOneBy({id: 1}) 
         if (this.octopusMissedAthlete && octopusCount) {
-            await postFailedOctopusToTwitter(twitterClient, this.text, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount?.count + 1)
+            await postFailedOctopusToTwitter(twitterClient, this.shortText, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount?.count + 1)
         }
 
     }
