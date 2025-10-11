@@ -122,9 +122,4 @@ export class ScoringPlayInformation {
     public async populateFailedOctopusPlayerInformation() {
         this.octopusMissedAthlete = this.pointAfterAttempt.scorer
     }
-
-    public setOctopusScorer() {
-        this.octopusScorer = this.pointAfterAttempt.scorer
-    }
-
 }

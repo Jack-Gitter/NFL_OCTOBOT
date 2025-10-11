@@ -2,7 +2,6 @@ import { ScoringPlayInformation } from "./scoringPlay";
 
 export class Game {
     constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
-    // we could sort all the scoring plays within the class, but need to sort them globally
 
     public deduplicateProcessedPlays(playIds: number[]) {
         const gameScoringPlays = this.scoringPlays?.length
