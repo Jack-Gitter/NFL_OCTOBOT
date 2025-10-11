@@ -66,12 +66,15 @@ export class ScoringPlayInformation {
         })
     }
 
-    public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
-
-        const octopusCountRepository = datasource.getRepository(OctopusCount)
+    public async saveFailedOctopusScoringPlayToDatabase(datasource: DataSource) {
         const scoringPlayRepository = datasource.getRepository(ScoringPlay)
         const scoringPlay = new ScoringPlay(this.id)
         await scoringPlayRepository.save(scoringPlay)
+    }
+
+    public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
+
+        const octopusCountRepository = datasource.getRepository(OctopusCount)
         const octopusCount = await octopusCountRepository.findOneBy({id: 1}) 
         if (this.octopusMissedAthlete && octopusCount) {
             await postFailedOctopusToTwitter(twitterClient, this.shortText, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount?.count + 1)

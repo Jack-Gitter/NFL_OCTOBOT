@@ -36,6 +36,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
                 await scoringPlay.postOctopusToTwitter(twitterClient, datasource)
             } else if (scoringPlay.isMissedOctopus())  {
                 scoringPlay.populateFailedOctopusPlayerInformation()
+                await scoringPlay.saveFailedOctopusScoringPlayToDatabase(datasource)
                 await scoringPlay.postFailedOctopusToTwitter(twitterClient, datasource)
             }
         }
