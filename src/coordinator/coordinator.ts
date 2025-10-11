@@ -6,8 +6,8 @@ import { DataSource } from "typeorm/browser"
 
 export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date) => {
 
-    const processedOctopusPlays = await scoringPlayRepository.find()
-    const processedPlayIds = processedOctopusPlays.map(checkedPlay => {
+    const processedPlays = await scoringPlayRepository.find()
+    const processedPlayIds = processedPlays.map(checkedPlay => {
         return checkedPlay.id
     })
 
