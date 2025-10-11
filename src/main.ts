@@ -48,7 +48,7 @@ const main = async () => {
     })
 
     cron.schedule('0 4 * * 3', async () => {
-        console.log(`Purging scoring plays from database`)
+        console.log(`Purging all scoring plays from database`)
         await scoringPlayRepository.clear()
     })
 }
