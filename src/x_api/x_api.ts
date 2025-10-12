@@ -111,8 +111,7 @@ const formatDonationTweet = (
     totalMonthlyDonations: number
 ) => {
 
-    return `
-Donation Recap 💰
+    return `Donation Recap 💰
 
 Highest all time donator: ${allTimeDonatorName} with $${allTimeDonatorAmount}
 
