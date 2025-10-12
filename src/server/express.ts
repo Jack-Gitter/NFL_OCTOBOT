@@ -16,8 +16,6 @@ export const runServer = () => {
         res.send('pong')
     })
 
-
-
     app.get('/hook', async (req, res) => {
         if (!datasource.isInitialized) {
             await datasource.initialize()
@@ -40,9 +38,6 @@ export const runServer = () => {
 
         res.send(200)
     })
-
-
-
 
     app.listen(port, () => {
         console.log(`Listening on ${port}`)
