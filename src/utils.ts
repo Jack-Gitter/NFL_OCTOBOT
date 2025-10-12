@@ -20,7 +20,8 @@ export const getHighestAllTimeDonator = async (datasource: DataSource) => {
     const donationRepository = datasource.getRepository(Donation)
     const result = await donationRepository
         .createQueryBuilder("donation")
-        .select("donation.donatorName", "donatorName")
+        .select("donation.donatorId", "donatorId")
+        .addSelect("MAX(donation.donatorName)", "donatorName") // get latest name
         .addSelect("SUM(donation.money)", "total")
         .groupBy("donation.donatorId")
         .orderBy("total", "DESC")
@@ -37,16 +38,17 @@ export const getHighestMonthlyDonator = async (datasource: DataSource) => {
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
   const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
 
-  const result = await donationRepository
-    .createQueryBuilder("donation")
-    .select("donation.donatorName", "donatorName")
-    .addSelect("SUM(donation.money)", "total")
-    .where("donation.timestamp >= :start", { start: startOfMonth })
-    .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
-    .groupBy("donation.donatorId")
-    .orderBy("total", "DESC")
-    .limit(1)
-    .getRawOne();
+    const result = await donationRepository
+        .createQueryBuilder("donation")
+        .select("donation.donatorId", "donatorId")
+        .addSelect("MAX(donation.donatorName)", "donatorName") // get latest name
+        .addSelect("SUM(donation.money)", "total")
+        .where("donation.timestamp >= :start", { start: startOfMonth })
+        .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
+        .groupBy("donation.donatorId")
+        .orderBy("total", "DESC")
+        .limit(1)
+        .getRawOne();
 
   return result 
 }
