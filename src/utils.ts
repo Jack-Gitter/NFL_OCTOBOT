@@ -19,14 +19,13 @@ export const generateDates = (startDate: Date, endDate: Date) => {
 export const getHighestAllTimeDonator = async (datasource: DataSource) => {
     const donationRepository = datasource.getRepository(Donation)
     const result = await donationRepository
-        .createQueryBuilder("donations")
+        .createQueryBuilder("donation")
         .select("donation.donatorName", "donatorName")
         .addSelect("SUM(donation.money)", "total")
         .groupBy("donation.donatorName")
         .orderBy("total", "DESC")
         .limit(1)
         .getRawOne();
-
       return result 
 }
 
@@ -39,7 +38,7 @@ export const getHighestMonthlyDonator = async (datasource: DataSource) => {
   const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
 
   const result = await donationRepository
-    .createQueryBuilder("donations")
+    .createQueryBuilder("donation")
     .select("donation.donatorName", "donatorName")
     .addSelect("SUM(donation.money)", "total")
     .where("donation.timestamp >= :start", { start: startOfMonth })

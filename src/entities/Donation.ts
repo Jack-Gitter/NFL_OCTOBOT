@@ -21,7 +21,7 @@ export class Donation {
     @Column({type: 'float'})
     money: number
 
-    @Column()
+    @Column({name: 'donator_name'})
     donatorName: string
 
     @Column()
