@@ -121,8 +121,10 @@ const formatDonationTweet = (
 
   return `Donation Recap 💰
 
-Highest all-time donator: ${safeAllTimeName} ($${safeAllTimeAmount})
-Highest monthly donator: ${safeMonthlyName} ($${safeMonthlyAmount})
+Highest all-time donator: ${safeAllTimeName} with $${safeAllTimeAmount}
+
+Highest monthly donator: ${safeMonthlyName} with $${safeMonthlyAmount}
+
 Monthly donations: $${safeTotalMonthly} → keeps Octobot running ~${monthsCovered} month(s)
 `;
 }
