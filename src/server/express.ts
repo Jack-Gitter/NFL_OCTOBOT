@@ -38,6 +38,8 @@ export const runServer = () => {
 
         await donationRepository.save(donation)
 
+        console.log(`Donation saved to database`)
+
         res.send(200)
     })
 
