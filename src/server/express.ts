@@ -67,7 +67,7 @@ const isSignatureValid = (req) => {
         .digest('hex')
 
       const signatureBuffer = Buffer.from(signature, 'hex')
-    const hashBuffer = Buffer.from(hash, 'hex')
+        const hashBuffer = Buffer.from(hash, 'hex')
 
     if (signatureBuffer.length !== hashBuffer.length || !crypto.timingSafeEqual(signatureBuffer, hashBuffer)) {
         return true
