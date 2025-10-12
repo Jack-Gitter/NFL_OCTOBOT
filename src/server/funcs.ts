@@ -1,4 +1,5 @@
 import { ExchangeRateResponse } from "./types";
+import crypto from 'crypto'
 
 export const convertToUSD = async (money: number, currency: string) => {
   if (currency?.toUpperCase() === "USD") return money
