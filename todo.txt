@@ -1,3 +1,5 @@
 pg_dump "postgresql://user:pass@hostname/dbname" -F p -f backup.sql
 
 psql "postgresql://user:pass@host/dbname" -f backup.sql
+
+after the games on sunday, make sure to cut over the database to a paid instance
