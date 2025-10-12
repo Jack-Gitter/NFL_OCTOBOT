@@ -7,7 +7,7 @@ export class MonthlyDonationCount {
     @Column({primary: true})
     id: number
 
-    @Column()
+    @Column({type: 'float'})
     money: number
 
     @Column()

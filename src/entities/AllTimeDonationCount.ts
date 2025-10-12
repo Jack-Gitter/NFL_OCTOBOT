@@ -6,7 +6,7 @@ export class AllTimeDonationCount {
     @Column({primary: true})
     id: number
 
-    @Column()
+    @Column({type: 'float'})
     money: number
 
 }

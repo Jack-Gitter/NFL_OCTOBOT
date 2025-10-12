@@ -4,6 +4,7 @@ import { BuyMeACoffeeWebhook } from './types'
 import datasource from '../datasource/datasource'
 import { AllTimeDonationCount } from '../entities/AllTimeDonationCount'
 import { MonthlyDonationCount } from '../entities/MonthlyDonationCount'
+import { convertToUSD } from './funcs'
 
 export const runServer = () => {
 
@@ -15,6 +16,8 @@ export const runServer = () => {
         console.log('pinged')
         res.send('pong')
     })
+
+
 
     app.get('/hook', async (req, res) => {
         if (!datasource.isInitialized) {
@@ -30,9 +33,16 @@ export const runServer = () => {
         const name = body.data.supporter_name
         const currency = body.data.currency
 
+        const usdMoney = convertToUSD(money, currency)
+
+
+
 
         res.send(200)
-    }
+    })
+
+
+
 
     app.listen(port, () => {
         console.log(`Listening on ${port}`)
