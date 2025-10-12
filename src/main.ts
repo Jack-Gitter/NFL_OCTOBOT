@@ -69,11 +69,11 @@ const main = async () => {
 
       await tweetDonations(
             twitterClient, 
-            highestAllTime.donatorName, 
-            highestAllTime.total, 
-            highestMonthly.donatorName,
-            highestMonthly.total,
-            totalMonthlyDonations
+            highestAllTime?.donatorName, 
+            highestAllTime?.total, 
+            highestMonthly?.donatorName,
+            highestMonthly?.total,
+            totalMonthlyDonations.total
       )
     // }
   });
