@@ -37,6 +37,10 @@ export const runServer = () => {
 
         const allTimeDonationRecord = await allTimeDonationRepository.findOneBy({id: 1})
         if (allTimeDonationRecord) {
+            if (usdMoney > allTimeDonationRecord.topDonatorAmount) {
+                allTimeDonationRecord.topDonatorAmount = usdMoney
+                allTimeDonationRecord.topDonatorName = name
+            }
             allTimeDonationRecord.money += usdMoney
             await allTimeDonationRepository.save(allTimeDonationRecord)
         } else {

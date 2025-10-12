@@ -12,6 +12,7 @@ import { MonthlyDonationCount } from "../entities/MonthlyDonationCount"
 import { Migrations1760275897408 } from "./migrations/1760275897408-migrations"
 import { Migrations1760276348584 } from "./migrations/1760276348584-migrations"
 import { Migrations1760277371346 } from "./migrations/1760277371346-migrations"
+import { Migrations1760277622939 } from "./migrations/1760277622939-migrations"
 
 configDotenv()
 
@@ -35,7 +36,8 @@ export default new DataSource({
         Migrations1760230910337,
         Migrations1760275897408,
         Migrations1760276348584,
-        Migrations1760277371346
+        Migrations1760277371346,
+        Migrations1760277622939
     ],
     migrationsRun: true,
 })
