@@ -27,7 +27,7 @@ export const isSignatureValid = (req: Request) => {
       const signatureBuffer = Buffer.from(signature, 'hex')
         const hashBuffer = Buffer.from(hash, 'hex')
 
-    if(signatureBuffer.length !== hashBuffer.length || !crypto.timingSafeEqual(signatureBuffer, hashBuffer)) {
+    if (signatureBuffer.length !== hashBuffer.length || !crypto.timingSafeEqual(signatureBuffer, hashBuffer)) {
         return false
     }
     return true
