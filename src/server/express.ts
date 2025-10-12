@@ -2,6 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import { BuyMeACoffeeWebhook } from './types'
 import datasource from '../datasource/datasource'
+import { AllTimeDonationCount } from '../entities/AllTimeDonationCount'
+import { MonthlyDonationCount } from '../entities/MonthlyDonationCount'
 
 export const runServer = () => {
 
@@ -15,11 +17,23 @@ export const runServer = () => {
     })
 
     app.get('/hook', async (req, res) => {
+        if (!datasource.isInitialized) {
+            await datasource.initialize()
+        }
+
+        const allTimeDonationRepository = datasource.getRepository(AllTimeDonationCount)
+        const monthlyDonationRepository = datasource.getRepository(MonthlyDonationCount)
+
         const body: BuyMeACoffeeWebhook = req.body()
-        datasource.
+
+        const money = body?.data?.amount
+        const name = body.data.supporter_name
+        const currency = body.data.currency
 
 
+        res.send(200)
     }
+
     app.listen(port, () => {
         console.log(`Listening on ${port}`)
     })

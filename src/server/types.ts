@@ -28,3 +28,14 @@ export type BuyMeACoffeeWebhook = {
       coffee_price: 5
    }
 }
+
+export type ExchangeRateResponse = {
+  status_code: number,
+  data: {
+    base: string,
+    target: string,
+    mid: number,
+    unit: number,
+    timestamp: string,
+  }
+}

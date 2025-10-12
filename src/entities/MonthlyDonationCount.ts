@@ -9,5 +9,8 @@ export class MonthlyDonationCount {
 
     @Column()
     money: number
+
+    @Column()
+    topDonatorName: string
     
 }
