@@ -4,7 +4,7 @@ import { PointAfterAttempt } from "../models/pointAfterAttempt"
 import { ScoringPlayInformation } from "../models/scoringPlay"
 import { AthleteResponse, EventResponse, GameResponse, ParticipantResponse, ScoreboardResponse, SCORER_TYPE, SCORING_TYPE, ScoringPlayInformationResponse, ScoringPlayResponse } from "./types"
 
-export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: number[]) => {
+export const getScoringPlayInformation = async (gameId: string, scoringPlayIds: string[]) => {
     if (scoringPlayIds) {
         return await Promise.all(scoringPlayIds.map(async (scoringPlayId) => {
             const url = `https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/events/${gameId}/competitions/${gameId}/plays/${scoringPlayId}`
@@ -15,11 +15,11 @@ export const getScoringPlayInformation = async (gameId: number, scoringPlayIds: 
     }
 }
 
-export const getGameScoringPlayIds = async (gameId: number) => {
+export const getGameScoringPlayIds = async (gameId: string) => {
     const url = `https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${gameId}`
     const result = await fetch(url)
     const game: GameResponse = await result.json()
-    let ids: number[] = []
+    let ids: string[] = []
     if (game?.scoringPlays) {
         ids = game?.scoringPlays?.filter((scoringPlay: ScoringPlayResponse) => {
             return scoringPlay?.scoringType?.name === SCORING_TYPE.TOUCHDOWN
@@ -45,7 +45,7 @@ export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformation
 }
 
 export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
-        const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === 15 || scoringPlay?.pointAfterAttempt?.id === 16 || scoringPlay?.text?.toLowerCase()?.includes('two point')
+        const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === '15' || scoringPlay?.pointAfterAttempt?.id === '16' || scoringPlay?.text?.toLowerCase()?.includes('two point')
 
         const twoPointAttemptSuccess = 
                 scoringPlay?.pointAfterAttempt?.value === 2 || 
@@ -68,7 +68,7 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
 
 }
 
-export const getGameInformation = async (gameId: number) => {
+export const getGameInformation = async (gameId: string) => {
 
     const scoringPlayIds = await getGameScoringPlayIds(gameId)
     const scoringPlayInformationResponse = await getScoringPlayInformation(gameId, scoringPlayIds)

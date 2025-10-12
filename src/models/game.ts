@@ -1,9 +1,9 @@
 import { ScoringPlayInformation } from "./scoringPlay";
 
 export class Game {
-    constructor(public gameId: number, public scoringPlays: ScoringPlayInformation[] = []) {}
+    constructor(public gameId: string, public scoringPlays: ScoringPlayInformation[] = []) {}
 
-    public deduplicateProcessedPlays(playIds: number[]) {
+    public deduplicateProcessedPlays(playIds: string[]) {
         const gameScoringPlays = this.scoringPlays?.length
         const playIdsSet = new Set(playIds)
         this.scoringPlays = this.scoringPlays?.filter(scoringPlay => {

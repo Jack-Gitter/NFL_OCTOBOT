@@ -23,7 +23,7 @@ const main = async () => {
     const scoringPlayRepository = datasource.getRepository(ScoringPlay)
     const octopusCountRepository = datasource.getRepository(OctopusCount)
     
-    const startingOctopusCount = await octopusCountRepository.findOneBy({id: 1}) ?? new OctopusCount(1, Number(process.env.STARTING_OCTOPUS_COUNT))
+    const startingOctopusCount = await octopusCountRepository.findOneBy({id: '1'}) ?? new OctopusCount('1', Number(process.env.STARTING_OCTOPUS_COUNT))
 
     await octopusCountRepository.save(startingOctopusCount)
 

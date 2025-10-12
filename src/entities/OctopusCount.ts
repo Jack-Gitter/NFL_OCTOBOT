@@ -3,13 +3,13 @@ import { Column, Entity } from "typeorm";
 @Entity()
 export class OctopusCount {
 
-    constructor(id: number, count: number) {
+    constructor(id: string, count: number) {
         this.id = id
         this.count = count
     }
 
     @Column({primary: true})
-    id: number
+    id: string
 
     @Column({type: 'int'})
     count: number
