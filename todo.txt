@@ -1,4 +1,3 @@
-
 pg_dump "postgresql://user:pass@hostname/dbname" -F p -f backup.sql
 
 psql "postgresql://user:pass@host/dbname" -f backup.sql
