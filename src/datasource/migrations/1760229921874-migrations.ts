@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class ConvertIdToStringMigration implements MigrationInterface {
+export class Migrations1760229921874 implements MigrationInterface {
     name = 'ConvertIdToStringMigration'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
