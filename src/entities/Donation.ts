@@ -9,10 +9,11 @@ export class Donation {
         donatorName: string, 
         unixTimestamp: number
     ) {
+        console.log(unixTimestamp)
         this.id = id
         this.money = money
         this.donatorName = donatorName
-        this.timestamp = new Date(unixTimestamp)
+        this.timestamp = new Date(unixTimestamp * 1000)
     }
 
     @Column({primary: true, type: 'bigint'})
