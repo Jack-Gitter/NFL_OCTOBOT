@@ -25,8 +25,6 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
 
         const allOctopi = game.filterScoringPlays()
 
-
-        console.log(allOctopi)
         allOctopi.sort((scoringPlay1, scoringPlay2) => {
             return scoringPlay1.wallclock.getTime() - scoringPlay2.wallclock.getTime()
         })
