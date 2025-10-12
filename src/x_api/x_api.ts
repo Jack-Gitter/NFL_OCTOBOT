@@ -117,7 +117,7 @@ Highest all time donator: ${allTimeDonatorName} with $${allTimeDonatorAmount}
 
 Highest monthly donator: ${monthlyDonatorName} with ${monthlyDonatorAmount}
 
-Monthly donations: ${totalMonthlyDonations} keeps octobot running for ${15/monthlyDonatorAmount} months
+Monthly donations: ${totalMonthlyDonations} keeps octobot running for ${monthlyDonatorAmount/15} months
 `
 }
 
