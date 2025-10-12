@@ -25,6 +25,8 @@ export const runServer = () => {
 
         const body: BuyMeACoffeeWebhook = req.body
 
+        console.log(`Donation Received! ${JSON.stringify(body)}`)
+
         const money = body?.data?.amount
         const name = body?.data.supporter_name
         const currency = body?.data?.currency
