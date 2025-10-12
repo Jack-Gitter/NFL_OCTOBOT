@@ -44,7 +44,7 @@ export const runServer = () => {
             allTimeDonationRecord.money += usdMoney
             await allTimeDonationRepository.save(allTimeDonationRecord)
         } else {
-            const allTimeDonationRecord = new AllTimeDonationCount(1, usdMoney)
+            const allTimeDonationRecord = new AllTimeDonationCount(1, usdMoney, name, usdMoney)
             await allTimeDonationRepository.save(allTimeDonationRecord)
         }
 
