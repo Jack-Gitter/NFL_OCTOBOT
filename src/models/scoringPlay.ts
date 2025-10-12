@@ -10,7 +10,7 @@ import TwitterApi from "twitter-api-v2";
 
 export class ScoringPlayInformation {
     constructor(
-        public id: number,
+        public id: string,
         public participants: Athlete[],
         public pointAfterAttempt: PointAfterAttempt,
         public shortText: string,
@@ -50,7 +50,7 @@ export class ScoringPlayInformation {
                 const playerId = this.octopusScorer?.id
                 const play = new ScoringPlay(this.id)
                 await scoringPlayRepository.save(play)
-                await octopusCountRepository.increment({id: 1}, 'count', 1)
+                await octopusCountRepository.increment({id: '1'}, 'count', 1)
                 const playerOctopusCount = await playerOctopusCountRepository.findOneBy({id: playerId})
                 if (!playerOctopusCount) {
                     const newPlayerOctopusCount = new PlayerOctopusCount(playerId, 1)
@@ -75,7 +75,7 @@ export class ScoringPlayInformation {
     public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
 
         const octopusCountRepository = datasource.getRepository(OctopusCount)
-        const octopusCount = await octopusCountRepository.findOneBy({id: 1}) 
+        const octopusCount = await octopusCountRepository.findOneBy({id: '1'}) 
         if (this.octopusMissedAthlete && octopusCount) {
             await postFailedOctopusToTwitter(twitterClient, this.shortText, this.octopusMissedAthlete?.firstName, this.octopusMissedAthlete?.lastName, octopusCount?.count + 1)
         }
@@ -92,7 +92,7 @@ export class ScoringPlayInformation {
                 const playerOctopusCountRepository = entityManager.getRepository(PlayerOctopusCount)
                 const octopusCountRepository = entityManager.getRepository(OctopusCount)
 
-                const octopusCount = await octopusCountRepository.findOneBy({id: 1})
+                const octopusCount = await octopusCountRepository.findOneBy({id: '1'})
                 const playerOctopus = await playerOctopusCountRepository.findOneBy({id: this.octopusScorer.id})
 
                 if (playerOctopus && octopusCount) {

@@ -4,7 +4,7 @@ export type ScoreboardResponse = {
 }
 
 export type EventResponse = {
-    id: number
+    id: string
 }
 
 export type GameResponse = {
@@ -12,12 +12,12 @@ export type GameResponse = {
 }
 
 export type ScoringPlayResponse = {
-    id: number,
+    id: string,
     scoringType: {name: "touchdown" | "fieldgoal"}
 }
 
 export type ScoringPlayInformationResponse = {
-    id: number,
+    id: string,
     wallclock: string;
     participants: ParticipantResponse[]
     pointAfterAttempt: PointAfterAttemptResponse
@@ -34,14 +34,14 @@ export type ParticipantResponse = {
 }
 
 export type PointAfterAttemptResponse = {
-    id: number,
+    id: string,
     value: number
 }
 
 export type AthleteResponse = {
     firstName: string,
     lastName: string,
-    id: number,
+    id: string,
 }
 
 export enum SCORING_TYPE {

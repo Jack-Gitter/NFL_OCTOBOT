@@ -15,7 +15,7 @@ export const run = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
 
     console.log(`Fetched ${currentGameIds.length} games for today, ${date.toISOString()}`)
 
-    const games = await Promise.all(currentGameIds.map(async (gameId: number) => {
+    const games = await Promise.all(currentGameIds.map(async (gameId: string) => {
         return getGameInformation(gameId)
     }))
 
