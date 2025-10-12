@@ -23,6 +23,7 @@ services:
       RECOVERY_MODE: ${RECOVERY_MODE}
       RECOVERY_START_DATE: ${RECOVERY_START_DATE}
       RECOVERY_END_DATE: ${RECOVERY_END_DATE}
+      COFFEE_SECRET: ${COFFEE_SECRET}
   db:
     image: postgres:15
     profiles: [pg, all]

@@ -2,14 +2,14 @@ import { configDotenv } from "dotenv"
 import "reflect-metadata"
 import datasource from "./datasource/datasource"
 import { run } from "./coordinator/coordinator"
-import { getTwitterClient } from "./x_api/x_api"
+import { getTwitterClient, tweetDonations } from "./x_api/x_api"
 import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
 import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
 import { TwitterApi } from "twitter-api-v2"
 import { DataSource, Repository } from "typeorm"
-import { generateDates } from "./utils"
+import { generateDates, getHighestAllTimeDonator, getHighestMonthlyDonator, getMonthlyDonationCount } from "./utils"
 
 const main = async () => {
 
@@ -50,6 +50,33 @@ const main = async () => {
         console.log(`Purging all scoring plays from database`)
         await scoringPlayRepository.clear()
     })
+
+    cron.schedule('0 0 28-31 * *', async () => {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+
+        if (tomorrow.getMonth() !== today.getMonth()) {
+          console.log('📅 Running monthly donation summary...');
+
+          const highestAllTime = await getHighestAllTimeDonator(datasource);
+          const highestMonthly = await getHighestMonthlyDonator(datasource);
+          const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
+
+          console.log(`highest all time: ${JSON.stringify(highestAllTime)}`)
+          console.log(`highest monthly: ${JSON.stringify(highestMonthly)}`)
+          console.log(`total monthly: ${JSON.stringify(totalMonthlyDonations)}`)
+
+          await tweetDonations(
+                twitterClient, 
+                highestAllTime?.donatorName, 
+                highestAllTime?.total, 
+                highestMonthly?.donatorName,
+                highestMonthly?.total,
+                totalMonthlyDonations?.total
+          )
+        }
+    });
 }
 
 const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date = new Date()) => {

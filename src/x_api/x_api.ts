@@ -84,6 +84,51 @@ This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 }
 
 
+export const tweetDonations = async (
+    twitterClient: TwitterApi,
+    allTimeDonatorName?: string,
+    allTimeDonatorAmount?: number,
+    monthlyDonatorName?: string,
+    monthlyDonatorAmount?: number,
+    totalMonthlyDonations?: number
+) => {
+    try {
+        const text = formatDonationTweet(allTimeDonatorName, allTimeDonatorAmount, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
+        const body = { text }
+        console.log(body)
+        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        console.log(`Successfully posted donations tweet!`)
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const formatDonationTweet = (
+  allTimeDonatorName?: string,
+  allTimeDonatorAmount?: number,
+  monthlyDonatorName?: string,
+  monthlyDonatorAmount?: number,
+  totalMonthlyDonations?: number
+) => {
+  const safeAllTimeName = allTimeDonatorName ?? "N/A";
+  const safeAllTimeAmount = allTimeDonatorAmount ?? 0;
+
+  const safeMonthlyName = monthlyDonatorName ?? "N/A";
+  const safeMonthlyAmount = monthlyDonatorAmount ?? 0;
+
+  const safeTotalMonthly = totalMonthlyDonations ?? 0;
+  const monthsCovered = monthlyDonatorAmount ? (monthlyDonatorAmount / 15).toFixed(1) : "0";
+
+  return `Donation Recap 💰
+
+Highest all-time donator: ${safeAllTimeName} with $${safeAllTimeAmount}
+
+Highest monthly donator: ${safeMonthlyName} with $${safeMonthlyAmount}
+
+Monthly donations: $${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
+`;
+}
+
 function ordinalSuffixOf(i: number) {
     const j = i % 10,
         k = i % 100;

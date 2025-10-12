@@ -1,3 +1,6 @@
+import { DataSource } from "typeorm"
+import { Donation } from "./entities/Donation"
+
 export const generateDates = (startDate: Date, endDate: Date) => {
   const dates: Date[] = []
   const current = new Date(startDate)
@@ -11,4 +14,57 @@ export const generateDates = (startDate: Date, endDate: Date) => {
   }
 
   return dates
+}
+
+export const getHighestAllTimeDonator = async (datasource: DataSource) => {
+    const donationRepository = datasource.getRepository(Donation)
+    const result = await donationRepository
+        .createQueryBuilder("donation")
+        .select("donation.donatorName", "donatorName")
+        .addSelect("SUM(donation.money)", "total")
+        .groupBy("donation.donatorName")
+        .orderBy("total", "DESC")
+        .limit(1)
+        .getRawOne();
+      return result 
+}
+
+export const getHighestMonthlyDonator = async (datasource: DataSource) => {
+
+  const donationRepository = datasource.getRepository(Donation)
+
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+
+  const result = await donationRepository
+    .createQueryBuilder("donation")
+    .select("donation.donatorName", "donatorName")
+    .addSelect("SUM(donation.money)", "total")
+    .where("donation.timestamp >= :start", { start: startOfMonth })
+    .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
+    .groupBy("donation.donatorName")
+    .orderBy("total", "DESC")
+    .limit(1)
+    .getRawOne();
+
+  return result 
+}
+
+export const getMonthlyDonationCount = async (datasource: DataSource) => {
+
+  const donationRepository = datasource.getRepository(Donation)
+
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+
+  const result = await donationRepository
+    .createQueryBuilder("donation")
+    .select("SUM(donation.money)", "total")
+    .where("donation.timestamp >= :start", { start: startOfMonth })
+    .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
+    .getRawOne();
+
+  return result 
 }
