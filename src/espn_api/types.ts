@@ -34,7 +34,7 @@ export type ParticipantResponse = {
 }
 
 export type PointAfterAttemptResponse = {
-    id: string,
+    id: number,
     value: number
 }
 

@@ -45,7 +45,8 @@ export const getScoringPlayAthletes = async (scoringPlay: ScoringPlayInformation
 }
 
 export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationResponse) => {
-        const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === '15' || scoringPlay?.pointAfterAttempt?.id === '16' || scoringPlay?.text?.toLowerCase()?.includes('two point')
+    console.log(scoringPlay)
+        const isTwoPointAttempt = scoringPlay?.pointAfterAttempt?.id === 15 || scoringPlay?.pointAfterAttempt?.id === 16 || scoringPlay?.text?.toLowerCase()?.includes('two point')
 
         const twoPointAttemptSuccess = 
                 scoringPlay?.pointAfterAttempt?.value === 2 || 
