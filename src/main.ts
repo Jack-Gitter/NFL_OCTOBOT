@@ -38,7 +38,6 @@ const main = async () => {
         console.log(`Recovering games between ${recoveryStartDate.toISOString()} and ${recoveryEndDate.toISOString()}`)
         const dates = generateDates(recoveryStartDate, recoveryEndDate)
         for (const date of dates) {
-            await new Promise(r => setTimeout(r, 500));
             await processDay(twitterClient, scoringPlayRepository, datasource, date)
         }
     }
