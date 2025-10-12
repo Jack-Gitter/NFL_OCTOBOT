@@ -39,10 +39,11 @@ export const runServer = () => {
         const name = body?.data.supporter_name
         const currency = body?.data?.currency
         const unixTimestamp = body?.data?.created_at
+        const donatorId = body?.data.supporter_id
 
         const usdMoney = await convertToUSD(money, currency)
 
-        const donation = new Donation(body?.data?.id, usdMoney, name, unixTimestamp)
+        const donation = new Donation(body?.data?.id, usdMoney, name, unixTimestamp, donatorId)
 
         await donationRepository.save(donation)
 

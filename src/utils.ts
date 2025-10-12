@@ -22,7 +22,7 @@ export const getHighestAllTimeDonator = async (datasource: DataSource) => {
         .createQueryBuilder("donation")
         .select("donation.donatorName", "donatorName")
         .addSelect("SUM(donation.money)", "total")
-        .groupBy("donation.donatorName")
+        .groupBy("donation.donatorId")
         .orderBy("total", "DESC")
         .limit(1)
         .getRawOne();
@@ -43,7 +43,7 @@ export const getHighestMonthlyDonator = async (datasource: DataSource) => {
     .addSelect("SUM(donation.money)", "total")
     .where("donation.timestamp >= :start", { start: startOfMonth })
     .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
-    .groupBy("donation.donatorName")
+    .groupBy("donation.donatorId")
     .orderBy("total", "DESC")
     .limit(1)
     .getRawOne();
