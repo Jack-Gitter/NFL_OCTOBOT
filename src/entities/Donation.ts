@@ -9,7 +9,6 @@ export class Donation {
         donatorName: string, 
         unixTimestamp: number
     ) {
-        console.log(unixTimestamp)
         this.id = id
         this.money = money
         this.donatorName = donatorName
