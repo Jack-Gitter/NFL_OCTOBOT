@@ -23,7 +23,7 @@ export const runServer = () => {
             await datasource.initialize()
         }
 
-        const donationRepository = datasource.getRepository(AllTimeDonationCount)
+        const donationRepository = datasource.getRepository(Donation)
 
         const body: BuyMeACoffeeWebhook = req.body()
 
@@ -37,10 +37,6 @@ export const runServer = () => {
         const donation = new Donation(body.event_id, usdMoney, name, unixTimestamp)
 
         await donationRepository.save(donation)
-
-
-
-
 
         res.send(200)
     })
