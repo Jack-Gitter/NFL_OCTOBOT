@@ -59,7 +59,7 @@ export class ScoringPlayInformation {
                     playerOctopusCount.octopusCount += 1
                     await playerOctopusCountRepository.save(playerOctopusCount)
                 }
-                console.log(`Successfully saved the playId ${this.id}`)
+                console.log(`Successfully saved the octopus playId ${this.id}`)
                 console.log(`Successfully updated player octopus count for player with id ${playerId}`)
                 console.log(`Successfully updated global octopus count`)
             }
@@ -70,6 +70,7 @@ export class ScoringPlayInformation {
         const scoringPlayRepository = datasource.getRepository(ScoringPlay)
         const scoringPlay = new ScoringPlay(this.id)
         await scoringPlayRepository.save(scoringPlay)
+        console.log(`Successfully saved the failed octopus playId ${this.id}`)
     }
 
     public async postFailedOctopusToTwitter(twitterClient: TwitterApi, datasource: DataSource) {
