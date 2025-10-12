@@ -28,6 +28,6 @@ export class Donation {
     donatorAmount: number
 
     @Column()
-    month: Date
+    timestamp: Date
 
 }
