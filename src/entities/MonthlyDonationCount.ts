@@ -12,5 +12,8 @@ export class MonthlyDonationCount {
 
     @Column()
     topDonatorName: string
+
+    @Column({type: 'float'})
+    topDonatorAmount: number
     
 }

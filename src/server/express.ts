@@ -33,7 +33,16 @@ export const runServer = () => {
         const name = body.data.supporter_name
         const currency = body.data.currency
 
-        const usdMoney = convertToUSD(money, currency)
+        const usdMoney = await convertToUSD(money, currency)
+
+        const allTimeDonationRecord = await allTimeDonationRepository.findOneBy({id: 1})
+        if (allTimeDonationRecord) {
+            allTimeDonationRecord.money += usdMoney
+            await allTimeDonationRepository.save(allTimeDonationRecord)
+        } else {
+            const allTimeDonationRecord = new AllTimeDonationCount(1, usdMoney)
+            await allTimeDonationRepository.save(allTimeDonationRecord)
+        }
 
 
 
