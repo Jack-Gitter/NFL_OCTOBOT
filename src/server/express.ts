@@ -30,6 +30,7 @@ export const runServer = () => {
         const valid = isSignatureValid(req)
         if (!valid) {
             res.status(403).send(`Invalid Signature`)
+            return
         }
 
         console.log(`Donation Received! ${JSON.stringify(body)}`)
