@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
 export class Migrations1760229921874 implements MigrationInterface {
-    name = 'ConvertIdToStringMigration'
+    name = 'Migrations1760229921874'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         // octopus_count
