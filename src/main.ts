@@ -43,49 +43,18 @@ const main = async () => {
     }
 
     cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
-        processDay(twitterClient, scoringPlayRepository, datasource)
+        await processDay(twitterClient, scoringPlayRepository, datasource)
     })
 
     cron.schedule('0 4 * * 3', async () => {
-        try {
-            console.log(`Purging all scoring plays from database`)
-            await scoringPlayRepository.clear()
-        } catch (error) {
-            console.error(error)
-        }
+        await purgeScoringPlays(scoringPlayRepository)
     })
 
     cron.schedule('0 0 28-31 * *', async () => {
-        try {
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(today.getDate() + 1);
-
-            if (tomorrow.getMonth() !== today.getMonth()) {
-              console.log('📅 Running monthly donation summary...');
-
-              const highestAllTime = await getHighestAllTimeDonator(datasource);
-              const highestMonthly = await getHighestMonthlyDonator(datasource);
-              const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
-
-              console.log(`highest all time: ${JSON.stringify(highestAllTime)}`)
-              console.log(`highest monthly: ${JSON.stringify(highestMonthly)}`)
-              console.log(`total monthly: ${JSON.stringify(totalMonthlyDonations)}`)
-
-              await tweetDonations(
-                        twitterClient, 
-                        highestAllTime?.donatorName, 
-                        highestAllTime?.total, 
-                        highestMonthly?.donatorName,
-                        highestMonthly?.total,
-                        totalMonthlyDonations?.total
-                    )
-            }
-        } catch (error) {
-            console.error(error)
-        }
+        await processDonations(twitterClient)
     });
 }
+
 
 const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repository<ScoringPlay>, datasource: DataSource, date: Date = new Date()) => {
     try {
@@ -100,6 +69,46 @@ const processDay = async (twitterClient: TwitterApi, scoringPlayRepository: Repo
             console.error('Error Stack:')
             console.error(error.stack)
         }
+    }
+}
+
+const purgeScoringPlays = async (scoringPlayRepository: Repository<ScoringPlay>) => {
+    try {
+        console.log(`Purging all scoring plays from database`)
+        await scoringPlayRepository.clear()
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+const processDonations = async (twitterClient: TwitterApi) => {
+    try {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+
+        if (tomorrow.getMonth() !== today.getMonth()) {
+          console.log('📅 Running monthly donation summary...');
+
+          const highestAllTime = await getHighestAllTimeDonator(datasource);
+          const highestMonthly = await getHighestMonthlyDonator(datasource);
+          const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
+
+          console.log(`highest all time: ${JSON.stringify(highestAllTime)}`)
+          console.log(`highest monthly: ${JSON.stringify(highestMonthly)}`)
+          console.log(`total monthly: ${JSON.stringify(totalMonthlyDonations)}`)
+
+          await tweetDonations(
+                    twitterClient, 
+                    highestAllTime?.donatorName, 
+                    highestAllTime?.total, 
+                    highestMonthly?.donatorName,
+                    highestMonthly?.total,
+                    totalMonthlyDonations?.total
+                )
+        }
+    } catch (error) {
+        console.error(error)
     }
 }
 
