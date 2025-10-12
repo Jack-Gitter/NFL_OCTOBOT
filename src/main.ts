@@ -73,7 +73,7 @@ const main = async () => {
             highestAllTime?.total, 
             highestMonthly?.donatorName,
             highestMonthly?.total,
-            totalMonthlyDonations.total
+            totalMonthlyDonations?.total
       )
     // }
   });

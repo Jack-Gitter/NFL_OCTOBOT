@@ -86,11 +86,11 @@ This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 
 export const tweetDonations = async (
     twitterClient: TwitterApi,
-    allTimeDonatorName: string,
-    allTimeDonatorAmount: number,
-    monthlyDonatorName: string,
-    monthlyDonatorAmount: number,
-    totalMonthlyDonations: number
+    allTimeDonatorName?: string,
+    allTimeDonatorAmount?: number,
+    monthlyDonatorName?: string,
+    monthlyDonatorAmount?: number,
+    totalMonthlyDonations?: number
 ) => {
     try {
         const text = formatDonationTweet(allTimeDonatorName, allTimeDonatorAmount, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
@@ -104,21 +104,27 @@ export const tweetDonations = async (
 }
 
 const formatDonationTweet = (
-    allTimeDonatorName: string,
-    allTimeDonatorAmount: number,
-    monthlyDonatorName: string,
-    monthlyDonatorAmount: number,
-    totalMonthlyDonations: number
+  allTimeDonatorName?: string,
+  allTimeDonatorAmount?: number,
+  monthlyDonatorName?: string,
+  monthlyDonatorAmount?: number,
+  totalMonthlyDonations?: number
 ) => {
+  const safeAllTimeName = allTimeDonatorName ?? "N/A";
+  const safeAllTimeAmount = allTimeDonatorAmount ?? 0;
 
-    return `Donation Recap 💰
+  const safeMonthlyName = monthlyDonatorName ?? "N/A";
+  const safeMonthlyAmount = monthlyDonatorAmount ?? 0;
 
-Highest all time donator: ${allTimeDonatorName} with $${allTimeDonatorAmount}
+  const safeTotalMonthly = totalMonthlyDonations ?? 0;
+  const monthsCovered = monthlyDonatorAmount ? (monthlyDonatorAmount / 15).toFixed(1) : "0";
 
-Highest monthly donator: ${monthlyDonatorName} with ${monthlyDonatorAmount}
+  return `Donation Recap 💰
 
-Monthly donations: ${totalMonthlyDonations} keeps octobot running for ${monthlyDonatorAmount/15} months
-`
+Highest all-time donator: ${safeAllTimeName} ($${safeAllTimeAmount})
+Highest monthly donator: ${safeMonthlyName} ($${safeMonthlyAmount})
+Monthly donations: $${safeTotalMonthly} → keeps Octobot running ~${monthsCovered} month(s)
+`;
 }
 
 function ordinalSuffixOf(i: number) {
