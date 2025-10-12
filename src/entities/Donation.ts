@@ -7,12 +7,14 @@ export class Donation {
         id: number, 
         money: number, 
         donatorName: string, 
-        unixTimestamp: number
+        unixTimestamp: number,
+        donatorId: number
     ) {
         this.id = id
         this.money = money
         this.donatorName = donatorName
         this.timestamp = new Date(unixTimestamp * 1000)
+        this.donatorId = donatorId
     }
 
     @Column({primary: true, type: 'bigint'})
@@ -26,5 +28,8 @@ export class Donation {
 
     @Column()
     timestamp: Date
+
+    @Column()
+    donatorId: number
 
 }
