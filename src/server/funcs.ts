@@ -1,4 +1,5 @@
 import { ExchangeRateResponse } from "./types";
+import { Request } from 'express';
 import crypto from 'crypto'
 
 export const convertToUSD = async (money: number, currency: string) => {
@@ -12,7 +13,7 @@ export const convertToUSD = async (money: number, currency: string) => {
   return usdValue
 }
 
-export const isSignatureValid = (req) => {
+export const isSignatureValid = (req: Request) => {
     const signature = req.header('x-signature-sha256')
     const rawBody = JSON.stringify(req.body)
     if (!signature) {
