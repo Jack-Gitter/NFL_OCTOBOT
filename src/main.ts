@@ -2,7 +2,7 @@ import { configDotenv } from "dotenv"
 import "reflect-metadata"
 import datasource from "./datasource/datasource"
 import { run } from "./coordinator/coordinator"
-import { getTwitterClient } from "./x_api/x_api"
+import { getTwitterClient, tweetDonations } from "./x_api/x_api"
 import cron from 'node-cron'
 import { ScoringPlay } from "./entities/Play"
 import { OctopusCount } from "./entities/OctopusCount"
@@ -67,8 +67,14 @@ const main = async () => {
       console.log(`highest monthly: ${highestMonthly}`)
       console.log(`total monthly: ${totalMonthlyDonations}`)
 
-      console.log('🏆 Highest All-Time Donator:', highestAllTime);
-      console.log('🗓️ Highest Monthly Donator:', highestMonthly);
+      await tweetDonations(
+            twitterClient, 
+            highestAllTime.donatorName, 
+            highestAllTime.total, 
+            highestMonthly.donatorName,
+            highestMonthly.total,
+            totalMonthlyDonations
+      )
     // }
   });
 }
