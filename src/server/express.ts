@@ -29,8 +29,8 @@ export const runServer = () => {
 
         const money = body?.data?.amount
         const name = body.data.supporter_name
-        const currency = body.data.currency
-        const unixTimestamp = body.created
+        const currency = body?.data?.currency
+        const unixTimestamp = body?.created
 
         const usdMoney = await convertToUSD(money, currency)
 
