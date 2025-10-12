@@ -2,9 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import { BuyMeACoffeeWebhook } from './types'
 import datasource from '../datasource/datasource'
-import { AllTimeDonationCount } from '../entities/AllTimeDonationCount'
-import { MonthlyDonationCount } from '../entities/MonthlyDonationCount'
 import { convertToUSD } from './funcs'
+import { Donation } from '../entities/Donation'
 
 export const runServer = () => {
 
@@ -24,8 +23,7 @@ export const runServer = () => {
             await datasource.initialize()
         }
 
-        const allTimeDonationRepository = datasource.getRepository(AllTimeDonationCount)
-        const monthlyDonationRepository = datasource.getRepository(MonthlyDonationCount)
+        const donationRepository = datasource.getRepository(AllTimeDonationCount)
 
         const body: BuyMeACoffeeWebhook = req.body()
 
@@ -35,25 +33,8 @@ export const runServer = () => {
 
         const usdMoney = await convertToUSD(money, currency)
 
-        const allTimeDonationRecord = await allTimeDonationRepository.findOneBy({id: 1})
-        if (allTimeDonationRecord) {
-            if (usdMoney > allTimeDonationRecord.topDonatorAmount) {
-                allTimeDonationRecord.topDonatorAmount = usdMoney
-                allTimeDonationRecord.topDonatorName = name
-            }
-            allTimeDonationRecord.money += usdMoney
-            await allTimeDonationRepository.save(allTimeDonationRecord)
-        } else {
-            const allTimeDonationRecord = new AllTimeDonationCount(1, usdMoney, name, usdMoney)
-            await allTimeDonationRepository.save(allTimeDonationRecord)
-        }
+        const donation = new Donation(body.event_id)
 
-        const monthlyDonationRecord = await monthlyDonationRepository.findOneBy({id: 1})
-        if (monthlyDonationRecord) {
-            if (usdMoney > monthlyDonationRecord.topDonatorAmount) {
-                monthlyDonationRecord.topDonatorAmount = usdMoney
-            }
-        }
 
 
 

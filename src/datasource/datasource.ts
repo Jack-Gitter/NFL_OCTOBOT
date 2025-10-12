@@ -7,12 +7,12 @@ import { PlayerOctopusCount } from "../entities/PlayerOctopusCount"
 import { Migrations1759845363781 } from "./migrations/1759845363781-migrations"
 import { Migrations1760229921874 } from "./migrations/1760229921874-migrations"
 import { Migrations1760230910337 } from "./migrations/1760230910337-migrations"
-import { AllTimeDonationCount } from "../entities/AllTimeDonationCount"
-import { MonthlyDonationCount } from "../entities/MonthlyDonationCount"
 import { Migrations1760275897408 } from "./migrations/1760275897408-migrations"
 import { Migrations1760276348584 } from "./migrations/1760276348584-migrations"
 import { Migrations1760277371346 } from "./migrations/1760277371346-migrations"
 import { Migrations1760277622939 } from "./migrations/1760277622939-migrations"
+import { Donation } from "../entities/Donation"
+import { Migrations1760277959113 } from "./migrations/1760277959113-migrations"
 
 configDotenv()
 
@@ -27,8 +27,7 @@ export default new DataSource({
         ScoringPlay, 
         OctopusCount, 
         PlayerOctopusCount, 
-        AllTimeDonationCount, 
-        MonthlyDonationCount
+        Donation
     ],
     migrations: [
         Migrations1759845363781, 
@@ -37,7 +36,8 @@ export default new DataSource({
         Migrations1760275897408,
         Migrations1760276348584,
         Migrations1760277371346,
-        Migrations1760277622939
+        Migrations1760277622939,
+        Migrations1760277959113
     ],
     migrationsRun: true,
 })

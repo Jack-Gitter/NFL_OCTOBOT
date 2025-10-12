@@ -17,7 +17,7 @@ export class Donation {
         this.timestamp = new Date(timestamp)
     }
 
-    @Column({primary: true})
+    @Column({primary: true, type: 'bigint'})
     id: number
 
     @Column({type: 'float'})
