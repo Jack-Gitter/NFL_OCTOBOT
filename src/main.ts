@@ -63,9 +63,9 @@ const main = async () => {
       const highestMonthly = await getHighestMonthlyDonator(datasource);
       const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
 
-      console.log(highestAllTime)
-      console.log(highestMonthly)
-      console.log(totalMonthlyDonations)
+      console.log(`highest all time: ${highestAllTime}`)
+      console.log(`highest monthly: ${highestMonthly}`)
+      console.log(`total monthly: ${totalMonthlyDonations}`)
 
       console.log('🏆 Highest All-Time Donator:', highestAllTime);
       console.log('🗓️ Highest Monthly Donator:', highestMonthly);
