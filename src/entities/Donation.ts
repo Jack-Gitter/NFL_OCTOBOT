@@ -1,6 +1,6 @@
 import { Column, Entity } from "typeorm";
 
-@Entity()
+@Entity('Donations')
 export class Donation {
 
     constructor(

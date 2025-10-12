@@ -25,10 +25,11 @@ export const runServer = () => {
 
         const body: BuyMeACoffeeWebhook = req.body
 
+        console.log(body)
         const money = body?.data?.amount
-        const name = body.data.supporter_name
+        const name = body?.data.supporter_name
         const currency = body?.data?.currency
-        const unixTimestamp = body?.created
+        const unixTimestamp = body?.data?.created_at
 
         const usdMoney = await convertToUSD(money, currency)
 
