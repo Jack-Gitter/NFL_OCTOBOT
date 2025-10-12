@@ -85,13 +85,22 @@ This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 
 
 export const tweetDonations = async (
+    twitterClient: TwitterApi,
     allTimeDonatorName: string,
     allTimeDonatorAmount: number,
     monthlyDonatorName: string,
     monthlyDonatorAmount: number,
     totalMonthlyDonations: number
 ) => {
-
+    try {
+        const text = formatDonationTweet(allTimeDonatorName, allTimeDonatorAmount, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
+        const body = { text }
+        console.log(body)
+        // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        console.log(`Successfully posted donations tweet!`)
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 const formatDonationTweet = (
@@ -110,9 +119,7 @@ Highest all time donator: ${allTimeDonatorName} with $${allTimeDonatorAmount}
 Highest monthly donator: ${monthlyDonatorName} with ${monthlyDonatorAmount}
 
 Monthly donations: ${totalMonthlyDonations} keeps octobot running for ${15/monthlyDonatorAmount} months
-
-
-    `
+`
 }
 
 function ordinalSuffixOf(i: number) {
