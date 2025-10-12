@@ -21,9 +21,6 @@ export class ScoringPlayInformation {
     ) {}
 
     public isOctopus() {
-        console.log(this.pointAfterAttempt.isTwoPointAttempt)
-        console.log(this.pointAfterAttempt.success)
-        console.log(this.pointAfterAttempt.scorer)
         if (this.pointAfterAttempt.isTwoPointAttempt && this.pointAfterAttempt.success && this.pointAfterAttempt.scorer) {
             const tdScorer = this.participants.find((participant: Athlete) => {
                 return participant.type === SCORER_TYPE.TD_SCORER
