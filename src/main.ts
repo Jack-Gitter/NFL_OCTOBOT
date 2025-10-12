@@ -34,21 +34,21 @@ const main = async () => {
     const recoveryEndDate = new Date(process.env.RECOVERY_END_DATE as string)
 
     if (recoveryMode && recoveryStartDate) {
-        console.log(`Entering recovery mode`)
+        /*console.log(`Entering recovery mode`)
         console.log(`Recovering games between ${recoveryStartDate.toISOString()} and ${recoveryEndDate.toISOString()}`)
         const dates = generateDates(recoveryStartDate, recoveryEndDate)
         for (const date of dates) {
             await processDay(twitterClient, scoringPlayRepository, datasource, date)
-        }
+        }*/
     }
 
     cron.schedule('* 9-23,0-2 * * 4-6,0,1', async () => {
-        processDay(twitterClient, scoringPlayRepository, datasource)
+        //processDay(twitterClient, scoringPlayRepository, datasource)
     })
 
     cron.schedule('0 4 * * 3', async () => {
-        console.log(`Purging all scoring plays from database`)
-        await scoringPlayRepository.clear()
+        /*console.log(`Purging all scoring plays from database`)
+        await scoringPlayRepository.clear()*/
     })
 
     cron.schedule('0 0 28-31 * *', async () => {
