@@ -111,12 +111,12 @@ const formatDonationTweet = (
   totalMonthlyDonations?: number
 ) => {
   const safeAllTimeName = allTimeDonatorName ?? "N/A";
-  const safeAllTimeAmount = allTimeDonatorAmount ?? 0;
+  const safeAllTimeAmount = (allTimeDonatorAmount ?? 0).toFixed(2);
 
   const safeMonthlyName = monthlyDonatorName ?? "N/A";
-  const safeMonthlyAmount = monthlyDonatorAmount ?? 0;
+  const safeMonthlyAmount = (monthlyDonatorAmount ?? 0).toFixed(2);
 
-  const safeTotalMonthly = totalMonthlyDonations ?? 0;
+  const safeTotalMonthly = (totalMonthlyDonations ?? 0).toFixed(2);
   const monthsCovered = monthlyDonatorAmount ? (monthlyDonatorAmount / 15).toFixed(1) : "0";
 
   return `Donation Recap 💰
