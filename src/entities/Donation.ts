@@ -7,13 +7,11 @@ export class Donation {
         id: number, 
         money: number, 
         donatorName: string, 
-        donatorAmount: number,
         timestamp: string
     ) {
         this.id = id
         this.money = money
         this.donatorName = donatorName
-        this.donatorAmount = donatorAmount
         this.timestamp = new Date(timestamp)
     }
 
@@ -25,9 +23,6 @@ export class Donation {
 
     @Column()
     donatorName: string
-
-    @Column({type: 'float'})
-    donatorAmount: number
 
     @Column()
     timestamp: Date
