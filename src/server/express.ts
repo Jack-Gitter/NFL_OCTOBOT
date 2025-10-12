@@ -16,7 +16,7 @@ export const runServer = () => {
         res.send('pong')
     })
 
-    app.get('/hook', async (req, res) => {
+    app.post('/hook', async (req, res) => {
         if (!datasource.isInitialized) {
             await datasource.initialize()
         }
