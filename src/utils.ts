@@ -50,3 +50,21 @@ export const getHighestMonthlyDonator = async (datasource: DataSource) => {
 
   return result 
 }
+
+export const getMonthlyDonationCount = async (datasource: DataSource) => {
+
+  const donationRepository = datasource.getRepository(Donation)
+
+  const now = new Date();
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+  const startOfNextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+
+  const result = await donationRepository
+    .createQueryBuilder("donation")
+    .select("SUM(donation.money)", "total")
+    .where("donation.timestamp >= :start", { start: startOfMonth })
+    .andWhere("donation.timestamp < :end", { end: startOfNextMonth })
+    .getRawOne();
+
+  return result 
+}

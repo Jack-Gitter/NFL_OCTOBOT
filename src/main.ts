@@ -9,7 +9,7 @@ import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
 import { TwitterApi } from "twitter-api-v2"
 import { DataSource, Repository } from "typeorm"
-import { generateDates, getHighestAllTimeDonator, getHighestMonthlyDonator } from "./utils"
+import { generateDates, getHighestAllTimeDonator, getHighestMonthlyDonator, getMonthlyDonationCount } from "./utils"
 
 const main = async () => {
 
@@ -61,9 +61,11 @@ const main = async () => {
 
       const highestAllTime = await getHighestAllTimeDonator(datasource);
       const highestMonthly = await getHighestMonthlyDonator(datasource);
+      const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
 
       console.log(highestAllTime)
       console.log(highestMonthly)
+      console.log(totalMonthlyDonations)
 
       console.log('🏆 Highest All-Time Donator:', highestAllTime);
       console.log('🗓️ Highest Monthly Donator:', highestMonthly);
