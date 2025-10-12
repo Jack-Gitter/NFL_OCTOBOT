@@ -33,7 +33,7 @@ export const runServer = () => {
 
         const usdMoney = await convertToUSD(money, currency)
 
-        const donation = new Donation(body.event_id)
+        //const donation = new Donation(body.event_id, usdMoney, name, )
 
 
 

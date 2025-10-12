@@ -39,7 +39,7 @@ export default new DataSource({
         Migrations1760277371346,
         Migrations1760277622939,
         Migrations1760277959113,
-        Migrations1760278074619
+        Migrations1760278074619,
     ],
     migrationsRun: true,
 })
