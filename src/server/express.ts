@@ -23,7 +23,7 @@ export const runServer = () => {
 
         const donationRepository = datasource.getRepository(Donation)
 
-        const body: BuyMeACoffeeWebhook = req.body()
+        const body: BuyMeACoffeeWebhook = req.body
 
         const money = body?.data?.amount
         const name = body.data.supporter_name
