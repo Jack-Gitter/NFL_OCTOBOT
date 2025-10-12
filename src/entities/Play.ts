@@ -7,6 +7,6 @@ export class ScoringPlay {
         this.id = id
     }
 
-    @Column({primary: true})
+    @Column({primary: true, type: 'bigint'})
     id: string
 }
