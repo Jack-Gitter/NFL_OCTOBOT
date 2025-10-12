@@ -50,21 +50,24 @@ const main = async () => {
         console.log(`Purging all scoring plays from database`)
         await scoringPlayRepository.clear()
     })
-
-  cron.schedule('0 0 28-31 * *', async () => {
-    const today = new Date();
+//0 0 28-31 * *
+  cron.schedule('* * * * *', async () => {
+    /*const today = new Date();
     const tomorrow = new Date(today);
     tomorrow.setDate(today.getDate() + 1);
 
-    if (tomorrow.getMonth() !== today.getMonth()) {
+    if (tomorrow.getMonth() !== today.getMonth()) {*/
       console.log('📅 Running monthly donation summary...');
 
       const highestAllTime = await getHighestAllTimeDonator(datasource);
       const highestMonthly = await getHighestMonthlyDonator(datasource);
 
+      console.log(highestAllTime)
+      console.log(highestMonthly)
+
       console.log('🏆 Highest All-Time Donator:', highestAllTime);
       console.log('🗓️ Highest Monthly Donator:', highestMonthly);
-    }
+    // }
   });
 }
 
