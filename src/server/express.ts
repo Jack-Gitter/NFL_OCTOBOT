@@ -2,7 +2,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import { BuyMeACoffeeWebhook } from './types'
 import datasource from '../datasource/datasource'
-import { convertToUSD } from './funcs'
+import { convertToUSD, isSignatureValid } from './funcs'
 import { Donation } from '../entities/Donation'
 import crypto from 'crypto'
 
@@ -55,21 +55,3 @@ export const runServer = () => {
     })
 }
 
-const isSignatureValid = (req) => {
-    const signature = req.header('x-signature-sha256')
-    const rawBody = JSON.stringify(req.body)
-    if (!signature) {
-        return false
-    }
-    const hash = crypto
-        .createHmac('sha256', process.env.COFFEE_SECRET as string)
-        .update(rawBody, 'utf8')
-        .digest('hex')
-
-      const signatureBuffer = Buffer.from(signature, 'hex')
-        const hashBuffer = Buffer.from(hash, 'hex')
-
-    if (signatureBuffer.length !== hashBuffer.length || !crypto.timingSafeEqual(signatureBuffer, hashBuffer)) {
-        return true
-    }
-}
