@@ -22,7 +22,6 @@ export const runServer = () => {
             await datasource.initialize()
         }
 
-
         const donationRepository = datasource.getRepository(Donation)
 
         const body: BuyMeACoffeeWebhook = req.body
