@@ -48,6 +48,13 @@ export const runServer = () => {
             await allTimeDonationRepository.save(allTimeDonationRecord)
         }
 
+        const monthlyDonationRecord = await monthlyDonationRepository.findOneBy({id: 1})
+        if (monthlyDonationRecord) {
+            if (usdMoney > monthlyDonationRecord.topDonatorAmount) {
+                monthlyDonationRecord.topDonatorAmount = usdMoney
+            }
+        }
+
 
 
 

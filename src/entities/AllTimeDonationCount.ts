@@ -1,18 +1,18 @@
 import { Column, Entity } from "typeorm";
 
 @Entity()
-export class AllTimeDonationCount {
+export class Donation {
 
     constructor(
         id: number, 
         money: number, 
-        topDonatorName: string, 
-        topDonatorAmount: number
+        donatorName: string, 
+        donatorAmount: number
     ) {
         this.id = id
         this.money = money
-        this.topDonatorName = topDonatorName
-        this.topDonatorAmount = topDonatorAmount
+        this.donatorName = donatorName
+        this.donatorAmount = donatorAmount
     }
 
     @Column({primary: true})
@@ -22,9 +22,9 @@ export class AllTimeDonationCount {
     money: number
 
     @Column()
-    topDonatorName: string
+    donatorName: string
 
     @Column({type: 'float'})
-    topDonatorAmount: number
+    donatorAmount: number
 
 }
