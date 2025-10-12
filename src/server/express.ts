@@ -48,7 +48,7 @@ export const runServer = () => {
 
         console.log(`Donation saved to database`)
 
-        res.send(200)
+        res.send()
     })
 
     app.listen(port, () => {
