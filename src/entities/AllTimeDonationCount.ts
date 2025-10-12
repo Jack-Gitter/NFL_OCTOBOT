@@ -27,4 +27,7 @@ export class Donation {
     @Column({type: 'float'})
     donatorAmount: number
 
+    @Column()
+    month: Date
+
 }
