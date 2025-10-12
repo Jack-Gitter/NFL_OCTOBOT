@@ -63,9 +63,9 @@ const main = async () => {
           const highestMonthly = await getHighestMonthlyDonator(datasource);
           const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
 
-          console.log(`highest all time: ${highestAllTime}`)
-          console.log(`highest monthly: ${highestMonthly}`)
-          console.log(`total monthly: ${totalMonthlyDonations}`)
+          console.log(`highest all time: ${JSON.stringify(highestAllTime)}`)
+          console.log(`highest monthly: ${JSON.stringify(highestMonthly)}`)
+          console.log(`total monthly: ${JSON.stringify(totalMonthlyDonations)}`)
 
           await tweetDonations(
                 twitterClient, 
