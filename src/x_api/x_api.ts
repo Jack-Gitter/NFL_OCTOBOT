@@ -125,7 +125,7 @@ Highest all-time donator: ${safeAllTimeName} with $${safeAllTimeAmount}
 
 Highest monthly donator: ${safeMonthlyName} with $${safeMonthlyAmount}
 
-Monthly donations: $${safeTotalMonthly} → keeps Octobot running ~${monthsCovered} month(s)
+Monthly donations: $${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
 `;
 }
 
