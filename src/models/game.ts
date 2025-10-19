@@ -11,7 +11,7 @@ export class Game {
         })
         const unprocessedGameScoringPlays = this.scoringPlays.length
         console.log(
-            `Removed ${gameScoringPlays - unprocessedGameScoringPlays} already processed scoring plays from game ${this.gameId}`
+            `Removed ${gameScoringPlays - unprocessedGameScoringPlays} already processed opctopi or unfinished octopi from game with id: ${this.gameId}`
         )
 
     }
@@ -20,7 +20,7 @@ export class Game {
         const scoringPlays = this.scoringPlays?.filter((scoringPlay) => {
             return scoringPlay.isOctopus() || scoringPlay.isMissedOctopus()
         })
-        console.log(`Found ${scoringPlays.length} new plays that are either octopi, or missed octopi`)
+        console.log(`Found ${scoringPlays.length} new plays that are either octopi, or missed octopi from game with id: ${this.gameId}`)
         return scoringPlays
     }
 }
