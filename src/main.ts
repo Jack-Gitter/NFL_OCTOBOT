@@ -27,7 +27,7 @@ const main = async () => {
 
     await octopusCountRepository.save(startingOctopusCount)
 
-    console.log(`Global octopus count: ${startingOctopusCount.count}`)
+    console.log(`Global octopus count is ${startingOctopusCount.count}`)
 
     const twitterClient = await getTwitterClient()
 
