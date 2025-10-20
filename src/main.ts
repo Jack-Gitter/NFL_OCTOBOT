@@ -42,7 +42,7 @@ const main = async () => {
         }
     }
 
-    cron.schedule('* 9-23,0-2 * 1-6,9-12 4-6,0,1', async () => {
+    cron.schedule('* 9-23,0-2 * 1-6,9-12 *', async () => {
         await processDay(twitterClient, scoringPlayRepository, datasource)
     })
 
