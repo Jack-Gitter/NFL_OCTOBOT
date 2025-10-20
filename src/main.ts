@@ -27,6 +27,8 @@ const main = async () => {
 
     await octopusCountRepository.save(startingOctopusCount)
 
+    console.log(`Global octopus count is ${startingOctopusCount}`)
+
     const twitterClient = await getTwitterClient()
 
     const recoveryMode = process.env.RECOVERY_MODE?.toLowerCase() === 'true' ? true : false
