@@ -83,6 +83,7 @@ const purgeScoringPlays = async (scoringPlayRepository: Repository<ScoringPlay>)
 
 const processDonations = async (twitterClient: TwitterApi) => {
     try {
+        console.log('Starting check for monthly donations')
         const today = new Date();
         const tomorrow = new Date(today);
         tomorrow.setDate(today.getDate() + 1);
@@ -106,6 +107,8 @@ const processDonations = async (twitterClient: TwitterApi) => {
                     highestMonthly?.total,
                     totalMonthlyDonations?.total
                 )
+        } else {
+            console.log('Not the last day of the month. Will wait to process donations')
         }
     } catch (error) {
         console.error(error)
