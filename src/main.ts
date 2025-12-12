@@ -9,7 +9,7 @@ import { OctopusCount } from "./entities/OctopusCount"
 import { runServer } from "./server/express"
 import { TwitterApi } from "twitter-api-v2"
 import { DataSource, Repository } from "typeorm"
-import { generateDates, getHighestAllTimeDonator, getHighestMonthlyDonator, getMonthlyDonationCount } from "./utils"
+import { generateDates, getHighestAllTimeDonators, getHighestMonthlyDonator, getMonthlyDonationCount } from "./utils"
 
 const main = async () => {
 
@@ -93,18 +93,18 @@ const processDonations = async (twitterClient: TwitterApi) => {
         if (tomorrow.getMonth() !== today.getMonth()) {
           console.log('📅 Running monthly donation summary...');
 
-          const highestAllTime = await getHighestAllTimeDonator(datasource);
+          const highestAllTimeDonators = await getHighestAllTimeDonators(datasource);
           const highestMonthly = await getHighestMonthlyDonator(datasource);
           const totalMonthlyDonations = await getMonthlyDonationCount(datasource)
 
-          console.log(`highest all time: ${JSON.stringify(highestAllTime)}`)
+          console.log(`highest all time: ${JSON.stringify(highestAllTimeDonators)}`)
           console.log(`highest monthly: ${JSON.stringify(highestMonthly)}`)
           console.log(`total monthly: ${JSON.stringify(totalMonthlyDonations)}`)
 
           await tweetDonations(
                     twitterClient, 
-                    highestAllTime?.donatorName, 
-                    highestAllTime?.total, 
+                    highestAllTimeDonators?.donatorName, 
+                    highestAllTimeDonators?.total, 
                     highestMonthly?.donatorName,
                     highestMonthly?.total,
                     totalMonthlyDonations?.total

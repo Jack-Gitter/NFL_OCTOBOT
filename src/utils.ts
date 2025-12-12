@@ -1,6 +1,12 @@
 import { DataSource } from "typeorm"
 import { Donation } from "./entities/Donation"
 
+export interface DonatorInformation {
+	donatorId: number
+	donatorName: string,
+	donatorMoney: number,
+}
+
 export const generateDates = (startDate: Date, endDate: Date) => {
   const dates: Date[] = []
   const current = new Date(startDate)
@@ -16,7 +22,7 @@ export const generateDates = (startDate: Date, endDate: Date) => {
   return dates
 }
 
-export const getHighestAllTimeDonator = async (datasource: DataSource) => {
+export const getHighestAllTimeDonators = async (datasource: DataSource): Promise<DonatorInformation[]> => {
     const donationRepository = datasource.getRepository(Donation)
     const result = await donationRepository
         .createQueryBuilder("donation")
@@ -25,8 +31,8 @@ export const getHighestAllTimeDonator = async (datasource: DataSource) => {
         .addSelect("SUM(donation.money)", "total")
         .groupBy("donation.donatorId")
         .orderBy("total", "DESC")
-        .limit(1)
-        .getRawOne();
+        .limit(3)
+        .getRawMany();
       return result 
 }
 
