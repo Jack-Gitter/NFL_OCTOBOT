@@ -130,13 +130,13 @@ const formatDonationTweet = (
 
   return `Donation Recap 💰
 
-Top All-Time Donators
+Top All-Time
 ${allTimeDonatorsList}
 
-Highest Monthly Donator
+Top Monthly 
 ${monthlyDonatorText}
 
-Monthly donations
+Monthly Impact
 $${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
 `;
 };
