@@ -23,7 +23,7 @@ export const postFailedOctopusToTwitter = async (
         const text = formatFailedOctopusTweet(playSummary, octopusCount)
         const body = { text }
         console.log(body)
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted failed octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)
@@ -55,7 +55,7 @@ export const postOctopusToTwitter = async (
         const text = formatOctopusTweet(playSummary, playerLastName, playerOctopusCount, globalOctopusCount, playerOctopusRanking, playerOctopusRankingTiedWith) 
         const body = { text }
         console.log(body)
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted octopus to twitter for player ${playerFirstName} ${playerLastName}`)
     } catch (error) {
         console.error(error)
@@ -96,7 +96,7 @@ export const tweetDonations = async (
         const text = formatDonationTweet(allTimeDonators, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
         const body = { text }
         console.log(body)
-        await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
+        // await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
         console.log(`Successfully posted donations tweet!`)
     } catch (error) {
         console.error(error)
@@ -109,24 +109,20 @@ const formatDonationTweet = (
   monthlyDonatorAmount?: number,
   totalMonthlyDonations?: number
 ) => {
-  let allTimeDonatorsList = (allTimeDonators ?? [])
-    .filter(d => (d != null && d.donatorId != null && d.donatorMoney != null && d.donatorName != null)) 
-    .map((d, index) => {
+  let allTimeDonatorsList = 'No donations yet!'
+
+  if (allTimeDonators.length > 0) {
+	allTimeDonatorsList = allTimeDonators.map((d, index) => {
       const name = d.donatorName
-      const amount = (d.donatorMoney).toFixed(2);
-      return `${index + 1}. ${name} - $${amount}`;
+      const amount = (d.total).toFixed(2);
+      return `${index + 1}. '${name}' - $${amount}`;
     })
     .join('\n');
+  }
 
-	if (allTimeDonatorsList.length === 0) {
-		allTimeDonatorsList = 'No donations yet!'
-	}
-
- 
   let monthlyDonatorText = 'No donations this month!';
   if (monthlyDonatorName != null && monthlyDonatorAmount != null) {
-	  monthlyDonatorText = `${monthlyDonatorName} with ${monthlyDonatorAmount.toFixed(2)}`
-
+	  monthlyDonatorText = `'${monthlyDonatorName}' with ${monthlyDonatorAmount.toFixed(2)}`
   }
 
   const safeTotalMonthly = (totalMonthlyDonations ?? 0).toFixed(2);
@@ -134,13 +130,14 @@ const formatDonationTweet = (
 
   return `Donation Recap 💰
 
-Top All-Time Donators:
+Top All-Time Donators
 ${allTimeDonatorsList}
 
-Highest monthly donator: 
+Highest Monthly Donator
 ${monthlyDonatorText}
 
-Monthly donations: $${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
+Monthly donations
+$${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
 `;
 };
 

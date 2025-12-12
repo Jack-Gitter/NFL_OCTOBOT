@@ -52,7 +52,7 @@ const main = async () => {
         await purgeScoringPlays(scoringPlayRepository)
     })
 
-    cron.schedule('0 12 28-31 * *', async () => {
+    cron.schedule('* * * * *', async () => {
         await processDonations(twitterClient)
     });
 }
@@ -85,12 +85,6 @@ const purgeScoringPlays = async (scoringPlayRepository: Repository<ScoringPlay>)
 
 const processDonations = async (twitterClient: TwitterApi) => {
     try {
-        console.log('Starting check for monthly donations')
-        const today = new Date();
-        const tomorrow = new Date(today);
-        tomorrow.setDate(today.getDate() + 1);
-
-        if (tomorrow.getMonth() !== today.getMonth()) {
           console.log('📅 Running monthly donation summary...');
 
           const highestAllTimeDonators = await getHighestAllTimeDonators(datasource);
@@ -103,15 +97,11 @@ const processDonations = async (twitterClient: TwitterApi) => {
 
           await tweetDonations(
                     twitterClient, 
-                    highestAllTimeDonators?.donatorName, 
-                    highestAllTimeDonators?.total, 
+					highestAllTimeDonators,
                     highestMonthly?.donatorName,
                     highestMonthly?.total,
                     totalMonthlyDonations?.total
                 )
-        } else {
-            console.log('Not the last day of the month. Will wait to process donations')
-        }
     } catch (error) {
         console.error(error)
     }

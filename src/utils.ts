@@ -4,7 +4,7 @@ import { Donation } from "./entities/Donation"
 export interface DonatorInformation {
 	donatorId: number
 	donatorName: string,
-	donatorMoney: number,
+	total: number,
 }
 
 export const generateDates = (startDate: Date, endDate: Date) => {
