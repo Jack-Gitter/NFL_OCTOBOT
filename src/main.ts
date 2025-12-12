@@ -52,7 +52,7 @@ const main = async () => {
         await purgeScoringPlays(scoringPlayRepository)
     })
 
-    cron.schedule('* * * * *', async () => {
+    cron.schedule('0 12 28-31 * *', async () => {
         await processDonations(twitterClient)
     });
 }
@@ -114,7 +114,6 @@ const processDonations = async (twitterClient: TwitterApi) => {
     } catch (error) {
         console.error(error)
     }
-}
 }
 
 main()
