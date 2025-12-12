@@ -1,4 +1,5 @@
 import { TwitterApi } from 'twitter-api-v2';
+import { DonatorInformation } from '../utils';
 
 export const twitterBaseUrl = `https://api.x.com/2`
 
@@ -86,14 +87,13 @@ This is the NFL's ${ordinalSuffixOf(globalOctopusCount)} all time octopus!
 
 export const tweetDonations = async (
     twitterClient: TwitterApi,
-    allTimeDonatorName?: string,
-    allTimeDonatorAmount?: number,
+    allTimeDonators: DonatorInformation[],
     monthlyDonatorName?: string,
     monthlyDonatorAmount?: number,
     totalMonthlyDonations?: number
 ) => {
     try {
-        const text = formatDonationTweet(allTimeDonatorName, allTimeDonatorAmount, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
+        const text = formatDonationTweet(allTimeDonators, monthlyDonatorName, monthlyDonatorAmount, totalMonthlyDonations) 
         const body = { text }
         console.log(body)
         await twitterClient.post(`${twitterBaseUrl}/tweets`, body)
@@ -104,30 +104,42 @@ export const tweetDonations = async (
 }
 
 const formatDonationTweet = (
-  allTimeDonatorName?: string,
-  allTimeDonatorAmount?: number,
+  allTimeDonators: DonatorInformation[],
   monthlyDonatorName?: string,
   monthlyDonatorAmount?: number,
   totalMonthlyDonations?: number
 ) => {
-  const safeAllTimeName = allTimeDonatorName ?? "N/A";
-  const safeAllTimeAmount = (allTimeDonatorAmount ?? 0).toFixed(2);
+  let allTimeDonatorsList = 'No donations yet!'
 
-  const safeMonthlyName = monthlyDonatorName ?? "N/A";
-  const safeMonthlyAmount = (monthlyDonatorAmount ?? 0).toFixed(2);
+  if (allTimeDonators.length > 0) {
+	allTimeDonatorsList = allTimeDonators.map((d, index) => {
+      const name = d.donatorName
+      const amount = (d.total).toFixed(2);
+      return `${index + 1}. '${name}' - $${amount}`;
+    })
+    .join('\n');
+  }
+
+  let monthlyDonatorText = 'No donations this month!';
+  if (monthlyDonatorName != null && monthlyDonatorAmount != null) {
+	  monthlyDonatorText = `'${monthlyDonatorName}' - $${monthlyDonatorAmount.toFixed(2)}`
+  }
 
   const safeTotalMonthly = (totalMonthlyDonations ?? 0).toFixed(2);
   const monthsCovered = monthlyDonatorAmount ? (monthlyDonatorAmount / 15).toFixed(1) : "0";
 
   return `Donation Recap 💰
 
-Highest all-time donator: ${safeAllTimeName} with $${safeAllTimeAmount}
+Top All-Time
+${allTimeDonatorsList}
 
-Highest monthly donator: ${safeMonthlyName} with $${safeMonthlyAmount}
+Top Monthly 
+${monthlyDonatorText}
 
-Monthly donations: $${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
+Monthly Impact
+$${safeTotalMonthly} → keeps Octobot running ${monthsCovered} month(s)
 `;
-}
+};
 
 function ordinalSuffixOf(i: number) {
     const j = i % 10,
