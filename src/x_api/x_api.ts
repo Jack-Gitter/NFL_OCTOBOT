@@ -122,7 +122,7 @@ const formatDonationTweet = (
 
   let monthlyDonatorText = 'No donations this month!';
   if (monthlyDonatorName != null && monthlyDonatorAmount != null) {
-	  monthlyDonatorText = `'${monthlyDonatorName}' - ${monthlyDonatorAmount.toFixed(2)}`
+	  monthlyDonatorText = `'${monthlyDonatorName}' - $${monthlyDonatorAmount.toFixed(2)}`
   }
 
   const safeTotalMonthly = (totalMonthlyDonations ?? 0).toFixed(2);
