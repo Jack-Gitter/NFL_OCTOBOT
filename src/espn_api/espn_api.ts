@@ -49,7 +49,7 @@ export const getScoringPlayPat = async (scoringPlay: ScoringPlayInformationRespo
 
         const twoPointAttemptSuccess = (scoringPlay?.text?.toLowerCase()?.includes('two-point') 
 		&& scoringPlay?.text?.toLowerCase()?.includes('attempt succeeds') 
-		&& !scoringPlay?.text?.toLowerCase()?.includes('attempt fails')) || (scoringPlay.pointAfterAttempt.value === 2)
+		&& !scoringPlay?.text?.toLowerCase()?.includes('attempt fails')) 
 
         const participant = scoringPlay?.participants.find((participant: ParticipantResponse) => {
             return participant.type === SCORER_TYPE.PAT_SCORER
